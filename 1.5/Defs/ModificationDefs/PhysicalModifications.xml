@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+        <defName>THNMF_SensoryBoost</defName>
+        <label>sensory boost</label>
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>+{0}% sight</label>
+                <amount>4</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>+{0}% hearing</label>
+                <amount>4</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>+{0}% talking</label>
+                <amount>4</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>+{0}% moving</label>
+                <amount>1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>+{0}% manipulation</label>
+                <amount>1</amount>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_SensoryBoost</iconPath>
+
+        <scalingCapacityOffsets>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingCapacityAffector">
+                <affectedCapacity>Sight</affectedCapacity>
+                <amount>.04</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingCapacityAffector">
+                <affectedCapacity>Hearing</affectedCapacity>
+                <amount>.04</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingCapacityAffector">
+                <affectedCapacity>Talking</affectedCapacity>
+                <amount>.04</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingCapacityAffector">
+                <affectedCapacity>Moving</affectedCapacity>
+                <amount>.01</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingCapacityAffector">
+                <affectedCapacity>Manipulation</affectedCapacity>
+                <amount>.01</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+        </scalingCapacityOffsets>
+
+        <categoryDef>THNMF_Physical</categoryDef>
+        <description>Dedicate nanites to maintenance of sensory organs, improving all senses. Improves sight, hearing, and talking. The added sense also gives a minor boost to moving and manipulation.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker</workerClass>
+        <ticker>false</ticker>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+        <defName>THNMF_Biolizer</defName>
+        <label>biolizer</label>
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>+{0}% moving</label>
+                <amount>3</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>+{0}% manipulation</label>
+                <amount>3</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>+{0}% blood pumping</label>
+                <amount>3</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>+{0}% eating</label>
+                <amount>3</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>+{0}% breathing</label>
+                <amount>1</amount>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_Biolizer</iconPath>
+
+        <scalingCapacityOffsets>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingCapacityAffector">
+                <affectedCapacity>Moving</affectedCapacity>
+                <amount>.03</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingCapacityAffector">
+                <affectedCapacity>Manipulation</affectedCapacity>
+                <amount>.03</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingCapacityAffector">
+                <affectedCapacity>BloodPumping</affectedCapacity>
+                <amount>.03</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingCapacityAffector">
+                <affectedCapacity>Eating</affectedCapacity>
+                <amount>.03</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingCapacityAffector">
+                <affectedCapacity>Breathing</affectedCapacity>
+                <amount>.01</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+        </scalingCapacityOffsets>
+
+        <categoryDef>THNMF_Physical</categoryDef>
+        <description>Nanites weave themselves into a solid lattice, intertwined with muscle fibers. The lattices moves with muscle, increasing most physical capacities.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker</workerClass>
+        <ticker>false</ticker>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+        <defName>THNMF_InstinctInhibitor</defName>
+        <label>instinct inhibitor</label>
+        <modScalingDetails>
+            
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>-{0}% pain</label>
+                <amount>5</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>+{0}% minimum comfort</label>
+                <amount>2</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>-{0}% mental break threshold</label>
+                <amount>0.75</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Constant</scalingStyle>
+                <label>ignores move orders when an enemy is in attack range</label>
+                <amount>0</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Constant</scalingStyle>
+                <label>cannot dodge</label>
+                <amount>0</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Constant</scalingStyle>
+                <label>pawn cannot become dependent on normal drugs (drugs which the body can naturally tolerate)</label>
+                <amount>0</amount>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_InstinctInhibitor</iconPath>
+
+        <scalingStatOffsets>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>MentalBreakThreshold</affectedStat>
+                <amount>0.75</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+        </scalingStatOffsets>
+
+        <scalingStatFactors>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>MeleeDodgeChance</affectedStat>
+                <amount>0</amount>
+                <scalingStyle>Constant</scalingStyle>
+            </li>
+        </scalingStatFactors>
+        
+        <categoryDef>THNMF_Physical</categoryDef>
+        <description>Dulls the pawn's sense of self preservation, reducing mental break threshold and pain. The pawn will feel less discomfort as more nanites are allocated. This comes with the consequence of strategic ineptitude in combat. Inhibited pawns will outright ignore move orders if they can instead attack an enemy, and will never make an attempt to dodge attacks. Strangely, muting instincts also seems to stifle any possibility of psychological addictions.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker_InstinctInhibitor</workerClass>
+        <ticker>false</ticker>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+        <defName>THNMF_Nanosurgeons</defName>
+        <label>nanosurgeons</label>
+        <modScalingDetails>
+            
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>+{0}% healing factor</label>
+                <amount>100</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>-{0}% bleed factor</label>
+                <amount>1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>+{0} random treat quality</label>
+                <amount>.02</amount>
+                
+                <accessKey>TreatQuality</accessKey>
+                <configGenerator>
+                    <label>Treat quality multiplier: {0}</label>
+                    <minValue>0.01</minValue>
+                    <maxValue>10</maxValue>
+                    <defaultValue>1</defaultValue>
+                </configGenerator>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>LinearWithBase</scalingStyle>
+                <baseValue>5</baseValue>
+                <label>{0} treatments/day</label>
+                <amount>2</amount>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+
+                <accessKey>TreatCommonality</accessKey>
+                <configGenerator>
+                    <label>Treat rate per day multiplier: {0}</label>
+                    <minValue>0.01</minValue>
+                    <maxValue>10</maxValue>
+                    <defaultValue>1</defaultValue>
+                </configGenerator>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_Nanosurgeons</iconPath>
+
+        <scalingStatOffsets>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>InjuryHealingFactor</affectedStat>
+                <amount>1</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+        </scalingStatOffsets>
+
+
+        
+        <categoryDef>THNMF_Physical</categoryDef>
+        <description>Increases healing and immunity gain, and reduces blood loss. Rarely tends to immediately life-threatening injuries with very poor quality.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker_Nanosurgeons</workerClass>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+        <defName>THNMF_Biomanager</defName>
+        <label>biomanager</label>
+        
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% rest fall rate</label>
+                <scalingOperatorSymbol>-</scalingOperatorSymbol>
+                <amount>2</amount>
+                <halfLife>20</halfLife>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% hunger need</label>
+                <scalingOperatorSymbol>-</scalingOperatorSymbol>
+                <amount>2</amount>
+                <halfLife>20</halfLife>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% immunity gain speed</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>2</amount>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_Biomanager</iconPath>
+
+        <scalingStatOffsets>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>RestFallRateFactor</affectedStat>
+                <amount>-0.02</amount>
+                <scalingStyle>Linear</scalingStyle>
+                <halfLife>20</halfLife>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>ImmunityGainSpeed</affectedStat>
+                <amount>0.02</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+        </scalingStatOffsets>
+
+        
+
+        <categoryDef>THNMF_Physical</categoryDef>
+        <description>Reduces rest fall rate and hunger gain rate, increased immunity gain speed. Has heavy diminishing returns.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker_Biomanager</workerClass>
+        <ticker>false</ticker>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+        <defName>THNMF_CombatCoroutines</defName>
+        <label>combat coroutines</label>
+
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0} melee hit chance</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>.5</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0} melee dodge chance</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>.5</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% aiming time</label>
+                <scalingOperatorSymbol>-</scalingOperatorSymbol>
+                <amount>1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% shooting accuracy</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>5</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% attack cooldown </label>
+                <scalingOperatorSymbol>-</scalingOperatorSymbol>
+                <amount>1</amount>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_CombatCoroutines</iconPath>
+
+        <scalingStatOffsets>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>MeleeHitChance</affectedStat>
+                <amount>.5</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>MeleeDodgeChance</affectedStat>
+                <amount>.5</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+        </scalingStatOffsets>
+
+        <scalingStatFactors>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>AimingDelayFactor</affectedStat>
+                <amount>-.01</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>ShootingAccuracyPawn</affectedStat>
+                <amount>.05</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>MeleeCooldownFactor</affectedStat>
+                <amount>-0.01</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>RangedCooldownFactor</affectedStat>
+                <amount>-0.01</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+        </scalingStatFactors>
+
+
+        <categoryDef>THNMF_Physical</categoryDef>
+        <description>Boosts combat abilites by embedding nanites directly into the muscle. The embedded nanites stimulate the muscle directly, coordinating every move and giving the user perfect form while attempting to execute common combat techniques.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker</workerClass>
+        <ticker>false</ticker>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+        <defName>THNMF_SiegebreakerPunch</defName>
+        <label>siegebreaker punch</label>
+
+
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Constant</scalingStyle>
+                <label>50 base damage</label>
+                <amount></amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Constant</scalingStyle>
+                <label>30 second cooldown</label>
+                <amount></amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0} damage, multiplied by cube root of melee skill</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>2</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Bonus</scalingStyle>
+                <label>Instinct inhibitor increases siegebreaker punch damage by +50%, but user can break their hand from punching.</label>
+                <amount>1</amount>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_SiegebreakerPunch</iconPath>
+
+        <ability>THNMF_SiegebreakerPunchAbility</ability>
+
+        <categoryDef>THNMF_Physical</categoryDef>
+        <description>Activated ability: Punch something within 1 tile. Damage dealt is relative to nanites allocated. Injures the user's hand if it doesn't destroy the thing in one hit; this cannot destroy the user's hand. If instinct inhibitor is installed siegebreaker punch does significantly more damage but is capable of completely destroying the user's hand.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker</workerClass>
+        <ticker>false</ticker>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+        <defName>THNMF_EjectNanites</defName>
+        <label>eject nanites</label>
+        
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Bonus</scalingStyle>
+                <label>10 tile range</label>
+                <amount>0</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0} square units area</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>7</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0} second duration</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>1</amount>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_EjectNanites</iconPath>
+        
+        <ability>THNMF_EjectNanitesAbility</ability>
+        
+        <categoryDef>THNMF_Physical</categoryDef>
+        <description>Activated ability: Purge all nanites allocated into a cloud that dissolve biological matter. The cloud of nanites is smart enough to avoid friendlies, and since the nanites are primed for ejection, the user does not suffer from demechanization shock. It's threat detection is decentralized, and takes some time, so pawns which keep moving through the cloud will often come out uninfected.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker</workerClass>
+        <ticker>false</ticker>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+        <defName>THNMF_LockerProtocol</defName>
+        <label>locker protocol</label>
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>LinearWithBase</scalingStyle>
+                <baseValue>72</baseValue>
+                <label>{0} hours to resurrect (5 seconds minimum)</label>
+                <amount>-6</amount>
+                <halfLife>10</halfLife>
+
+                <accessKey>ResurrectionTimeHours</accessKey>
+                <configGenerator>
+                    <label>Resurrection time multiplier: {0}</label>
+                    <minValue>0.01</minValue>
+                    <maxValue>10</maxValue>
+                    <defaultValue>1</defaultValue>
+                </configGenerator>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>LinearWithBase</scalingStyle>
+                <baseValue>100</baseValue>
+                <label>{0}% demechanization shock severity</label>
+                <amount>-2</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Bonus</scalingStyle>
+                <label>Tier 2 or higher mechanites are capable of healing brain injuries</label>
+                <amount>2</amount>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_LockerProtocol</iconPath>
+
+        <categoryDef>THNMF_Physical</categoryDef>
+        <description>Reallocates all allocated nanites to repair damage and integrate into a user's system upon their death, resurrecting them. The hard reset consumes all allocated nanites and inflicts mechanization shock. Only nanites tier 2 or higher (e.g. luciferites and archites) can heal brain injuries via locker protocol. At higher levels, the resurrection can raise the pawn in a matter of seconds.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker_LockerProtocol</workerClass>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+
+    <!--MOD INTEGRATION: SOS2-->
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+        <defName>THNMF_Hermeticism</defName>
+        <label>hermeticism</label>
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail" MayRequire="kentington.saveourship2">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0} vacuum speed multiplier</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>.2</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail" MayRequire="kentington.saveourship2">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% decompression resistance</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>10</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail" MayRequire="kentington.saveourship2">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% hypoxia resistance</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>10</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail" MayRequire="Ludeon.RimWorld.Biotech">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% toxic resistance</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>10</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail" MayRequire="Ludeon.RimWorld.Biotech">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% toxic environment resistance</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>10</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}° minimum comfortable temperature</label>
+                <scalingOperatorSymbol>-</scalingOperatorSymbol>
+                <amount>10</amount>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_Hermeticism</iconPath>
+
+        <scalingStatOffsets>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector" MayRequire="kentington.saveourship2">
+                <affectedStat>HypoxiaResistance</affectedStat>
+                <amount>.1</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector" MayRequire="kentington.saveourship2">
+                <affectedStat>DecompressionResistance</affectedStat>
+                <amount>.1</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector" MayRequire="kentington.saveourship2">
+                <affectedStat>VacuumSpeedMultiplier</affectedStat>
+                <amount>.2</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+
+
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector" MayRequire="Ludeon.RimWorld.Biotech">
+                <affectedStat>ToxicEnvironmentResistance</affectedStat>
+                <amount>.1</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector" MayRequire="Ludeon.RimWorld.Biotech">
+                <affectedStat>ToxicResistance</affectedStat>
+                <amount>.1</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+
+            
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector" MayRequire="Ludeon.RimWorld.Biotech">
+                <affectedStat>ComfyTemperatureMin</affectedStat>
+                <amount>-10</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+        </scalingStatOffsets>
+        
+
+        <categoryDef>THNMF_Physical</categoryDef>
+        <description>Nanites weave themselves into the pawns mucous membranes and skin, intelligently sealing pores and hardening against osmosis when needed. Reduces the effect of decompression, and absorption of toxic gasses. Also comes with life support systems, converting carbon dioxide to oxygen, filtering the bloodstream of toxins, and warming the body from within.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker</workerClass>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+</Defs>

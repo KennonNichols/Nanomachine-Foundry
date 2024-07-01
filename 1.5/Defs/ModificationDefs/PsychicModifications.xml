@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+        <defName>THNMF_Clairvoyance</defName>
+        <label>clairvoyance</label>
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>LinearWithBase</scalingStyle>
+                <baseValue>.25</baseValue>
+                <label>{0} cast range without line of sight</label>
+                <amount>.005</amount>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <baseOperatorSymbol>×</baseOperatorSymbol>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Bonus</scalingStyle>
+                <label>Tier 3 or higher nanites do not incur a range penalty.</label>
+                <amount>0</amount>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_Clairvoyance</iconPath>
+        <ticker>false</ticker>
+        <categoryDef>THNMF_Psychic</categoryDef>
+        <description>Attunes the host's mind to the gentle thrumming of of psychic fields that span the planet, allowing them to precisely visualise the location of nearby pawns through walls. Psychic powers can be cast without line of sight to target, but with reduced range (can still be cast at normal range if you have line of sight. Tier 3 and higher nanites do not incur this range penalty).</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker_Clairvoyance</workerClass>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+        <defName>THNMF_Neuroconception</defName>
+        <label>neuroconception</label>
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% sensitivity while undrafted</label>
+                <amount>10</amount>
+                <scalingOperatorSymbol>-</scalingOperatorSymbol>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% sensitivity while drafted</label>
+                <amount>10</amount>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_Neuroconception</iconPath>
+
+        <forcedStatAffector>true</forcedStatAffector>
+        <categoryDef>THNMF_Psychic</categoryDef>
+        <description>Rewire the user's brain to have a stronger intuitive understanding of the human mind. Psychic attunement becomes a conscious decision; psychic sensitivity increases while drafted and meditating, and reduces while undrafted.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker_Neuroconception</workerClass>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+    
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+        <defName>THNMF_PsychicRecycler</defName>
+        <label>psychic recycler</label>
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% psyfocus per hour while asleep</label>
+                <amount>0.5</amount>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_PsychicRecycler</iconPath>
+
+        <categoryDef>THNMF_Psychic</categoryDef>
+        <description>Turns dreams into a semi-lucid stream of consciousness. User will gradually gain psyfocus in their sleep.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker_PsychicRecycler</workerClass>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+    
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+        <defName>THNMF_PsychicCache</defName>
+        <label>psychic cache</label>
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% cache chance</label>
+                <amount>1</amount>
+                <baseOperatorSymbol></baseOperatorSymbol>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% heat produced by cached spells</label>
+                <amount>2</amount>
+                <scalingOperatorSymbol>-</scalingOperatorSymbol>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_PsychicCache</iconPath>
+
+        <ticker>false</ticker>
+        <categoryDef>THNMF_Psychic</categoryDef>
+        <description>By deep-storing a mental image of the psychic field around the pawn, they can occasionally recast the same psycast without having to refocus. When casting a psycast there is a chance to immediately reset the cooldown. For 30 seconds, the next cast of that psycast will not cost psyfocus, and produces far less neural heat.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker_PsychicCache</workerClass>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+        <defName>THNMF_Psioniser</defName>
+        <label>psioniser</label>
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0} neural heat per second</label>
+                <amount>0.1</amount>
+                <scalingOperatorSymbol>-</scalingOperatorSymbol>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% psyfocus per second</label>
+                <amount>0.01</amount>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Bonus</scalingStyle>
+                <label>While sitting in assigned meditation spot, psyfocus gain and neural heat loss are increased by meditation strength of spot.</label>
+                <amount>0.01</amount>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_Psioniser</iconPath>
+        
+        <ability>THNMF_PsioniserToggleAbility</ability>
+        <categoryDef>THNMF_Psychic</categoryDef>
+        <description>Activated ability: Unlocks and redirects neural channels allowing the user to enter a meditative trance. In this trance, the user will very quickly dissipate heat and recover psyfocus. However, the user is completely unresponsive during this trance, and it takes quite some time to enter and awake from it. Casters in a psychic trance gain a significant power boost if they are in their meditation spot. While entranced casters can't walk, they are still capable of skipping themselves.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker_Psioniser</workerClass>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+</Defs>

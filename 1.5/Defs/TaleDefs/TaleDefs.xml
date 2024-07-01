@@ -1,0 +1,16 @@
+<Defs>
+    <TaleDef>
+        <defName>THNMF_SavedAnArchotech</defName>
+        <label>saved an archotech</label>
+        <taleClass>Tale_SinglePawn</taleClass>
+        <type>PermanentHistorical</type>
+        <baseInterest>20</baseInterest>
+        <rulePack>
+            <rulesStrings>
+                <li>tale_noun->[PAWN_nameDef] being gifted by an archotech.</li>
+                <li>desc_sentence->[PAWN_nameDef]'s eyes begin to gleam with a greenish glow.</li>
+                <li>tale_noun->[PAWN_nameDef] saving an archotech.</li>
+            </rulesStrings>
+        </rulePack>
+    </TaleDef>
+</Defs>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <NanomachineFoundry.NaniteDef>
+        <defName>THNMF_Mechanite</defName>
+        <label>mechanite</label>
+        <valuePerUnit>10</valuePerUnit>
+        <description>High-tech and versatile nanomachines that causes a relatively gentle demechanization shock when lost. An ancient pattern which is functionaly inferior to modern nanites, mechanites are still the most available form of nanite due to being produced by mechanoids by the billion.</description>
+        <tier>0</tier>
+        <shockHediff>THNMF_MechaniteShock</shockHediff>
+        <color>(179, 166, 143)</color>
+        <pipeNet>THNMF_MechaniteNet</pipeNet>
+        <spawnable>true</spawnable>
+        <colonistSpawnable>true</colonistSpawnable>
+        <spawnWeight>9</spawnWeight>
+        <categories>
+            <li>THNMF_Physical</li>
+            <li>THNMF_Psychic</li>
+            <li MayRequire="ludeon.rimworld.biotech">THNMF_Mechanitor</li>
+        </categories>
+    </NanomachineFoundry.NaniteDef>
+
+    
+    <NanomachineFoundry.NaniteDef>
+        <defName>THNMF_Luciferite</defName>
+        <label>luciferite</label>
+        <valuePerUnit>70</valuePerUnit>
+        <description>Top-of-the-line modern nanomachines, most commonly administered orally as luciferium. Luciferites far more controllable when injected directly. Luciferites' power comes from their perfect integration into the human nervous system, but this comes with the cost of being invariably fatal if the nanites ever leave the user's system. They increase physical capacity tremendously, but are incapable of improving psychic powers. Bloodborne luciferites do not leave the user's system naturally over time like ingested luciferium, but are very quickly lost when bleeding. A single papercut can be lethal for a user of bloodborne luciferites.</description>
+        <tier>2</tier>
+        <shockHediff>THNMF_LuciferiteShock</shockHediff>
+        <passiveHediff>THNMF_LuciferitePower</passiveHediff>
+        <color>(143, 26, 45)</color>
+        <pipeNet>THNMF_LuciferiteNet</pipeNet>
+        <renewable>false</renewable>
+        <absoluteLoss>true</absoluteLoss>
+        <spawnable>true</spawnable>
+        <categories>
+            <li>THNMF_Physical</li>
+        </categories>
+    </NanomachineFoundry.NaniteDef>
+
+    
+    <NanomachineFoundry.NaniteDef>
+        <defName>THNMF_Archite</defName>
+        <label>archite</label>
+        <valuePerUnit>200</valuePerUnit>
+        <description>Archotech-created nanomachines which replicate themselves in the bloodstream. Archite swarms possess sentience, and will never integrate into a host against their own unknowable will. Archite-laden blood is thick and tough like rubber but still flows at will, making the host incredibly difficult to cut and unable to bleed. While they are obedient to configuration, they will not allow you to reduce or increase their quantity in the bloodstream.</description>
+        <pawnReferrer>host</pawnReferrer>
+        <tier>3</tier>
+        <passiveHediff>THNMF_ArchitePower</passiveHediff>
+        <color>(92, 140, 58)</color>
+        <modifiable>false</modifiable>
+        <categories>
+            <li>THNMF_Physical</li>
+            <li>THNMF_Psychic</li>
+            <li MayRequire="ludeon.rimworld.biotech">THNMF_Mechanitor</li>
+            <li>THNMF_Archite</li>
+        </categories>
+    </NanomachineFoundry.NaniteDef>
+
+    
+    <NanomachineFoundry.NaniteDef MayRequire="ludeon.rimworld.anomaly">
+        <defName>THNMF_Bionanite</defName>
+        <label>bionanite</label>
+        <valuePerUnit>10</valuePerUnit>
+        <description>Corrupt archotech-created nanomachines. Users report not feeling like themselves. While the nanites mostly obey their configurations when modifying the host's body, they seem to take their own liberties with how they do so...</description>
+        <pawnReferrer>host</pawnReferrer>
+        <tier>1</tier>
+        <shockHediff>THNMF_BionaniteShock</shockHediff>
+        <passiveHediff>THNMF_BionanitePower</passiveHediff>
+        <color>(54, 34, 35)</color>
+        <pipeNet>THNMF_BionaniteNet</pipeNet>
+        <categories>
+            <li>THNMF_Void</li>
+            <li>THNMF_Psychic</li>
+        </categories>
+    </NanomachineFoundry.NaniteDef>
+
+    
+    <!--
+    <NanomachineFoundry.NaniteDef MayRequire="VanillaExpanded.VFEA">
+        <defName>THNMF_SuperNanites</defName>
+        <label>archite</label>
+        <description>Archotech-created nanomachines which replicate themselves in the bloodstream. Archite swarms possess sentience, and will never integrate into a host against their unknowable will. Archite-laden blood is thick and tough like rubber but still flows at will, making the host incredibly difficult to cut and unable to bleed.</description>
+        <tier>1</tier>
+        <shockHediff>THNMF_BionaniteShock</shockHediff>
+        <passiveHediff>THNMF_BionanitePower</passiveHediff>
+        <color>(92, 140, 58)</color>
+    </NanomachineFoundry.NaniteDef>-->
+
+
+    <!-- Test nanites -->
+    <!--<NanomachineFoundry.NaniteDef>
+        <defName>THNMF_Bungite</defName>
+        <label>bungite</label>
+        <description>Hamburgerization nanites.</description>
+        <pawnReferrer>hamburger</pawnReferrer>
+        <tier>2</tier>
+        <color>(92, 92, 0)</color>
+        <categories>
+            <li>THNMF_Physical</li>
+            <li>THNMF_Psychic</li>
+            <li MayRequire="ludeon.rimworld.biotech">THNMF_Mechanitor</li>
+            <li>THNMF_Archite</li>
+        </categories>
+    </NanomachineFoundry.NaniteDef>
+    <NanomachineFoundry.NaniteDef>
+        <defName>THNMF_Shungite</defName>
+        <label>shungite</label>
+        <description>Protects you from the COVID 5gs.</description>
+        <pawnReferrer>awoken</pawnReferrer>
+        <tier>2</tier>
+        <color>(151, 113, 163)</color>
+        <categories>
+            <li>THNMF_Physical</li>
+            <li>THNMF_Psychic</li>
+            <li MayRequire="ludeon.rimworld.biotech">THNMF_Mechanitor</li>
+            <li>THNMF_Archite</li>
+        </categories>
+    </NanomachineFoundry.NaniteDef>
+    <NanomachineFoundry.NaniteDef>
+        <defName>THNMF_Sungite</defName>
+        <label>sungite</label>
+        <description>The power of the sun in the palm of your... bloodstream.</description>
+        <pawnReferrer>user</pawnReferrer>
+        <tier>2</tier>
+        <color>(204, 160, 41)</color>
+        <categories>
+            <li>THNMF_Physical</li>
+            <li>THNMF_Psychic</li>
+            <li MayRequire="ludeon.rimworld.biotech">THNMF_Mechanitor</li>
+            <li>THNMF_Archite</li>
+        </categories>
+    </NanomachineFoundry.NaniteDef>-->
+
+
+</Defs>

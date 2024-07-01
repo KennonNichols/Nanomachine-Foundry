@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- Bases -->
+	<PipeSystem.PipeNetDef Name="NanitePipeNetBase" Abstract="True">
+		<transferAmount>100</transferAmount>
+		<convertAmount>10</convertAmount>
+		<noStorageAlert>true</noStorageAlert>
+		<designator>
+			<deconstructIconPath>UI/Gizmos/NanitePipes_Deconstruct</deconstructIconPath>
+			<designationCategoryDef>THNMF_PipeNetworks</designationCategoryDef>
+		</designator>
+	</PipeSystem.PipeNetDef>
+
+
+
+	<!-- Mechanites -->
+	<PipeSystem.PipeNetDef ParentName="NanitePipeNetBase">
+		<defName>THNMF_MechaniteNet</defName>
+		<resource>
+			<name>Mechanites</name>
+			<unit>l</unit>
+			<color>(179, 166, 143)</color>
+			<onlyShowStored>True</onlyShowStored>
+		</resource>
+		<pipeDefs>
+			<li>THNMF_MechanitePipe</li>
+		</pipeDefs>
+		<overlayOptions>
+			<overlayColor>(179, 166, 143)</overlayColor>
+		</overlayOptions>
+	</PipeSystem.PipeNetDef>
+
+
+    <ThingDef ParentName="BuildingBase">
+		<defName>THNMF_MechanitePipe</defName>
+		<label>mechanite pipe</label>
+		<description>Advanced nanite pipes specifically tuned to handle mechanites and isolate them from the mechhive's psychic field. Relatively cheap for a nanite pipe.</description>
+		<thingClass>PipeSystem.Building_Pipe</thingClass>
+		<category>Building</category>
+		<graphicData>
+		<texPath>Things/Building/Linked/MechanitePipes_Atlas</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<linkType>Basic</linkType>
+		<linkFlags>
+			<li>Custom7</li>
+		</linkFlags>
+		<damageData>
+			<rect>(0,0.35,1,0.3)</rect>
+		</damageData>
+		</graphicData>
+		<uiIconPath>Things/Building/Linked/MechanitePipes_MenuIcon</uiIconPath>
+		<uiIconScale>0.7</uiIconScale>
+		<building>
+		<ai_chillDestination>false</ai_chillDestination>
+		<isInert>true</isInert>
+		<isEdifice>false</isEdifice>
+		<blueprintGraphicData>
+			<texPath>Things/Building/Linked/Pipes_Blueprint_Atlas</texPath>
+		</blueprintGraphicData>
+		</building>
+		<drawerType>MapMeshOnly</drawerType>
+		<altitudeLayer>Conduits</altitudeLayer>
+		<passability>Standable</passability>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<statBases>
+		<MaxHitPoints>40</MaxHitPoints>
+		<WorkToBuild>70</WorkToBuild>
+		<Flammability>0.0</Flammability>
+		</statBases>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<costList>
+		<Steel>2</Steel>
+		<Silver>1</Silver>
+		</costList>
+		<comps>
+		<li Class="PipeSystem.CompProperties_Resource">
+			<pipeNet>THNMF_MechaniteNet</pipeNet>
+		</li>
+		</comps>
+		<placeWorkers>
+		<li>PipeSystem.PlaceWorker_Pipe</li>
+		</placeWorkers>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>THNMF_PipeNetworks</designationCategory>
+		<constructEffect>ConstructMetal</constructEffect>
+		<clearBuildingArea>false</clearBuildingArea>
+	</ThingDef>
+
+	<!-- Bionanites -->
+	<PipeSystem.PipeNetDef MayRequire="ludeon.rimworld.anomaly" ParentName="NanitePipeNetBase">
+		<defName>THNMF_BionaniteNet</defName>
+		<resource>
+			<name>Bionanites</name>
+			<unit>l</unit>
+			<color>(54, 34, 35)</color>
+			<onlyShowStored>True</onlyShowStored>
+		</resource>
+		<pipeDefs>
+			<li>THNMF_BionanitePipe</li>
+		</pipeDefs>
+		<overlayOptions>
+			<overlayColor>(54, 34, 35)</overlayColor>
+		</overlayOptions>
+	</PipeSystem.PipeNetDef>
+    <ThingDef ParentName="BuildingBase" MayRequire="ludeon.rimworld.anomaly">
+        <defName>THNMF_BionanitePipe</defName>
+        <label>bionanite pipe</label>
+        <description>Advanced nanite pipes specifically tuned to handle bionanites. Bionanites aggressively integrate any metal other than bioferrite, so it must be lined with bioferrite; extremely flammable.</description>
+        <thingClass>PipeSystem.Building_Pipe</thingClass>
+        <category>Building</category>
+        <graphicData>
+          <texPath>Things/Building/Linked/BionanitePipes_Atlas</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <linkType>Basic</linkType>
+          <linkFlags>
+            <li>Custom7</li>
+          </linkFlags>
+          <damageData>
+            <rect>(0,0.35,1,0.3)</rect>
+          </damageData>
+        </graphicData>
+        <uiIconPath>Things/Building/Linked/BionanitePipes_MenuIcon</uiIconPath>
+        <uiIconScale>0.7</uiIconScale>
+        <building>
+          <ai_chillDestination>false</ai_chillDestination>
+          <isInert>true</isInert>
+          <isEdifice>false</isEdifice>
+          <blueprintGraphicData>
+            <texPath>Things/Building/Linked/Pipes_Blueprint_Atlas</texPath>
+          </blueprintGraphicData>
+        </building>
+        <drawerType>MapMeshOnly</drawerType>
+        <altitudeLayer>Conduits</altitudeLayer>
+        <passability>Standable</passability>
+        <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+        <statBases>
+          <MaxHitPoints>40</MaxHitPoints>
+          <WorkToBuild>70</WorkToBuild>
+          <Flammability>1.0</Flammability>
+        </statBases>
+        <placingDraggableDimensions>1</placingDraggableDimensions>
+        <costList>
+          <Steel>1</Steel>
+          <Bioferrite>1</Bioferrite>
+        </costList>
+        <comps>
+          <li Class="PipeSystem.CompProperties_Resource">
+            <pipeNet>THNMF_BionaniteNet</pipeNet>
+          </li>
+        </comps>
+        <placeWorkers>
+          <li>PipeSystem.PlaceWorker_Pipe</li>
+        </placeWorkers>
+        <rotatable>false</rotatable>
+        <selectable>true</selectable>
+        <neverMultiSelect>true</neverMultiSelect>
+        <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <designationCategory>THNMF_PipeNetworks</designationCategory>
+        <constructEffect>ConstructMetal</constructEffect>
+        <clearBuildingArea>false</clearBuildingArea>
+      </ThingDef>
+
+
+	<!-- Luciferites -->
+	<PipeSystem.PipeNetDef ParentName="NanitePipeNetBase">
+		<defName>THNMF_LuciferiteNet</defName>
+		<resource>
+			<name>Luciferites</name>
+			<unit>l</unit>
+			<color>(143, 26, 45)</color>
+			<onlyShowStored>True</onlyShowStored>
+		</resource>
+		<pipeDefs>
+			<li>THNMF_LuciferitePipe</li>
+		</pipeDefs>
+		<overlayOptions>
+			<overlayColor>(143, 26, 45)</overlayColor>
+		</overlayOptions>
+	</PipeSystem.PipeNetDef>
+
+
+
+
+	<ThingDef ParentName="BuildingBase">
+        <defName>THNMF_LuciferitePipe</defName>
+        <label>luciferite pipe</label>
+        <description>Advanced nanite pipes capable of carrying the ludicrously expensive luciferites</description>
+        <thingClass>PipeSystem.Building_Pipe</thingClass>
+        <category>Building</category>
+        <graphicData>
+          <texPath>Things/Building/Linked/LuciferitePipes_Atlas</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <linkType>Basic</linkType>
+          <linkFlags>
+            <li>Custom7</li>
+          </linkFlags>
+          <damageData>
+            <rect>(0,0.35,1,0.3)</rect>
+          </damageData>
+        </graphicData>
+        <uiIconPath>Things/Building/Linked/LuciferitePipes_MenuIcon</uiIconPath>
+        <uiIconScale>0.7</uiIconScale>
+        <building>
+          <ai_chillDestination>false</ai_chillDestination>
+          <isInert>true</isInert>
+          <isEdifice>false</isEdifice>
+          <blueprintGraphicData>
+            <texPath>Things/Building/Linked/Pipes_Blueprint_Atlas</texPath>
+          </blueprintGraphicData>
+        </building>
+        <drawerType>MapMeshOnly</drawerType>
+        <altitudeLayer>Conduits</altitudeLayer>
+        <passability>Standable</passability>
+        <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+        <statBases>
+          <MaxHitPoints>40</MaxHitPoints>
+          <WorkToBuild>70</WorkToBuild>
+          <Flammability>0.0</Flammability>
+        </statBases>
+        <placingDraggableDimensions>1</placingDraggableDimensions>
+        <costList>
+          <Steel>2</Steel>
+          <Gold>1</Gold>
+        </costList>
+        <comps>
+          <li Class="PipeSystem.CompProperties_Resource">
+            <pipeNet>THNMF_LuciferiteNet</pipeNet>
+          </li>
+        </comps>
+        <placeWorkers>
+          <li>PipeSystem.PlaceWorker_Pipe</li>
+        </placeWorkers>
+        <rotatable>false</rotatable>
+        <selectable>true</selectable>
+        <neverMultiSelect>true</neverMultiSelect>
+        <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <designationCategory>THNMF_PipeNetworks</designationCategory>
+        <constructEffect>ConstructMetal</constructEffect>
+        <clearBuildingArea>false</clearBuildingArea>
+      </ThingDef>
+
+
+</Defs>

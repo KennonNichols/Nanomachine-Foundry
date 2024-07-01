@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+    <THNMF.Config_RangeMultiplier>Range multiplier: {0}</THNMF.Config_RangeMultiplier>
+    <THNMF.Config_HealingTimeMultiplier>Healing time multiplier: {0}</THNMF.Config_HealingTimeMultiplier>
+    <THNMF.Config_TendQualityMultiplier>Tend quality multiplier: {0}</THNMF.Config_TendQualityMultiplier>
+    <THNMF.Config_TendChanceMultiplier>Tend chance multiplier: {0}</THNMF.Config_TendChanceMultiplier>
+    <THNMF.Config_PsychicComaEnabled>Psychic coma enabled?</THNMF.Config_PsychicComaEnabled>
+    <THNMF.Config_PsychicComaEnabledDescription>Whether or not the pawn will enter a psychic coma when the trance is interrupted by a mental break or being downed.</THNMF.Config_PsychicComaEnabledDescription>
+    <THNMF.Config_CacheDuration>Cache duration: {0}</THNMF.Config_CacheDuration>
+
+    <THNMF.Config_MechanizationAge>Mechanization age: {0}</THNMF.Config_MechanizationAge>
+    <THNMF.Config_MechanizationAgeDescription>The minimum age for a pawn to mechanize = [this value] * [pawn's adult age].</THNMF.Config_MechanizationAgeDescription>
+    <THNMF.Config_MechanizationAgingMultiplier>Mechanization aging speed: {0}</THNMF.Config_MechanizationAgingMultiplier>
+    <THNMF.Config_MechanizationAgingMultiplierDescription>The rate at which pawns age while undergoing mechanization.</THNMF.Config_MechanizationAgingMultiplierDescription>
+
+</LanguageData>

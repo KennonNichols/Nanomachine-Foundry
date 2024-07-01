@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!--Physical-->
+
+    <NanomachineFoundry.NaniteOperationDef>
+        <defName>THNMF_PurgePathogens</defName>
+        <label>purge pathogens</label>
+        <tabType>NanomachineFoundry.ITab_NaniteOperation</tabType>
+        <description>Removes all infections, but leaves the user's immune and digestive system weakened for a while.</description>
+        <categoryDef>THNMF_Physical</categoryDef>
+        <workerClass>NanomachineFoundry.AdministrationWorkers.PurgePathogensWorker</workerClass>
+        <iconPath>UI/Administrations/Icon_PurgePathogens</iconPath>
+        <naniteCost>100</naniteCost>
+        <researchPrerequisites>
+            <li>THNMF_HealthSupport</li>
+        </researchPrerequisites>
+        <operationDurationTicks>15000</operationDurationTicks>
+    </NanomachineFoundry.NaniteOperationDef>
+
+    <!--Psychic-->
+
+    <NanomachineFoundry.NaniteOperationDef>
+        <defName>THNMF_NeurorewirePower</defName>
+        <label>neurorewire-power</label>
+        <tabType>NanomachineFoundry.ITab_NaniteOperation</tabType>
+        <description>User gains major passion in melee and shooting, but become incapable of all other skills. This also enables those skills regardless of traits, genes, or backstory. Irreversible.</description>
+        <categoryDef>THNMF_Psychic</categoryDef>
+        <workerClass>NanomachineFoundry.AdministrationWorkers.NeurorewirePowerWorker</workerClass>
+        <iconPath>UI/Administrations/Icon_NeurorewirePower</iconPath>
+        <naniteCost>60</naniteCost>
+        <researchPrerequisites>
+            <li>THNMF_Neurorewiring</li>
+        </researchPrerequisites>
+        <operationDurationTicks>240000</operationDurationTicks>
+    </NanomachineFoundry.NaniteOperationDef>
+
+    <NanomachineFoundry.NaniteOperationDef>
+        <defName>THNMF_NeurorewireCreativity</defName>
+        <label>neurorewire-creativity</label>
+        <tabType>NanomachineFoundry.ITab_NaniteOperation</tabType>
+        <description>User gains major passion in construction, mining, crafting, cooking, and artistic, but become incapable of all other skills. This also enables those skills regardless of traits, genes, or backstory. Irreversible.</description>
+        <categoryDef>THNMF_Psychic</categoryDef>
+        <workerClass>NanomachineFoundry.AdministrationWorkers.NeurorewireCreativityWorker</workerClass>
+        <iconPath>UI/Administrations/Icon_NeurorewireCreativity</iconPath>
+        <naniteCost>60</naniteCost>
+        <researchPrerequisites>
+            <li>THNMF_Neurorewiring</li>
+        </researchPrerequisites>
+        <operationDurationTicks>240000</operationDurationTicks>
+    </NanomachineFoundry.NaniteOperationDef>
+
+    <NanomachineFoundry.NaniteOperationDef>
+        <defName>THNMF_NeurorewireElegance</defName>
+        <label>neurorewire-elegance</label>
+        <tabType>NanomachineFoundry.ITab_NaniteOperation</tabType>
+        <description>User gains major passion in intelligence, medical, social, and plants, but become incapable of all other skills. This also enables those skills regardless of traits, genes, or backstory. Irreversible.</description>
+        <categoryDef>THNMF_Psychic</categoryDef>
+        <workerClass>NanomachineFoundry.AdministrationWorkers.NeurorewireEleganceWorker</workerClass>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <naniteCost>60</naniteCost>
+        <researchPrerequisites>
+            <li>THNMF_Neurorewiring</li>
+        </researchPrerequisites>
+        <operationDurationTicks>240000</operationDurationTicks>
+    </NanomachineFoundry.NaniteOperationDef>
+
+    <NanomachineFoundry.NaniteOperationDef>
+        <defName>THNMF_NeurosanitizeDestroyDeviance</defName>
+        <label>neurosanitize: destroy deviance</label>
+        <tabType>NanomachineFoundry.ITab_NaniteOperation</tabType>
+        <description>Remove a trait permanently, but guarantees the user recieves minor brain damage.</description>
+        <categoryDef>THNMF_Psychic</categoryDef>
+        <workerClass>NanomachineFoundry.AdministrationWorkers.NeurosanitizeDestroyDevianceWorker</workerClass>
+        <iconPath>UI/Administrations/Icon_NeurosanitizeDestroyDeviance</iconPath>
+        <naniteCost>30</naniteCost>
+        <researchPrerequisites>
+            <li>THNMF_Neurorewiring</li>
+        </researchPrerequisites>
+        <operationDurationTicks>45000</operationDurationTicks>
+    </NanomachineFoundry.NaniteOperationDef>
+
+    <!--Void-->
+
+    <NanomachineFoundry.NaniteOperationDef>
+        <defName>THNMF_MetalhorrorInoculation</defName>
+        <label>metalhorror inoculation</label>
+        <tabType>NanomachineFoundry.ITab_NaniteOperation</tabType>
+        <description>Adds a tiny seed of metalhorror nanites. If the pawn is already infected, they will undergo a violent reaction as the two strains of metalhorror clash for control of the user's system. The intentionally implanted metalhorror will eventually overpower the other, and then kill itself, leaving the pawn uninfected. Be warned, however, as implanting a metalhorror into an uninfected pawn guarantees they become infected.</description>
+        <categoryDef>THNMF_Void</categoryDef>
+        <workerClass>NanomachineFoundry.AdministrationWorkers.MetalhorrorInoculationWorker</workerClass>
+        <iconPath>UI/Administrations/Icon_MetalhorrorInoculation</iconPath>
+        <naniteCost>40</naniteCost>
+        <researchPrerequisites>
+            <li>THNMF_HealthSupport</li>
+        </researchPrerequisites>
+        <operationDurationTicks>15000</operationDurationTicks>
+    </NanomachineFoundry.NaniteOperationDef>
+
+    <!--Mechanitor-->
+
+    <NanomachineFoundry.NaniteOperationDef>
+        <defName>THNMF_SeverMechlink</defName>
+        <label>sever mechlink</label>
+        <tabType>NanomachineFoundry.ITab_NaniteOperation</tabType>
+        <description>Installs mechanites to gently perform a days-long operation to sever mechlink connection to the brain. After a short installation time the pawn can leave the operator, at which points mechanites will slowly release the mechlink. After the link has been severed the mechlink will simply work its way out of the pawn's neck and fall out, safely able to be installed again.</description>
+        <categoryDef>THNMF_Mechanitor</categoryDef>
+        <workerClass>NanomachineFoundry.AdministrationWorkers.SeverMechlinkWorker</workerClass>
+        <iconPath>UI/Administrations/Icon_SeverMechlink</iconPath>
+        <naniteCost>75</naniteCost>
+        <researchPrerequisites>
+            <li>THNMF_HealthSupport</li>
+        </researchPrerequisites>
+        <operationDurationTicks>5000</operationDurationTicks>
+    </NanomachineFoundry.NaniteOperationDef>
+
+    <!--Reconfigure-->
+
+    <NanomachineFoundry.NaniteOperationDef>
+        <defName>THNMF_Reconfigure</defName>
+        <label>reconfigure</label>
+        <description>Reconfigure nanite levels.</description>
+        <workerClass>NanomachineFoundry.AdministrationWorkers.ReconfigureWorker</workerClass>
+        <!-- Dummy icon -->
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <researchPrerequisites>
+            <li>THNMF_NaniteAdmin</li>
+        </researchPrerequisites>
+        <operationDurationTicks>15000</operationDurationTicks>
+    </NanomachineFoundry.NaniteOperationDef>
+
+    <!--Nanite enabling-->
+
+    <NanomachineFoundry.NaniteOperationDef Name="EnableOperationBase" Abstract="True">
+        <tabType>NanomachineFoundry.ITab_NaniteOperation</tabType>
+        <researchPrerequisites>
+            <li>THNMF_NaniteAdmin</li>
+        </researchPrerequisites>
+        <operationDurationTicks>15000</operationDurationTicks>
+    </NanomachineFoundry.NaniteOperationDef>
+
+    <NanomachineFoundry.NaniteOperationDef ParentName="EnableOperationBase">
+        <defName>THNMF_EnableMechanites</defName>
+        <label>enable mechanites</label>
+        <description>Allow the user to accept mechanites.\n\nHigh-tech and versatile nanomachines that causes a relatively gentle demechanization shock when lost. An ancient pattern which is functionaly inferior to modern nanites, mechanites are still the most available form of nanites on rimworlds due to being produced by the billion by local mechhives.</description>
+        <workerClass>NanomachineFoundry.AdministrationWorkers.EnableMechanitesWorker</workerClass>
+        <iconPath>UI/Administrations/Icon_EnableMechanites</iconPath>
+    </NanomachineFoundry.NaniteOperationDef>
+
+    <NanomachineFoundry.NaniteOperationDef ParentName="EnableOperationBase">
+        <defName>THNMF_EnableLuciferites</defName>
+        <label>enable luciferites</label>
+        <description>Allow the user to accept luciferites.\n\nTop-of-the-line modern nanomachines, most commonly administered orally as luciferium. Yhe nanomachines are far more controllable when injected directly. Luciferites' power comes from their perfect integration into the human nervous system, but this comes with the cost of being invariably fatal if the nanites ever leave the user's system. They increase physical capacity tremendously, but are incapable of improving psychic powers. Bloodborne luciferites do not leave the user's system naturally over time like ingested luciferium, but are very quickly lost when bleeding. A single papercut can be lethal for a user of bloodborne luciferites.</description>
+        <workerClass>NanomachineFoundry.AdministrationWorkers.EnableLuciferitesWorker</workerClass>
+        <iconPath>UI/Administrations/Icon_EnableLuciferites</iconPath>
+    </NanomachineFoundry.NaniteOperationDef>
+
+    <NanomachineFoundry.NaniteOperationDef ParentName="EnableOperationBase">
+        <defName>THNMF_EnableBionanites</defName>
+        <label>enable bionanites</label>
+        <description>Allow the user to accept bionanites.\n\nCorrupt archotech-created nanomachines. Users report not feeling like themselves, or having strange urges. While the nanites mostly obey their configurations when modifying the host's body, they seem to take their own liberties with how they do so...</description>
+        <workerClass>NanomachineFoundry.AdministrationWorkers.EnableBionanitesWorker</workerClass>
+        <iconPath>UI/Administrations/Icon_EnableBionanites</iconPath>
+    </NanomachineFoundry.NaniteOperationDef>
+
+</Defs>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <JobDef>
+        <defName>THNMF_EnterNaniteInjector</defName>
+        <driverClass>NanomachineFoundry.JobDriver_EnterNaniteInjector</driverClass>
+        <reportString>entering nanite injector.</reportString>
+        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    </JobDef>
+
+    <JobDef>
+        <defName>THNMF_RemoveMechlinkFromSelf</defName>
+        <reportString>removing mechlink.</reportString>
+        <driverClass>NanomachineFoundry.JobDriver_RemoveMechlinkFromSelf</driverClass>
+    </JobDef>
+
+    <JobDef>
+		<defName>THNMF_CarryToMechaniteBreeder</defName>
+		<driverClass>NanomachineFoundry.NaniteProduction.JobDriver_CarryToMechaniteBreeder</driverClass>
+		<reportString>carrying TargetA to breeding platform.</reportString>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+
+    <JobDef>
+        <defName>THNMF_StabilizeCorruptArchonexusCore</defName>
+        <driverClass>NanomachineFoundry.AssistingArchotechQuest.JobDriver_StabilizeCorruptArchonexusCore</driverClass>
+        <reportString>stabilizing archotech nexus.</reportString>
+        <casualInterruptible>true</casualInterruptible>
+    </JobDef>
+
+    <JobDef>
+        <defName>THNMF_AccessArchotechNode</defName>
+        <driverClass>NanomachineFoundry.AssistingArchotechQuest.JobDriver_AccessArchotechNode</driverClass>
+        <reportString>accessing TargetA.</reportString>
+        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    </JobDef>
+
+
+</Defs>

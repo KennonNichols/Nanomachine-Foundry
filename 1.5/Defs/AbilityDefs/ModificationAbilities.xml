@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <AbilityDef Name="THNMF_PunchBase" ParentName="AbilityTouchBase" Abstract="True">
+        <aiCanUse>true</aiCanUse>
+        <cooldownTicksRange>1800</cooldownTicksRange> <!-- 30 seconds -->
+        <showPsycastEffects>false</showPsycastEffects>
+        <stunTargetWhileCasting>false</stunTargetWhileCasting>
+        <moteOffsetAmountTowardsTarget>0.5</moteOffsetAmountTowardsTarget>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
+        <hostile>true</hostile>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+        <verbProperties>
+            <verbClass>Verb_CastAbilityTouch</verbClass>
+            <drawAimPie>true</drawAimPie>
+            <range>-1</range>
+            <warmupTime>1</warmupTime>
+            <targetParams>
+                <canTargetSelf>false</canTargetSelf>
+                <canTargetMechs>true</canTargetMechs>
+                <canTargetBuildings>true</canTargetBuildings>
+            </targetParams>
+        </verbProperties>
+    </AbilityDef>
+
+    <!-- Siegebreaker punch -->
+    <AbilityDef ParentName="THNMF_PunchBase">
+        <defName>THNMF_SiegebreakerPunchAbility</defName>
+        <label>siegebreaker punch</label>
+        <description>Harden the user's fist and send a massive muscular impulse allowing the pawn to throw an unnaturally powerful punch. Siegebreaker punches can split people in half, crumble stone walls like chalk, or smash mechanoids into pieces.</description>
+        <iconPath>UI/Administrations/Modifications/Modicon_SiegebreakerPunch</iconPath>
+        <comps>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationAbilities.CompProperties_SiegebreakerPunch" />
+        </comps>
+    </AbilityDef>
+
+    <!-- Annihilation punch -->
+    <AbilityDef ParentName="THNMF_PunchBase">
+        <defName>THNMF_AnnihilationPunchAbility</defName>
+        <label>annihilation punch</label>
+        <description>Obliterate something.</description>
+        <iconPath>UI/Administrations/Modifications/Modicon_AnnihilationPunch</iconPath>
+        <comps>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationAbilities.CompProperties_AnnihilationPunch"/>
+        </comps>
+    </AbilityDef>
+
+
+    <!--Eject nanites-->
+
+    <ThingDef>
+        <defName>Proj_Cloud_Ability</defName>
+        <label>nanite cloud</label>
+        <thingClass>NanomachineFoundry.NaniteModifications.ModificationAbilities.Projectile_NaniteCloudLaunch</thingClass>
+        <category>Projectile</category>
+        <tickerType>Normal</tickerType>
+        <altitudeLayer>Projectile</altitudeLayer>
+        <useHitPoints>False</useHitPoints>
+        <neverMultiSelect>True</neverMultiSelect>
+        <graphicData>
+          <texPath>Things/Projectile/FoamLong/Foam</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>0.85</drawSize>
+        </graphicData>
+        <projectile>
+          <damageDef>Extinguish</damageDef>
+          <speed>10</speed>
+          <damageAmountBase>9999</damageAmountBase>
+          <arcHeightFactor>0.4</arcHeightFactor>
+          <armorPenetrationBase>0.8</armorPenetrationBase>
+          <stoppingPower>1</stoppingPower>
+          <shadowSize>0</shadowSize>
+          <filth>Filth_FireFoam</filth>
+          <filthCount>1</filthCount>
+          <landedEffecter>ExtinguisherPuffSmall</landedEffecter>
+          <numExtraHitCells>4</numExtraHitCells>
+          <soundImpact>Foam_Impact</soundImpact>
+        </projectile>
+    </ThingDef>
+
+    
+    <AbilityDef Abstract="True" Name="NaniteCloudBase">
+        <aiCanUse>true</aiCanUse>
+        <showPsycastEffects>false</showPsycastEffects>
+        <stunTargetWhileCasting>false</stunTargetWhileCasting>
+        <moteOffsetAmountTowardsTarget>0.5</moteOffsetAmountTowardsTarget>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
+        <hostile>true</hostile>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    </AbilityDef>
+
+
+    <AbilityDef ParentName="NaniteCloudBase">
+        <defName>THNMF_EjectNanitesAbility</defName>
+        <label>eject nanites</label>
+        <description>Spew a cloud of intelligent flesh-decaying nanites.</description>
+        <iconPath>UI/Administrations/Modifications/Modicon_EjectNanites</iconPath>
+        <cooldownTicksRange>1800</cooldownTicksRange> <!-- 30 seconds -->
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <range>10</range>
+            <warmupTime>1</warmupTime>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationAbilities.CompProperties_EjectNanites">
+                <projectileDef>Proj_Cloud_Ability</projectileDef>
+                <sprayEffecter>FoamSpray_Directional</sprayEffecter>
+                <naniteCloudDef>THNMF_NaniteCloud</naniteCloudDef>
+                <inflictionHediff>THNMF_DecayNaniteInfection</inflictionHediff>
+                <modification>THNMF_EjectNanites</modification>
+            </li>
+        </comps>
+    </AbilityDef>
+
+
+    <AbilityDef ParentName="NaniteCloudBase">
+        <defName>THNMF_AtomizationMistAbility</defName>
+        <label>atomization mist</label>
+        <description>Breathe a cloud of intelligent archites capable of seeking hostiles and dissolving their nervous system.</description>
+        <iconPath>UI/Administrations/Modifications/Modicon_AtomizationMist</iconPath>
+        <cooldownTicksRange>60</cooldownTicksRange> <!-- 1 second -->
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <range>15</range>
+            <warmupTime>1</warmupTime>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationAbilities.CompProperties_AtomizationMist">
+                <projectileDef>Proj_Cloud_Ability</projectileDef>
+                <sprayEffecter>FoamSpray_Directional</sprayEffecter>
+                <naniteCloudDef>THNMF_LivingNaniteCloud</naniteCloudDef>
+                <inflictionHediff>THNMF_DecayArchiteInfection</inflictionHediff>
+                <modification>THNMF_AtomizationMist</modification>
+            </li>
+        </comps>
+    </AbilityDef>
+
+
+    <AbilityDef ParentName="NaniteCloudBase">
+        <defName>THNMF_RotcloudAbility</defName>
+        <label>rotcloud</label>
+        <description>Spew a cloud of mindless, flammable, flesh-rotting nanites.</description>
+        <iconPath>UI/Abilities/UnnaturalHealing</iconPath>
+        <cooldownTicksRange>1800</cooldownTicksRange> <!-- 30 seconds -->
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <range>9</range>
+            <warmupTime>1</warmupTime>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationAbilities.CompProperties_Rotcloud">
+                <projectileDef>Proj_Cloud_Ability</projectileDef>
+                <sprayEffecter>FoamSpray_Directional</sprayEffecter>
+                <naniteCloudDef>THNMF_FlammableNaniteCloud</naniteCloudDef>
+                <inflictionHediff>THNMF_DecayNaniteInfection</inflictionHediff>
+                <modification>THNMF_Rotcloud</modification>
+                <isIntelligent>false</isIntelligent>
+                <spendingCausesShock>true</spendingCausesShock>
+            </li>
+        </comps>
+    </AbilityDef>
+
+
+
+
+
+
+
+    <AbilityDef>
+        <defName>THNMF_InsanityPulseAbility</defName>
+        <label>insanity pulse</label>
+        <description>Drive a target insane.</description>
+        <aiCanUse>true</aiCanUse>
+        <iconPath>UI/Administrations/Modifications/Modicon_InsanityPulse</iconPath>
+        <cooldownTicksRange>1800</cooldownTicksRange> <!-- 30 seconds -->
+        <showPsycastEffects>false</showPsycastEffects>
+        <stunTargetWhileCasting>false</stunTargetWhileCasting>
+        <moteOffsetAmountTowardsTarget>0.5</moteOffsetAmountTowardsTarget>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
+        <hostile>true</hostile>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <label>insanity pulse</label>
+            <hasStandardCommand>true</hasStandardCommand>
+            <targetable>true</targetable>
+            <onlyManualCast>True</onlyManualCast>
+            <range>40</range>
+            <warmupTime>2.4</warmupTime>
+            <invalidTargetPawn>psychic insanity immune</invalidTargetPawn>
+            <targetParams>
+              <canTargetBuildings>false</canTargetBuildings>
+              <neverTargetIncapacitated>true</neverTargetIncapacitated>
+            </targetParams>
+            <soundCast>PsychicInsanityLanceCast</soundCast>
+            <soundAiming>PsychicArtifactWarmupSustained</soundAiming>
+        </verbProperties>
+        <comps>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationAbilities.CompProperties_InsanityPulse"/>
+        </comps>
+    </AbilityDef>
+
+
+
+
+    <AbilityDef>
+        <defName>THNMF_MetalMawToggleAbility</defName>
+        <label>metal maw</label>
+        <description>Toggle the metal maw.</description>
+        <aiCanUse>true</aiCanUse>
+        <iconPath>UI/Administrations/Modifications/Modicon_MetalMaw</iconPath>
+        <cooldownTicksRange>0</cooldownTicksRange> <!-- no cd -->
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <drawAimPie>false</drawAimPie>
+            <warmupTime>3</warmupTime>
+            <requireLineOfSight>false</requireLineOfSight>
+            <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+            <soundCast>Pawn_Ghoul_Frenzy</soundCast>
+            <targetable>false</targetable>
+            <targetParams>
+              <canTargetSelf>true</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationAbilities.CompProperties_MetalMawToggle"/>
+        </comps>
+    </AbilityDef>
+
+
+
+
+    <AbilityDef ParentName="NaniteCloudBase">
+        <defName>THNMF_ConflagrationAbility</defName>
+        <label>conflagration</label>
+        <description>Explode into a ball of fire.</description>
+        <aiCanUse>true</aiCanUse>
+        <iconPath>UI/Administrations/Modifications/Modicon_Conflagration</iconPath>
+        <cooldownTicksRange>3600</cooldownTicksRange> <!-- 60 seconds -->
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <drawAimPie>false</drawAimPie>
+            <warmupTime>3</warmupTime>
+            <requireLineOfSight>false</requireLineOfSight>
+            <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+            <targetable>false</targetable>
+            <targetParams>
+              <canTargetSelf>true</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <warmupStartSound>FireSpew_Warmup</warmupStartSound>
+        <comps>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationAbilities.CompProperties_Conflagration"/>
+        </comps>
+    </AbilityDef>
+
+
+
+
+    <AbilityDef>
+        <defName>THNMF_PsioniserToggleAbility</defName>
+        <label>psychic trance</label>
+        <description>Enter or exit the psychic trance.</description>
+        <iconPath>UI/Administrations/Modifications/Modicon_Psioniser</iconPath>
+        <cooldownTicksRange>0</cooldownTicksRange> <!-- no cd -->
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <warmupEffecter MayRequire="ludeon.rimworld.biotech">ApocrionAoeWarmup</warmupEffecter>
+        <warmupSound>Pawn_Revenant_Hypnotize</warmupSound>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <drawAimPie>false</drawAimPie>
+            <warmupTime>30</warmupTime>
+            <requireLineOfSight>false</requireLineOfSight>
+            <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+            <targetable>false</targetable>
+            <targetParams>
+              <canTargetSelf>true</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationAbilities.CompProperties_PsioniserToggle"/>
+        </comps>
+    </AbilityDef>
+
+
+    <AbilityDef ParentName="AbilityTouchBase" Name="HostileMechTouchBase" Abstract="True">
+        <cooldownTicksRange>2500</cooldownTicksRange>
+        <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+        <showPsycastEffects>false</showPsycastEffects>
+        <stunTargetWhileCasting>false</stunTargetWhileCasting>
+        <moteOffsetAmountTowardsTarget>0.5</moteOffsetAmountTowardsTarget>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <hostile>true</hostile>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <verbProperties>
+            <verbClass>Verb_CastAbilityTouch</verbClass>
+            <drawAimPie>true</drawAimPie>
+            <range>-1</range>
+            <warmupTime>1</warmupTime>
+            <targetParams>
+                <canTargetSelf>false</canTargetSelf>
+                <canTargetMechs>true</canTargetMechs>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+            </targetParams>
+        </verbProperties>
+    </AbilityDef>
+
+    <AbilityDef ParentName="HostileMechTouchBase">
+        <defName>THNMF_DismantlePulseAbility</defName>
+        <label>dismantle pulse</label>
+        <description>Dismantle a mechanoid.</description>
+        <iconPath>UI/Administrations/Modifications/Modicon_DismantlePulse</iconPath>
+        <comps>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationAbilities.CompProperties_DismantlePulse" />
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="HostileMechTouchBase">
+        <defName>THNMF_CommandeerAbility</defName>
+        <label>commandeer</label>
+        <description>Commandeer a mechanoid.</description>
+        <iconPath>UI/Administrations/Modifications/Modicon_Commandeer</iconPath>
+        <comps>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationAbilities.CompProperties_Commandeer" />
+        </comps>
+    </AbilityDef>
+
+
+
+
+
+    <AbilityDef>
+        <defName>THNMF_UltraclockAbility</defName>
+        <label>ultraclock</label>
+        <description>Ultraclock a friendly mechanoid.</description>
+        <iconPath>UI/Administrations/Modifications/Modicon_Ultraclock</iconPath>
+        <cooldownTicksRange>1800</cooldownTicksRange> <!-- 30 seconds -->
+        <showPsycastEffects>false</showPsycastEffects>
+        <stunTargetWhileCasting>false</stunTargetWhileCasting>
+        <moteOffsetAmountTowardsTarget>0.5</moteOffsetAmountTowardsTarget>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
+        <hostile>false</hostile>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <label>ultraclock</label>
+            <hasStandardCommand>true</hasStandardCommand>
+            <targetable>true</targetable>
+            <onlyManualCast>True</onlyManualCast>
+            <range>40</range>
+            <warmupTime>2.4</warmupTime>
+            <targetParams>
+              <canTargetBuildings>false</canTargetBuildings>
+              <neverTargetIncapacitated>true</neverTargetIncapacitated>
+              <canTargetMechs>true</canTargetMechs>
+            </targetParams>
+            <soundCast>PsychicInsanityLanceCast</soundCast>
+            <soundAiming>PsychicArtifactWarmupSustained</soundAiming>
+        </verbProperties>
+        <comps>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationAbilities.CompProperties_Ultraclock"/>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>THNMF_MechanoidLeechAbility</defName>
+        <label>mechanoid leech</label>
+        <description>Forcibly leech mechanites from a hostile mechanoid.</description>
+        <iconPath>UI/Administrations/Modifications/Modicon_MechanoidLeech</iconPath>
+        <cooldownTicksRange>900</cooldownTicksRange> <!-- 15 seconds -->
+        <showPsycastEffects>false</showPsycastEffects>
+        <stunTargetWhileCasting>false</stunTargetWhileCasting>
+        <moteOffsetAmountTowardsTarget>0.5</moteOffsetAmountTowardsTarget>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
+        <hostile>true</hostile>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <label>mechanoid leech</label>
+            <hasStandardCommand>true</hasStandardCommand>
+            <targetable>true</targetable>
+            <onlyManualCast>True</onlyManualCast>
+            <range>20</range>
+            <warmupTime>2.4</warmupTime>
+            <targetParams>
+              <canTargetBuildings>false</canTargetBuildings>
+              <neverTargetIncapacitated>true</neverTargetIncapacitated>
+              <canTargetMechs>true</canTargetMechs>
+            </targetParams>
+            <soundCast>PsychicInsanityLanceCast</soundCast>
+            <soundAiming>PsychicArtifactWarmupSustained</soundAiming>
+        </verbProperties>
+        <comps>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationAbilities.CompProperties_MechanoidLeech">
+                <shockHediff>THNMF_MechanoidShock</shockHediff>
+                <foreignNaniteHediff>THNMF_HostileNanites</foreignNaniteHediff>
+            </li>
+        </comps>
+    </AbilityDef>
+
+
+
+</Defs>

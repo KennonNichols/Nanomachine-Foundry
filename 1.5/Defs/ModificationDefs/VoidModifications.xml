@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef MayRequire="ludeon.rimworld.anomaly">
+        <defName>THNMF_Rotcloud</defName>
+        <label>rotcloud</label>
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Bonus</scalingStyle>
+                <label>9 tile range</label>
+                <amount>0</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0} square units area</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>4</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0} second duration</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>1.5</amount>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_Rotcloud</iconPath>
+
+        
+        <ability>THNMF_RotcloudAbility</ability>
+        <categoryDef>THNMF_Void</categoryDef>
+        <description>Activated ability: Purge the entire bionanite population allocated to the skill into a cloud that aggressively rots all biological matter. The cloud of nanites will destroy all living things within in it, and can be ignited to cause a violent detonation. The sudden loss of nanite population causes minor demechanization shock.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker</workerClass>
+        <ticker>false</ticker>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef MayRequire="ludeon.rimworld.anomaly">
+        <defName>THNMF_MetalMaw</defName>
+        <label>metal maw</label>
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>LinearWithBase</scalingStyle>
+                <baseValue>10</baseValue>
+                <label>{0} bite damage</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>2</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>LinearWithBase</scalingStyle>
+                <baseValue>6</baseValue>
+                <label>{0} average seconds between bite</label>
+                <amount>-0.1</amount>
+            </li>
+
+
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0} seconds of regeneration after eating limb. Multiplied by hp of limb.</label>
+                <amount>.1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0} bite armor penetration</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>0.1</amount>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_MetalMaw</iconPath>
+
+        
+        <ability>THNMF_MetalMawToggleAbility</ability>
+        <categoryDef>THNMF_Void</categoryDef>
+        <description>Activated ability: Rapidly grows teeth and splits open the jaw, giving the host a giant mouth of razor-sharp teeth. The host will automatically use the powerful biting attack granted by the maw, and even restore food when removing a body part. If their stomach is full, the host will use the meat to regenerate health rapidly. Note that the host will still be upset by consuming human meat this way unless they have been inhumanized. The open wound caused by splitting the jaw will continue to cause pain until the host chooses to close up the maw.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker</workerClass>
+        <ticker>false</ticker>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef MayRequire="ludeon.rimworld.anomaly">
+        <defName>THNMF_ReconstructMortality</defName>
+        <label>reconstruct mortality</label>
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>LinearWithBase</scalingStyle>
+                <baseValue>20</baseValue>
+                <label>{0}% consciousness lost permanently per resurrection</label>
+                <amount>-0.5</amount>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_ReconstructMortality</iconPath>
+        <categoryDef>THNMF_Void</categoryDef>
+        <description>Upon death, resurrects the host. Each use has a toll, however, and gradually inhumanizes the host and permanently reduces their consciousness every time.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker_ReconstructMortality</workerClass>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef MayRequire="ludeon.rimworld.anomaly">
+        <defName>THNMF_Conflagration</defName>
+        <label>conflagration</label>
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Constant</scalingStyle>
+                <label>{0} damage to other pawns</label>
+                <amount>1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0} tile area</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>2</amount>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_Conflagration</iconPath>
+        
+        <ability>THNMF_ConflagrationAbility</ability>
+        <categoryDef>THNMF_Void</categoryDef>
+        <description>Activated ability: Host ejects bionanites into a firey explosion centered around themselves, dealing damage and igniting pawns. The host is undamaged by the explosion, but will end up being surrounded by fire.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker</workerClass>
+        <ticker>false</ticker>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef MayRequire="ludeon.rimworld.anomaly">
+        <defName>THNMF_Fleshform</defName>
+        <label>fleshform</label>
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% healing factor</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>200</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Constant</scalingStyle>
+                <label>50% incoming damage</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>2</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>LinearWithBase</scalingStyle>
+                <baseValue>72</baseValue>
+                <label>{0} hours to regenerate limbs</label>
+                <amount>-1.5</amount>
+
+
+                <accessKey>RecoveryTimeHours</accessKey>
+                <configGenerator>
+                    <label>Limb recovery time multiplier: {0}</label>
+                    <minValue>0.01</minValue>
+                    <maxValue>10</maxValue>
+                    <defaultValue>1</defaultValue>
+                </configGenerator>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_Fleshform</iconPath>
+        
+        <scalingStatOffsets>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>InjuryHealingFactor</affectedStat>
+                <amount>2</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>IncomingDamageFactor</affectedStat>
+                <amount>0.5</amount>
+                <scalingStyle>Constant</scalingStyle>
+            </li>
+        </scalingStatOffsets>
+        
+        
+
+
+        <categoryDef>THNMF_Void</categoryDef>
+        <description>Makes the host's flesh soft and spongy, increasing incoming damage but allowing the bionanites to rapidly heal any injury. At higher levels can heal near-fatal injuries in mere seconds. Missing parts will slowly be reformed. Missing limbs temporarily regrow as tendrils, until the nanites can completely reform the body part.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker_Fleshform</workerClass>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef MayRequire="ludeon.rimworld.anomaly">
+        <defName>THNMF_Mindshear</defName>
+        <label>mindshear</label>
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% psychic sensitivity</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>15</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% consciousness</label>
+                <scalingOperatorSymbol>-</scalingOperatorSymbol>
+                <amount>1.5</amount>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_Mindshear</iconPath>
+
+        <scalingStatFactors>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>PsychicSensitivity</affectedStat>
+                <amount>0.15</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+        </scalingStatFactors>
+    
+        <scalingCapacityOffsets>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingCapacityAffector">
+                <affectedCapacity>Consciousness</affectedCapacity>
+                <amount>-.015</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+        </scalingCapacityOffsets>
+        
+        <categoryDef>THNMF_Void</categoryDef>
+        <description>Divides the host's brain into segments, rewiring those segments to better comprehend psychic fields. Increases psychic sensitivity dramatically, but reduces consciousness as well.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker</workerClass>
+        <ticker>false</ticker>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef MayRequire="ludeon.rimworld.anomaly">
+        <defName>THNMF_Metalblood</defName>
+        <label>metalblood</label>
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>LinearWithBase</scalingStyle>
+                <baseValue>30</baseValue>
+                <label>{0}% increased damage from converted attacks.</label>
+                <baseOperatorSymbol>+</baseOperatorSymbol>
+                <amount>-2.5</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Bonus</scalingStyle>
+                <label>All sharp damage is converted to blunt</label>
+                <amount>0</amount>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_Metalblood</iconPath>
+        
+        <categoryDef>THNMF_Void</categoryDef>
+        <description>Bionanites in the host's skin harden in anticipation of incoming attacks. Despite hardening very effectively, it does not absorb shock well at lower levels. Converts incoming sharp damage to blunt damage.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker_Metalblood</workerClass>
+        <ticker>false</ticker>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+        <defName>THNMF_Metallize</defName>
+        <label>metallize</label>
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0} scale damage</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>.5</amount>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_Metallize</iconPath>
+
+        <hediff>THNMF_Metallize</hediff>
+        <categoryDef>THNMF_Void</categoryDef>
+        <description>Host grows metal spikes all over their body, gaining powerful slashing attacks. Having less body covered with clothing allows the host to grow more spikes and therefore attack faster.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker</workerClass>
+        <ticker>false</ticker>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+
+
+</Defs>

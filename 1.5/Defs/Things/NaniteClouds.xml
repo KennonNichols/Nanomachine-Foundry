@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<ThingDef Name="NaniteCloudParent" Abstract="True">
+        <tickerType>Normal</tickerType>
+	</ThingDef>
+
+    <ThingDef ParentName="NaniteCloudParent" Name="NaniteCloud">
+        <defName>THNMF_NaniteCloud</defName>
+        <label>nanite cloud</label>
+        <thingClass>NanomachineFoundry.NaniteModifications.ModificationAbilities.NaniteCloud</thingClass>
+    </ThingDef>
+
+    <ThingDef ParentName="NaniteCloudParent">
+        <defName>THNMF_LivingNaniteCloud</defName>
+        <label>motile nanite cloud</label>
+        <thingClass>NanomachineFoundry.NaniteModifications.ModificationAbilities.LivingNaniteCloud</thingClass>
+    </ThingDef>
+
+    <ThingDef ParentName="NaniteCloudParent">
+        <defName>THNMF_FlammableNaniteCloud</defName>
+        <label>inflammable nanite cloud</label>
+        <thingClass>NanomachineFoundry.NaniteModifications.ModificationAbilities.FlammableNaniteCloud</thingClass>
+    </ThingDef>
+
+</Defs>

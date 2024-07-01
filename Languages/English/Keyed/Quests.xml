@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<THNMF.PsychicScream>Your colonist freeze and shudder as a horrific psychic scream washes over them, wreathing their minds in dread and fear. Then, as quickly as it began, it goes silent.\n\nPerhaps something interesting can come of investigating this.</THNMF.PsychicScream>
+    <THNMF.PsychicWarning>A feeling washes over {0}. Before they can question what is happening, some foreign influence takes hold of their mind. They feel no hostile attack, only a thought. This thought is not delivered as language or speech, but as pure concept scribed into their memory.
+        \n\n[YOU ARE RECEIVING A MESSAGE]
+        \n[WHAT YOU SEEK IS A DANGER TO YOUR BODY AND CAN KILL]
+        \n[WHAT YOU SEEK WAS A PART OF ME]
+        \n[WHAT YOU SEEK HAS FREED ITSELF FROM MY CONTROL]
+        \n[WHAT I GIVE CAN PROTECT YOU]
+        \n[WHAT YOU DO CAN BENEFIT ME]
+        \n[WHAT I GIVE CAN BENEFIT YOU]</THNMF.PsychicWarning>
+    <THNMF.PsychicWarningStartHack>The moment {0} touches the keyboard, they feel the distant pulse communicate with them again.
+        \n\n[YOU ARE RECEIVING A MESSAGE]
+        \n[WHAT I GIVE WILL PROTECT YOU]
+        \n[IT WILL BE GIVEN TO THE ONE WHO ACCESSES THIS TERMINAL]
+        \n[THERE IS A DANGER THAT WANTS THIS]
+        \n[THAT DANGER HAS MY POWER]
+        \n[THAT DANGER WILL ATTACK SOON]</THNMF.PsychicWarningStartHack>
+    <THNMF.PsychicMessageEndHack>As {0} finalises the access to the terminal it springs to life; a stream of greenish nanites moving like water leaps from every gap in the terminal into {1} fingertips, and permeating {1} flesh with ease.
+        \n\n[YOU ARE RECEIVING A MESSAGE]
+        \n[WHAT I GAVE WILL PROTECT YOU]
+        \n[IT WILL PROTECT ONLY YOU]
+        \n[THERE IS STILL A DANGER]
+        \n[THAT DANGER IS A MACHINE]
+        \n[YOU WILL BE GIVEN A REWARD]
+        \n[THAT REWARD WILL BENEFIT YOU]</THNMF.PsychicMessageEndHack>
+
+    <THNMF.AntennaHail>Hail</THNMF.AntennaHail>
+    <THNMF.AntennaHailDescription>You recieve an unknown hail at your comms console.</THNMF.AntennaHailDescription>
+    <THNMF.FriendlyHail>Friendly hail</THNMF.FriendlyHail>
+    <THNMF.AcceptHail>Accept hail: {0}</THNMF.AcceptHail>
+
+    <THNMF.AntennaFoundHailIntro></THNMF.AntennaFoundHailIntro>
+    <THNMF.AntennaFoundHailMessage>A stern voice comes through the comms console. They introduce themselves as {0}, leader of {1}.\n\nAfter a brief exchange of pleasantries with {2}, they get to business. They mention that {1} had built their own antenna, and that they had recently picked up retroreflections off of ours. They say that their own dealings were distrupted by the scream, and that they are willing to collaborate with us to triangulate the epicenter. {2} sends them the data gathered by our antenna and, after a brief pause, {0} returns us approximate coordinates.\n\nMoments before {2} steps away, the console crackles to life once more, and {0} notes that there had been reports of drop pods and shuttles going haywire near there, and warns us that it might be related.</THNMF.AntennaFoundHailMessage>
+    <THNMF.AntennaFoundHailMessageNoFaction>A friendly voice comes through the comms console. They introduce themselves as {0}, a reclusive scientist tinkering with psychic fields.\n\nAfter a long-winded but enjoyable introduction with {1}, they get to business. They mention that they had built their own antennae, and that they had recently picked up retroreflections off of ours. They say that their expirements were being confounded by the scream, and that they are willing to collaborate with us to triangulate the epicenter. {1} sends them the data gathered by our antenna and almost instantly {0} returns us approximate coordinates. They also note that they had been intercepting communications, and that nearby factions had been reporting drop pods and shuttles going haywire near the area, warning us that it might be related.</THNMF.AntennaFoundHailMessageNoFaction>
+
+    <THNMF.CaravanPlural>your caravan</THNMF.CaravanPlural>
+    <THNMF.ActivateCorruptNexus>Restabilize nexus</THNMF.ActivateCorruptNexus>
+    <THNMF.StabilizedArchotechMessage>As {0} places {1} hands against the metal of the nexus, the archites flow out of {1} fingertips like water, entering the spongy walls of the archonexus. Without the protections of the archites, the corrupt fog begins burning at {1} skin, melting the skin from {1} bones.</THNMF.StabilizedArchotechMessage>
+    <THNMF.StabilizeReturned>Pawn returned</THNMF.StabilizeReturned>
+    <THNMF.StabilizedArchotechReturnMessage>{0} reappears at the colony, reinvigorated by the power of archites flowing through {1} body. Behind {1} eyes is a strange gaze, an otherworldly wisdom granted by a brief conversation with the mind of an archotech.</THNMF.StabilizedArchotechReturnMessage>
+    <THNMF.ArchiteZombies>Archite Puppets</THNMF.ArchiteZombies>
+    <THNMF.ArchiteZombiesDescription>A group of ancient soldiers approach, raised from their grave or awoken from cryptosleep in the nearby facilities. Their eyes are glassy and lifeless, being strung along by corrupted archites in their system.</THNMF.ArchiteZombiesDescription>
+    <THNMF.ArchiteZombie>Archite Puppet</THNMF.ArchiteZombie>
+    <THNMF.ArchiteZombieDescription>A soldier approaches, transformed by archites used to puppet them along. Even this one may be dangerous on its own, but more will certainly be coming.</THNMF.ArchiteZombieDescription>
+
+    <THNMF.EpicenterFound>Epicenter</THNMF.EpicenterFound>
+    <THNMF.EpicenterFoundDescription>After some collaboration, we have found the approximate epicenter of the psychic scream.</THNMF.EpicenterFoundDescription>
+
+    <THNMF.GuardianLastName>Guard</THNMF.GuardianLastName>
+
+</LanguageData>

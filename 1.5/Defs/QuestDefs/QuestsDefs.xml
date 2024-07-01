@@ -1,0 +1,56 @@
+<Defs>
+
+  <IncidentDef ParentName="GiveQuestBase">
+    <defName>THNMF_GiveQuest_AssistingArchotechStart</defName>
+    <label>start assisting archotech quest</label>
+    <questScriptDef>THNMF_AssistingArchotechStart</questScriptDef>
+    <baseChance>0</baseChance> <!-- given by a special storyteller comp -->
+  </IncidentDef>
+
+
+  <!--<epicParent>RelicHunt</epicParent>-->
+
+
+  <QuestScriptDef>
+    <defName>THNMF_AssistingArchotechStart</defName>
+    <autoAccept>true</autoAccept>
+    <rootMinPoints>0</rootMinPoints>
+    <defaultChallengeRating>3</defaultChallengeRating>
+    <isRootSpecial>true</isRootSpecial>
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->Strange Signal</li>
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>questDescription->While the initial scream has died down, there is still a very faint psychic disturbance coming in occassional waves. Perhaps more specialized equipment can be used to triangulate the source.\n\nA great start is to build a psysensitive antenna to begin triangulating the epicenter of the scream.</li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <root
+      Class="NanomachineFoundry.AssistingArchotechQuest.QuestNode_Root_AssistingArchotechBuildingAntennae"/>
+  </QuestScriptDef>
+
+
+  <QuestScriptDef>
+    <defName>THNMF_AssistingArchotechNode</defName>
+    <autoAccept>true</autoAccept>
+    <rootMinPoints>0</rootMinPoints>
+    <defaultChallengeRating>3</defaultChallengeRating>
+    <isRootSpecial>true</isRootSpecial>
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->Second signal</li>
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>questDescription->Some psychic influence contacted us, warning us of some danger. Moments later, our psychic antennae picked up a second pulse with a similar signature to the initial scream. This cannot be a coincidence.</li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <root
+      Class="NanomachineFoundry.AssistingArchotechQuest.QuestNode_Root_AssistingArchotechSecondaryNode"/>
+  </QuestScriptDef>
+
+
+</Defs>

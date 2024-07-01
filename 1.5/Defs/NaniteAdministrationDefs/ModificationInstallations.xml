@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <NanomachineFoundry.NaniteInstallationOperationDef Name="THNMF_ModificationInstallParent" Abstract="True">
+        <tabType>NanomachineFoundry.ITab_NaniteModificationInstallation</tabType>
+        <description>Install a modification in a mechanized pawn.</description>
+    </NanomachineFoundry.NaniteInstallationOperationDef>
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_ModificationInstallParent" Name="THNMF_HealthSupportInstallParent" Abstract="True">
+        <researchPrerequisites>
+            <li>THNMF_HealthSupport</li>
+        </researchPrerequisites>
+        <operationDurationTicks>15000</operationDurationTicks>
+    </NanomachineFoundry.NaniteInstallationOperationDef>
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_ModificationInstallParent" Name="THNMF_BodyEmpowermentInstallParent" Abstract="True">
+        <researchPrerequisites>
+            <li>THNMF_BodyEmpowerment</li>
+        </researchPrerequisites>
+        <operationDurationTicks>15000</operationDurationTicks>
+    </NanomachineFoundry.NaniteInstallationOperationDef>
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_ModificationInstallParent" Name="THNMF_NeurorewiringInstallParent" Abstract="True">
+        <researchPrerequisites>
+            <li>THNMF_Neurorewiring</li>
+        </researchPrerequisites>
+        <operationDurationTicks>15000</operationDurationTicks>
+    </NanomachineFoundry.NaniteInstallationOperationDef>
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_ModificationInstallParent" Name="THNMF_NaniteAttacksInstallParent" Abstract="True">
+        <researchPrerequisites>
+            <li>THNMF_NaniteAttacks</li>
+        </researchPrerequisites>
+        <operationDurationTicks>15000</operationDurationTicks>
+    </NanomachineFoundry.NaniteInstallationOperationDef>
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_ModificationInstallParent" Name="THNMF_RevivalInstallParent" Abstract="True">
+        <researchPrerequisites>
+            <li>THNMF_Revival</li>
+        </researchPrerequisites>
+        <operationDurationTicks>15000</operationDurationTicks>
+    </NanomachineFoundry.NaniteInstallationOperationDef>
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_ModificationInstallParent" Name="THNMF_MindEmpowermentInstallParent" Abstract="True">
+        <researchPrerequisites>
+            <li>THNMF_MindEmpowerment</li>
+        </researchPrerequisites>
+        <operationDurationTicks>15000</operationDurationTicks>
+    </NanomachineFoundry.NaniteInstallationOperationDef>
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_ModificationInstallParent" Name="THNMF_MechanoidControlInstallParent" Abstract="True">
+        <researchPrerequisites>
+            <li>THNMF_MechanoidControl</li>
+        </researchPrerequisites>
+        <operationDurationTicks>15000</operationDurationTicks>
+    </NanomachineFoundry.NaniteInstallationOperationDef>
+
+
+
+
+    <!-- Physical -->
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_BodyEmpowermentInstallParent">
+        <defName>THNMF_InstallSensoryBoost</defName>
+        <label>install sensory boost</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_SensoryBoost</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_SensoryBoost</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef> 
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_HealthSupportInstallParent">
+        <defName>THNMF_InstallBiolizer</defName>
+        <label>install biolizer</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_Biolizer</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_Biolizer</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef> 
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_HealthSupportInstallParent">
+        <defName>THNMF_InstallNanosurgeons</defName>
+        <label>install nanosurgeons</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_Nanosurgeons</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_Nanosurgeons</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef> 
+    
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_HealthSupportInstallParent">
+        <defName>THNMF_InstallBiomanager</defName>
+        <label>install biomanager</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_Biomanager</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_Biomanager</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef> 
+    
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_HealthSupportInstallParent">
+        <defName>THNMF_InstallCombatCoroutines</defName>
+        <label>install combat coroutines</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_CombatCoroutines</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_CombatCoroutines</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef> 
+    
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_NeurorewiringInstallParent">
+        <defName>THNMF_InstallInstinctInhibitor</defName>
+        <label>install instinct inhibitor</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_InstinctInhibitor</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_InstinctInhibitor</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef>
+    
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_NaniteAttacksInstallParent">
+        <defName>THNMF_InstallSiegebreakerPunch</defName>
+        <label>install siegebreaker punch</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_SiegebreakerPunch</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_SiegebreakerPunch</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef>
+    
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_NaniteAttacksInstallParent">
+        <defName>THNMF_InstallEjectNanites</defName>
+        <label>install eject nanites</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_EjectNanites</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_EjectNanites</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef>
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_RevivalInstallParent">
+        <defName>THNMF_InstallLockerProtocol</defName>
+        <label>install locker protocol</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_LockerProtocol</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_LockerProtocol</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef> 
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_BodyEmpowermentInstallParent">
+        <defName>THNMF_Hermeticism</defName>
+        <label>install hermeticism</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_Hermeticism</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_Hermeticism</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef> 
+
+    <!-- Mechanitor -->
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_RevivalInstallParent">
+        <defName>THNMF_InstallAngelOS</defName>
+        <label>install AngelOS</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_AngelOS</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_AngelOS</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef> 
+
+    <!--<NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_MechanoidControlInstallParent">
+        <defName>THNMF_InstallControlDrift</defName>
+        <label>install control drift</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_ControlDrift</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_ControlDrift</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef>-->
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_MechanoidControlInstallParent">
+        <defName>THNMF_InstallControlRelease</defName>
+        <label>install control release</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_ControlRelease</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_ControlRelease</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef> 
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_MechanoidControlInstallParent">
+        <defName>THNMF_InstallDismantlePulse</defName>
+        <label>install dismantle pulse</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_DismantlePulse</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_DismantlePulse</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef> 
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_MechanoidControlInstallParent">
+        <defName>THNMF_InstallUltraclock</defName>
+        <label>install ultraclock</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_Ultraclock</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_Ultraclock</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef> 
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_MechanoidControlInstallParent">
+        <defName>THNMF_InstallCommandeer</defName>
+        <label>install commandeer</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_Commandeer</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_Commandeer</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef> 
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_MechanoidControlInstallParent">
+        <defName>THNMF_InstallMechanoidLeech</defName>
+        <label>install mechanoid leech</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_MechanoidLeech</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_MechanoidLeech</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef> 
+
+
+    <!-- Void -->
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_NaniteAttacksInstallParent">
+        <defName>THNMF_InstallRotcloud</defName>
+        <label>install rot cloud</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_Rotcloud</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_Rotcloud</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef> 
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_NaniteAttacksInstallParent">
+        <defName>THNMF_InstallMetalMaw</defName>
+        <label>install metal maw</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_MetalMaw</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_MetalMaw</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef>
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_NeurorewiringInstallParent">
+        <defName>THNMF_InstallMindshear</defName>
+        <label>install mindshear</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_Mindshear</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_Mindshear</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef>
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_BodyEmpowermentInstallParent">
+        <defName>THNMF_InstallMetalblood</defName>
+        <label>install metalblood</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_Metalblood</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_Metalblood</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef>
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_BodyEmpowermentInstallParent">
+        <defName>THNMF_InstallMetallize</defName>
+        <label>install metallize</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_Metallize</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_Metallize</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef>
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_RevivalInstallParent">
+        <defName>THNMF_InstallReconstructMortality</defName>
+        <label>install reconstruct mortality</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_ReconstructMortality</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_ReconstructMortality</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef> 
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_NaniteAttacksInstallParent">
+        <defName>THNMF_InstallConflagration</defName>
+        <label>install conflagration</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_Conflagration</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_Conflagration</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef> 
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_BodyEmpowermentInstallParent">
+        <defName>THNMF_InstallFleshform</defName>
+        <label>install fleshform</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_Fleshform</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_Fleshform</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef> 
+
+    <!-- Psychic -->
+    
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_MindEmpowermentInstallParent">
+        <defName>THNMF_InstallClairvoyance</defName>
+        <label>install clairvoyance</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_Clairvoyance</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_Clairvoyance</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef>
+    
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_NeurorewiringInstallParent">
+        <defName>THNMF_InstallNeuroconception</defName>
+        <label>install neuroconception</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_Neuroconception</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_Neuroconception</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef>
+    
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_NeurorewiringInstallParent">
+        <defName>THNMF_InstallPsychicRecycler</defName>
+        <label>install psychic recycler</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_PsychicRecycler</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_PsychicRecycler</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef>
+    
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_MindEmpowermentInstallParent">
+        <defName>THNMF_InstallPsychicCache</defName>
+        <label>install psychic cache</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_PsychicCache</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_PsychicCache</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef>
+    
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_MindEmpowermentInstallParent">
+        <defName>THNMF_InstallPsioniser</defName>
+        <label>install psioniser</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_Psioniser</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_Psioniser</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef>
+    
+    <!-- Archite -->
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_NaniteAttacksInstallParent">
+        <defName>THNMF_InstallAtomizationMist</defName>
+        <label>install atomization mist</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_AtomizationMist</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_AtomizationMist</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef> 
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_NaniteAttacksInstallParent">
+        <defName>THNMF_InstallAnnihilationPunch</defName>
+        <label>install annihilation punch</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_AnnihilationPunch</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_AnnihilationPunch</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef> 
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_NaniteAttacksInstallParent">
+        <defName>THNMF_InstallInsanityPulse</defName>
+        <label>install insanity pulse</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_InsanityPulse</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_InsanityPulse</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef>
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_RevivalInstallParent">
+        <defName>THNMF_InstallRefuteMortality</defName>
+        <label>install refute mortality</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_RefuteMortality</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_RefuteMortality</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef>
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_BodyEmpowermentInstallParent">
+        <defName>THNMF_InstallBladeform</defName>
+        <label>install bladeform</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_Bladeform</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_Bladeform</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef>
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_BodyEmpowermentInstallParent">
+        <defName>THNMF_InstallAlphaBiology</defName>
+        <label>install alpha biology</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_AlphaBiology</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_AlphaBiology</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef>
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_MindEmpowermentInstallParent">
+        <defName>THNMF_Truesight</defName>
+        <label>install truesight</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_Truesight</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_Truesight</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef>
+
+    <NanomachineFoundry.NaniteInstallationOperationDef ParentName="THNMF_BodyEmpowermentInstallParent">
+        <defName>THNMF_InstallSelectiveAbsorption</defName>
+        <label>install selective absorption</label>
+        <iconPath>UI/Administrations/Icon_NeurorewireElegance</iconPath>
+        <modification>THNMF_SelectiveAbsorption</modification>
+        <descriptionHyperlinks><NanomachineFoundry.NaniteModifications.NaniteModificationDef>THNMF_SelectiveAbsorption</NanomachineFoundry.NaniteModifications.NaniteModificationDef></descriptionHyperlinks>
+    </NanomachineFoundry.NaniteInstallationOperationDef>
+    
+
+</Defs>

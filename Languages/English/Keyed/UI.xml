@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<THNMF.NanitesTab>Nanites</THNMF.NanitesTab>
+	<THNMF.ModsLabel>Mods:</THNMF.ModsLabel>
+	<THNMF.NanitesLabel>Nanite Capacity:</THNMF.NanitesLabel>
+	<THNMF.NanitesQuantityLabel>{0}/{1} {2}s in the {3}'s system.</THNMF.NanitesQuantityLabel>
+	<THNMF.NaniteTypeReport>{0}\n\nTier: {1}\nCategories supported:{2}\n{3}</THNMF.NaniteTypeReport>
+	<THNMF.NanitesLeftLabel>{0} has capacity for {1} more control groups of nanites.</THNMF.NanitesLeftLabel>
+	<THNMF.SetNaniteConfigLevelLabel>Set {0} capacity to {1}.</THNMF.SetNaniteConfigLevelLabel>
+	<THNMF.NaniteCapacityLabel>{0} capacity</THNMF.NaniteCapacityLabel>
+	<THNMF.Apply>Set configuration</THNMF.Apply>
+	<THNMF.LoseNaniteWarning>Existing {0}s will be lost when setting this configuration.</THNMF.LoseNaniteWarning>
+	<THNMF.LoseNaniteWarningNonRenewable>Existing {0}s will be lost when setting this configuration, and are non-renewable!</THNMF.LoseNaniteWarningNonRenewable>
+	<THNMF.ReconfigureCancel>Cancel</THNMF.ReconfigureCancel>
+	<THNMF.ReconfigureAccept>Reconfigure</THNMF.ReconfigureAccept>
+	<THNMF.DevEnabledNaniteType>{0} body has not been mechanized to accept {1}s. You are seeing this row because you are editing in dev mode. If you set the configs to have a {1} capacity, the pawn will automatically be allowed to accept {1}s in the future.</THNMF.DevEnabledNaniteType>
+	<THNMF.DevDisableNaniteType>{0} has no {1}s, but their body is still capable of accepting them. Click this label to remove their ability to accept mechanites in the future.</THNMF.DevDisableNaniteType>
+
+	
+	<THNMF.MustBeMechanized>Pawn must be mechanized.</THNMF.MustBeMechanized>
+	<THNMF.InjectorOccupied>Injector occupied.</THNMF.InjectorOccupied>
+	<THNMF.InvalidOperationForPawn>Invalid operation for pawn.</THNMF.InvalidOperationForPawn>
+	<THNMF.EnterInjector>Enter nanite injector.</THNMF.EnterInjector>
+	<THNMF.CarryToInjector>Carry to nanite injector.</THNMF.CarryToInjector>
+
+	<THNMF.EjectPawn>Eject pawn</THNMF.EjectPawn>
+	<THNMF.EjectPawnDesc>Eject pawn from the nanite injector.</THNMF.EjectPawnDesc>
+	<THNMF.PawnNanitesFull>Pawn nanite levels are full.</THNMF.PawnNanitesFull>
+	<THNMF.PawnNanitesAtCapacity>Pawn has reached the limit of biologically safe nanites.</THNMF.PawnNanitesAtCapacity>
+	<THNMF.PawnTooYoung>Pawn is not old enough to safely accept permanent mechanization. Pawn must be {0}.</THNMF.PawnTooYoung>
+	<THNMF.OperatorUnusable>Pawn has neither mechanites to modify nor a valid operation to recieve.</THNMF.OperatorUnusable>
+
+	<THNMF.MechanizerTimeRemaining>Cycle time: {0}/{1}.</THNMF.MechanizerTimeRemaining>
+	<THNMF.MechanizerCapacityRemaining>{0}'s nanite capacity: {1}/{2} control units.</THNMF.MechanizerCapacityRemaining>
+	<THNMF.FillModeLabel>Fill mode:</THNMF.FillModeLabel>
+	<THNMF.FillModeTip>Fill mode determines how your pawn accepts nanites. Pawns refill nanites as whole control units, meaning if they are missing less than 1 control unit, some nanites will be wasted as they cannot overfill. By default, pawns are capable of wasting renewable nanites like mechanites, but not non-renewable mechanites like luciferite. That behavior can be changed here.</THNMF.FillModeTip>
+
+	<!--<THNMF.NaniteConfigTab>Configure Nanites</THNMF.NaniteConfigTab>
+	<THNMF.NaniteModificationTab>Install Modifications</THNMF.NaniteModificationTab>
+	<THNMF.NaniteOperationTab>Operations</THNMF.NaniteOperationTab>-->
+
+
+	
+	<THNMF.NaniteConfigTab>Modify</THNMF.NaniteConfigTab>
+	<THNMF.NaniteModificationTab>Install</THNMF.NaniteModificationTab>
+	<THNMF.NaniteOperationTab>Operate</THNMF.NaniteOperationTab>
+
+	<THNMF.PawnMustBeMechanitor>Pawn must be a mechanitor.</THNMF.PawnMustBeMechanitor>
+	<THNMF.PawnMustBePsycaster>Pawn must be a psycaster.</THNMF.PawnMustBePsycaster>
+	<THNMF.NotUnlocked>Administration not unlocked.</THNMF.NotUnlocked>
+	<THNMF.ModificationAlreadyExists>Modification already exists.</THNMF.ModificationAlreadyExists>
+
+	<THNMF.CannotPerformNaniteOperation>Cannot perform operation: {0}</THNMF.CannotPerformNaniteOperation>
+
+	<THNMF.CannotPerformNaniteOperationNotEnoughNanites>Not enough nanites in system. {0}</THNMF.CannotPerformNaniteOperationNotEnoughNanites>
+
+	<THNMF.OperationCostReport>This operation costs {0} nanites capable of supporting {1} operations. Valid types are: {2}.</THNMF.OperationCostReport>
+	<THNMF.OperationCostReportSimple>Cost: {0} {1}s.</THNMF.OperationCostReportSimple>
+
+	<THNMF.StartOperation>Start operation '{0}'?</THNMF.StartOperation>
+	<THNMF.StartOperationWarned>Start operation '{0}'? Note that {1} are non-renewable.</THNMF.StartOperationWarned>
+	<THNMF.BeginOperation>Begin operation.</THNMF.BeginOperation>
+
+	<THNMF.RemoveTraitLabel>Choose a trait to remove:</THNMF.RemoveTraitLabel>
+
+	<THNMF.NeurosanitiseNoTraits>Pawn has no traits to remove.</THNMF.NeurosanitiseNoTraits>
+
+	<THNMF.NeurorewireAlreadyCompleted>Pawn has already been neurorewired.</THNMF.NeurorewireAlreadyCompleted>
+
+	<THNMF.PawnMustHaveInfection>Pawn must have at least one infection.</THNMF.PawnMustHaveInfection>
+
+	<THNMF.AccidentalMetalhorrorImplantation>This metalhorror was artificially implanted as a failed attempt to root out an existing infestation.</THNMF.AccidentalMetalhorrorImplantation>
+
+	<THNMF.NoValidNanitesToSupportOperation>Pawn does not have any nanite which can support this modification.</THNMF.NoValidNanitesToSupportOperation>
+
+	<THNMF.NaniteLevelForHediff>{0} level: {1}</THNMF.NaniteLevelForHediff>
+
+	<THNMF.ModificationInstallationDescription>Requires nanites of type: {0}.</THNMF.ModificationInstallationDescription>
+
+
+	<THNMF.NeverForce>Never Force</THNMF.NeverForce>
+	<THNMF.AlwaysForce>Always Force</THNMF.AlwaysForce>
+	<THNMF.Renewables>Renewables</THNMF.Renewables>
+	
+	<THNMF.NanitesAllocated>{0} allocated:</THNMF.NanitesAllocated>
+	<THNMF.AllocateNanites>Allocate</THNMF.AllocateNanites>
+
+	<THNMF.NoModificationsInstalled>Pawn has no modifications installed. Program some via the Nanite Operator.</THNMF.NoModificationsInstalled>
+
+	<!--Modification scaling details-->
+	<THNMF.ScalingPerLevel>Per each control unit allocated:\n</THNMF.ScalingPerLevel>
+	<THNMF.ScalingFlat>Base:\n</THNMF.ScalingFlat>
+	<THNMF.ScalingBonus>At all levels:\n</THNMF.ScalingBonus>
+	<THNMF.AtCurrentLevel>At current level:\n</THNMF.AtCurrentLevel>
+	<THNMF.DiminishingReturns>. Effectiveness halved every {0} levels.</THNMF.DiminishingReturns>
+	<THNMF.NaniteFactor>Nanite factor: {0}</THNMF.NaniteFactor>
+	<THNMF.NaniteOffset>Nanite offset: {0}</THNMF.NaniteOffset>
+	<THNMF.NaniteCapBonus>Nanite offset</THNMF.NaniteCapBonus>
+	<THNMF.ModAssignmentReport>{0} {1} allocated.</THNMF.ModAssignmentReport>
+	<THNMF.ModAssignmentReportShort>Has access to {0}/{1} allocated {2}.</THNMF.ModAssignmentReportShort>
+	
+	<!--Metal maw-->
+	<THNMF.TextMote_Eaten>Consumed</THNMF.TextMote_Eaten>
+	<THNMF.TextMote_Devoured>Devoured</THNMF.TextMote_Devoured>
+	<THNMF.Maw>razorteeth</THNMF.Maw>
+	<!--Resurrection-->
+	<THNMF.ResurrectionTimeRemaining>Nanites attempt to resurrect in: {0}</THNMF.ResurrectionTimeRemaining>
+	<!--Psychic Cache-->
+	<THNMF.PsychicCacheReport>Ability cached. Next use is free. Expires in: {0}s</THNMF.PsychicCacheReport>
+	<THNMF.CachedAlert>Ability cached.</THNMF.CachedAlert>
+	<!--Psioniser-->
+	<THNMF.CanOnlyCastPsycasts>Can only use psycasts in psychic trance</THNMF.CanOnlyCastPsycasts>
+	<THNMF.DownedInTrance>Trance Coma</THNMF.DownedInTrance>
+	<THNMF.DownedInTranceDescription>{0} collapsed while entranced, and has fallen into a psychic coma.</THNMF.DownedInTranceDescription>
+	<!--Mechanoid Leech-->
+	<THNMF.MechanoidLeechResult>Mechanoid body size: {0}\nMaximum fraction you can leech: {1}\nNanite cost: {2} - {3} (absorbed) = {4}</THNMF.MechanoidLeechResult>
+	<THNMF.MechanoidLeechWillKill>Will destroy mechanoid</THNMF.MechanoidLeechWillKill>
+	<THNMF.MechanoidLeechWarning>{0} is at risk of adverse effects!</THNMF.MechanoidLeechWarning>
+
+
+	<THNMF.GrantArchites>Grant archites:</THNMF.GrantArchites>
+
+	<THNMF.BreederExcessNanites>Excess mechanites</THNMF.BreederExcessNanites>
+	<THNMF.BreederExcessNanitesTip>The regulator built into the breeding platform harvests as many nanites as it can, and then destroys any excess. If left unpowered, excess nanites can build up, and will eventually allow the mechanoid to run it's reboot cycle.</THNMF.BreederExcessNanitesTip>
+
+	<THNMF.BionanitesPerDay>Bionanites produced per day: {0}</THNMF.BionanitesPerDay>
+
+	<THNMF.CannotUseNoCommsConsole>Requires working comms console to function.</THNMF.CannotUseNoCommsConsole>
+	<THNMF.UsingCommsConsole>Collecting data.</THNMF.UsingCommsConsole>
+
+</LanguageData>

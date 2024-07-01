@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <HediffDef>
+        <defName>THNMF_DecayNaniteInfection</defName>
+        <label>nanite infection</label>
+        <description>Hostile or corrupted nanites have infested the pawn's system and are randomly attacking the inside of their body.</description>
+
+        <hediffClass>HediffWithComps</hediffClass>
+        <makesSickThought>true</makesSickThought>
+        <comps>
+            <li Class="NanomachineFoundry.HediffCompProperties_NaniteDecay">
+                <minDamagePerRot>1</minDamagePerRot>
+                <maxDamagePerRot>5</maxDamagePerRot>
+                <rotChancePerTick>0.05</rotChancePerTick>
+            </li>
+            
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-100.0</severityPerDay>
+                <showDaysToRecover>true</showDaysToRecover>
+            </li>
+        </comps>
+
+
+
+        <stages>
+            <li>
+            </li>
+        </stages>
+
+        <everCurableByItem>false</everCurableByItem>
+        <isBad>true</isBad>
+    </HediffDef>
+
+
+    <HediffDef>
+        <defName>THNMF_DecayArchiteInfection</defName>
+        <label>archite infection</label>
+        <description>Hostile archites are attacking the pawn's central nervous system. They will not survive this.</description>
+
+        <hediffClass>HediffWithComps</hediffClass>
+        <makesSickThought>true</makesSickThought>
+        <comps>
+            <li Class="NanomachineFoundry.HediffCompProperties_NaniteDecay">
+                <minDamagePerRot>3</minDamagePerRot>
+                <maxDamagePerRot>5</maxDamagePerRot>
+                <rotChancePerTick>0.01</rotChancePerTick>
+            </li>
+            <li Class="NanomachineFoundry.HediffCompProperties_NaniteBrainDecay">
+                <minDamagePerRot>1</minDamagePerRot>
+                <maxDamagePerRot>4</maxDamagePerRot>
+                <rotChancePerTick>0.001</rotChancePerTick>
+            </li>
+        </comps>
+
+        <stages>
+            <li>
+            </li>
+        </stages>
+
+        <initialSeverity>1</initialSeverity>
+        <everCurableByItem>false</everCurableByItem>
+        <isBad>true</isBad>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>THNMF_ArchosplinterLink</defName>
+        <label>archosplinter link</label>
+        <description>This pawn is inundated with archites that are loyal to an archosplinter. They will have no autonomy until the archosplinter has been destroyed.</description>
+        <comps>
+            <li Class="NanomachineFoundry.HediffCompProperties_ArchosplinterLink"/>
+        </comps>
+        <disablesNeeds>
+            <li>Comfort</li>
+            <li>Beauty</li>
+            <li>Outdoors</li>
+        </disablesNeeds>
+        <hediffClass>HediffWithComps</hediffClass>
+        <everCurableByItem>false</everCurableByItem>
+        <isBad>true</isBad>
+    </HediffDef>
+
+  
+    <HediffDef ParentName="InjuryBase">
+        <defName>THNMF_NaniteDecay</defName>
+        <label>nanite decay</label>
+        <description>Often called nanite rot, nanite decay is micro-scale chemical attacks from hostile or corrupted nanites. Incredibly painful, and highly likely to become infected.</description>
+        <displayWound>false</displayWound>
+        <comps>
+            <li Class="HediffCompProperties_TendDuration">
+                <labelTendedWell>bandaged</labelTendedWell>
+                <labelTendedWellInner>tended</labelTendedWellInner>
+                <labelSolidTendedWell>tended</labelSolidTendedWell>
+            </li>
+            <li Class="HediffCompProperties_Infecter">
+                <infectionChance>0.5</infectionChance>
+            </li>
+            <li Class="HediffCompProperties_GetsPermanent">
+                <permanentLabel>decay scar</permanentLabel>
+            </li>
+        </comps>
+        <injuryProps>
+        <painPerSeverity>0.0125</painPerSeverity>
+        <averagePainPerSeverityPermanent>0.003</averagePainPerSeverityPermanent>
+        <canMerge>true</canMerge>
+        <destroyedLabel>Sloughed away by nanite decay</destroyedLabel>
+        </injuryProps>
+    </HediffDef>
+
+
+    <HediffDef>
+        <defName>THNMF_ResurrectionFog</defName>
+        <label>resurrection fog</label>
+        <description>Poorly-done reconstruction of the nervous system has left the pawn's consiousness permanently reduced.</description>
+
+        <hediffClass>HediffWithComps</hediffClass>
+        <makesSickThought>true</makesSickThought>
+        <comps>
+            <li Class="NanomachineFoundry.HediffCompProperties_ConsciousnessLossFromSeverity"/>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                      <capacity>Consciousness</capacity>
+                      <offset>0</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+        <everCurableByItem>false</everCurableByItem>
+        <isBad>true</isBad>
+    </HediffDef>
+
+    
+
+    <HediffDef>
+        <defName>THNMF_Ultraclock</defName>
+        <label>ultraclocked</label>
+        <description>This mechanoid had been inundated with mechanites and is being enhanced by a direct link to a mechanitor.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-1.0</severityPerDay>
+                <showDaysToRecover>true</showDaysToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <multiplyStatChangesBySeverity>true</multiplyStatChangesBySeverity>
+                <statFactors>
+                    <MoveSpeed>4</MoveSpeed>
+                    <ArmorRating_Sharp>3</ArmorRating_Sharp>
+                    <ArmorRating_Blunt>3</ArmorRating_Blunt>
+                    <MeleeDamageFactor>2</MeleeDamageFactor>
+                    <MeleeArmorPenetration>3</MeleeArmorPenetration>
+                    <MeleeHitChance>4</MeleeHitChance>
+                    <ShootingAccuracyPawn>4</ShootingAccuracyPawn>
+                    <EnergyShieldEnergyMax>2</EnergyShieldEnergyMax>
+                </statFactors>
+            </li>
+        </stages>
+        <everCurableByItem>false</everCurableByItem>
+        <isBad>false</isBad>
+    </HediffDef>
+
+    
+    
+
+    <HediffDef>
+        <defName>THNMF_HostileNanites</defName>
+        <label>active hostile nanites</label>
+        <description>A portion of mechanites within the user's bloodstream are foreign nanites that have yet to be reprogrammed.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <comps>
+            <li Class="NanomachineFoundry.HediffCompProperties_HostileNanites">
+                <possessionHediff>THNMF_MechanitePossession</possessionHediff>
+            </li>
+        </comps>
+        <stages>
+            <li>
+            </li>
+        </stages>
+        <everCurableByItem>true</everCurableByItem>
+        <isBad>false</isBad>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>THNMF_MechanitePossession</defName>
+        <label>mechanite possession</label>
+        <description>Mechanites loyal to the mechhive have overwhelmed this pawn's system, and commandeered their nervous system. After some time, the mechanites may die out.</description>
+        <initialSeverity>1</initialSeverity>
+        <maxSeverity>1</maxSeverity>
+        <hediffClass>HediffWithComps</hediffClass>
+        <comps>
+            <li Class="NanomachineFoundry.HediffCompProperties_MechanitePossession">
+                <possessionThought>THNMF_ColonistPossessed</possessionThought>
+                <possessionThoughtWitness>THNMF_SawColonistPossessed</possessionThoughtWitness>
+                <possessionThoughtTranshumanist>THNMF_TranshumanistSawColonistPossessed</possessionThoughtTranshumanist>
+                <transhumanistMeme>Transhumanist</transhumanistMeme>
+            </li>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.0667</severityPerDay>
+                <showDaysToRecover>true</showDaysToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <painFactor>0</painFactor>
+                <opinionOfOthersFactor>0</opinionOfOthersFactor>
+                <statOffsets>
+                  <ComfyTemperatureMin>-16</ComfyTemperatureMin>
+                </statOffsets>
+                <statFactors>
+                  <MoveSpeed>1.25</MoveSpeed>
+                  <StaggerDurationFactor>0</StaggerDurationFactor>
+                </statFactors>
+            </li>
+        </stages>
+        <everCurableByItem>false</everCurableByItem>
+        <isBad>true</isBad>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>THNMF_ArchiteBorn</defName>
+        <label>archite conception</label>
+        <defaultLabelColor>(0.36, 0.55, 0.23)</defaultLabelColor>
+        <description>Archites have influenced this pawn's growth from the moment they were conceived. They are biologically superior.</description>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <offset>0.2</offset>
+                    </li>
+                    <li>
+                        <capacity>BloodPumping</capacity>
+                        <offset>0.2</offset>
+                    </li>
+                    <li>
+                        <capacity>Breathing</capacity>
+                        <offset>0.2</offset>
+                    </li>
+                    <li>
+                        <capacity>Talking</capacity>
+                        <offset>0.2</offset>
+                    </li>
+                    <li>
+                        <capacity>Sight</capacity>
+                        <offset>0.2</offset>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.2</offset>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>0.2</offset>
+                    </li>
+                    <li>
+                        <capacity>Hearing</capacity>
+                        <offset>0.2</offset>
+                    </li>
+                    <li>
+                        <capacity>Eating</capacity>
+                        <offset>0.2</offset>
+                    </li>
+                    <li>
+                        <capacity>Metabolism</capacity>
+                        <offset>0.2</offset>
+                    </li>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>0.2</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+        <everCurableByItem>false</everCurableByItem>
+        <isBad>false</isBad>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>THNMF_Archotouched</defName>
+        <label>archotouched</label>
+        <defaultLabelColor>(0.36, 0.55, 0.23)</defaultLabelColor>
+        <description>This pawn has had the incredible honor of conversing directly with an archotech. They have never spoken about what they learned, but their eyes belie a peace and wisdom that man could only dream of.</description>
+        <stages>
+            <li>
+                <statFactors>
+                    <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0</CertaintyLossFactor>
+                    <SocialImpact>1.5</SocialImpact>
+                    <MentalBreakThreshold>0</MentalBreakThreshold>
+                    <ResearchSpeed>3</ResearchSpeed>
+                    <EntityStudyRate>3</EntityStudyRate>
+                </statFactors>
+            </li>
+        </stages>
+        <everCurableByItem>false</everCurableByItem>
+        <isBad>false</isBad>
+    </HediffDef>
+
+    <HediffDef ParentName="THNMF_NaniteShock">
+		<defName>THNMF_MechanoidCrippled</defName>
+		<label>crippled</label>
+		<description>Precision damaging of key components make the mechanoid unable to move. Great care was taken to damage the components without triggering it's self-repair protocol.</description>
+		<stages>
+			<li>
+                <statFactors>
+                    <MoveSpeed>0</MoveSpeed>
+                </statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+</Defs>

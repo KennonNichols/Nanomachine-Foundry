@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Nanomachine Foundry</name>
+	<author>ThatHitmann</author>
+	<packageId>ThatHitmann.NanomachineFoundry</packageId>
+	<supportedVersions>
+		<li>1.5</li>
+	</supportedVersions>
+	<description>No longer will the power of nanomachines be out of your grasp. Create a nanomachine foundry to inundate your pawns with bloodborne nanites, empowering them with unique and powerful abilities.\n\nInstall any of 4 types of nanomachines, which confer minor passive bonuses, and unlock new modifications you can install. Contains 37 abilities and counting.\n\nUtilize the nanite operator for one-time operations, ranging from the neurorewires which allow you to tweak a pawn's skills and allowed work types, to rapidly curing all infections in the pawn's body. Contains 7 operations.\n\nDiscover and fight a unique hidden hostile faction over the course of a handcrafted questline, with a powerful reward...</description>
+	<modDependencies>
+		<li>
+			<packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+			<displayName>Vanilla Expanded Framework</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2023507013</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+			<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2009463077</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>Ludeon.RimWorld.Anomaly</li>
+		<li>Ludeon.RimWorld.Biotech</li>
+		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+	</loadAfter>
+</ModMetaData>

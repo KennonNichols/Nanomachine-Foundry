@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<ThoughtDef>
+		<defName>THNMF_MetalhorrorCombat</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>THNMF_MetalhorrorCombat</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>metalhorror combat</label>
+				<description>GET THEM OUT! GET THEM OUT!</description>
+				<baseMoodEffect>-20</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef Name="THNMF_ColonistPossessionParent" Abstract="True">
+		<durationDays>6</durationDays>
+		<stackLimit>5</stackLimit>
+		<nullifyingHediffs>
+			<li MayRequire="Ludeon.RimWorld.Anomaly">Inhumanized</li>
+		</nullifyingHediffs>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+		</nullifyingTraits>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="THNMF_ColonistPossessionParent">
+		<defName>THNMF_ColonistPossessed</defName>
+		<stages>
+			<li>
+				<label>colonist possessed</label>
+				<description>They were just taken and strung along like a puppet. What a horrible fate!</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="THNMF_ColonistPossessionParent">
+		<defName>THNMF_SawColonistPossessed</defName>
+		<stages>
+			<li>
+				<label>saw colonist get possessed</label>
+				<description>I saw their look of fear as their body was siezed and strung along like a puppet.</description>
+				<baseMoodEffect>-6</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="THNMF_ColonistPossessionParent">
+		<defName>THNMF_TranshumanistSawColonistPossessed</defName>
+		<stages>
+			<li>
+				<label>colonist possessed</label>
+				<description>Their body was completely overtaken and controlled by machines. It was sick, but also morbidly intriguing.</description>
+				<baseMoodEffect>-1</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>

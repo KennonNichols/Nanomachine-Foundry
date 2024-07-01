@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<THNMF.BionaniteBreak>As long a single seed exists, bionanite influence will grate on {0} mental state.</THNMF.BionaniteBreak>
+	<THNMF.BionaniteInhumanize>The host's mind has finally broken and accepted the bionanites. They have achieved some semblance of harmony with the chaos of the bionanite's thrum.</THNMF.BionaniteInhumanize>
+	<THNMF.MechanizerDestroyEarly>Mechanizer destroyed.</THNMF.MechanizerDestroyEarly>
+	<THNMF.MechanizerDestroyEarlyDescription>The mechanizer operating on {0} has been destroyed, causing it to malfunction! The nanites have gone haywire and are killing {1}!</THNMF.MechanizerDestroyEarlyDescription>
+	<THNMF.PawnMechanizationIncrease>{0} nanite capacity has increased from {1} to {2}.</THNMF.PawnMechanizationIncrease>
+	<THNMF.PawnMechanizedAlert>Pawn mechanized: {0}</THNMF.PawnMechanizedAlert>
+	<THNMF.PawnMechanizedAlertDescription>{0} has becomed mechanized, and is now able to have nanites installed in their body. The very slow initial process has finished, and all future operations will be much faster.</THNMF.PawnMechanizedAlertDescription>
+	<THNMF.PawnFullyMechanizedAlert>Mechanization complete: {0}</THNMF.PawnFullyMechanizedAlert>
+	<THNMF.PawnFullyMechanizedAlertDescription>{0} cannot safely be mechanized any further, and has been automatically ejected from the mechanizer..</THNMF.PawnFullyMechanizedAlertDescription>
+	<THNMF.OperationComplete>Nanite operation complete.</THNMF.OperationComplete>
+	<THNMF.OperationCompleteDescription>{0} has finished on {1}.</THNMF.OperationCompleteDescription>
+	
+	<THNMF.MetalhorrorProvoked>Provoked to emerge early by artificial implantation. A metalhorror has emerged from {0}. A rare complication of artificial metalhorror provocation.</THNMF.MetalhorrorProvoked>
+
+	<THNMF.MechlinkSevered>Mechlink Severed</THNMF.MechlinkSevered>
+	<THNMF.MechlinkSeveredDescription>{0} has removed their mechlink. It has left a small surgical scar, but was otherwise harmless.</THNMF.MechlinkSeveredDescription>
+	<THNMF.MechlinkSeveredDesctiptionLostModifications>{0} has removed their mechlink. It has left a small surgical scar, but was otherwise harmless. All installed mechanitor modifications have been uninstalled along with it.</THNMF.MechlinkSeveredDesctiptionLostModifications>
+
+	<THNMF.PawnUnresponsive>{0} is focused on combat, and is not listening to orders.</THNMF.PawnUnresponsive>
+	
+	<THNMF.PawnHasNoHand>Cannot punch with no hand.</THNMF.PawnHasNoHand>
+
+	<THNMF.Resurrected>Pawn resurrected: {0}</THNMF.Resurrected>
+	<THNMF.ResurrectingPawnPermadead>Pawn unable to resurrect: {0}</THNMF.ResurrectingPawnPermadead>
+	<THNMF.AngelOSConsumed>AngelOS consumed: {0} mechs.</THNMF.AngelOSConsumed>
+
+	<THNMF.PawnNotHypnotized>Pawn resisted hypnosis</THNMF.PawnNotHypnotized>
+	<THNMF.PawnNotHypnotizedDescription>The revenant's attempt to hypnotise was shrugged off by {0}, and the exhausted revenant is now retreating.</THNMF.PawnNotHypnotizedDescription>
+
+	<THNMF.MustTargetMechanoid>Must target mechanoid.</THNMF.MustTargetMechanoid>
+	<THNMF.CannotAffordMechanites>Not enough mechanites.</THNMF.CannotAffordMechanites>
+	<THNMF.NotEnoughBandwidth>Not enough bandwidth to commandeer.</THNMF.NotEnoughBandwidth>
+	<THNMF.CannotCommandeerFriendly>Cannot commandeer a friendly mechanoid.</THNMF.CannotCommandeerFriendly>
+	<THNMF.CannotLeechFriendly>Cannot leech a friendly mechanoid.</THNMF.CannotLeechFriendly>
+	<THNMF.NotControllable>Sentient mechanoids cannot be controlled.</THNMF.NotControllable>
+
+	
+	<THNMF.MechanitePossession>Possession</THNMF.MechanitePossession>
+	<THNMF.MechanitePossessionDescription>{0} freezes in place as their eyes glaze over. Devoid of any emotion, they stand upright, and begin attacking. {0} has been possessed by {1}!</THNMF.MechanitePossessionDescription>
+	<THNMF.MechanitePossessionEnded>Possession ended</THNMF.MechanitePossessionEnded>
+	<THNMF.MechanitePossessionEndedDescription>{0} has finally awoken as every mechanite in their system has expired or lost signal.</THNMF.MechanitePossessionEndedDescription>
+
+	<THNMF.ArchitesInherited>Inheritance</THNMF.ArchitesInherited>
+	<THNMF.ArchitesInheritedDescription>A greenish shimmer crosses the whites of {0}'s eyes. Latent archites passed down during childbirth have chosen to show themselves. The archites have been slowly reforming their biology, and have chosen to manifest as their body begins puberty.</THNMF.ArchitesInheritedDescription>
+
+	<THNMF.CarryToBreedingPlatform>Carry to mechanite breeeder.</THNMF.CarryToBreedingPlatform>
+	<THNMF.CarryToBreedingPlatformDowned>Mechanoid must be downed.</THNMF.CarryToBreedingPlatformDowned>
+	<THNMF.CarryToBreedingPlatformTooYoung>Only ancient mechanoids can produce mechanites.</THNMF.CarryToBreedingPlatformTooYoung>
+	<THNMF.MechaniteProduction>Nanites produced per day: {0}</THNMF.MechaniteProduction>
+
+	<THNMF.ExcessMechanitesBuilding>Mechanite overflow</THNMF.ExcessMechanitesBuilding>
+	<THNMF.ExcessMechanitesBuildingDescription>Excess mechanites are being produced unregulated in a mechanoid's system. It may soon reboot!</THNMF.ExcessMechanitesBuildingDescription>
+	<THNMF.ExcessMechanitesCritical>Mechanoid can reboot</THNMF.ExcessMechanitesCritical>
+	<THNMF.ExcessMechanitesCriticalDescription>A mechanoid on a platform has enough mechanites to reboot. It may wake up at any moment!</THNMF.ExcessMechanitesCriticalDescription>
+
+	<THNMF.MechanoidsAwoken>Mechanoids awoken</THNMF.MechanoidsAwoken>
+	<THNMF.MechanoidsAwokenDescription>A {0} has stood up off of their breeding platform, their limbs whirring to life as they rip off the mechanite pump and prepare to kill again.</THNMF.MechanoidsAwokenDescription>
+
+	<THNMF.SplinterPuppetsFreed>Puppets freed</THNMF.SplinterPuppetsFreed>
+	<THNMF.SplinterPuppetsFreedDescription>With a jolt, some of your prisoners snap out of their trance, being ripped away from the control of the archosplinter.</THNMF.SplinterPuppetsFreedDescription>
+
+	<THNMF.SplinterPuppetRetaken>Puppet retaken</THNMF.SplinterPuppetRetaken>
+	<THNMF.SplinterPuppetRetakenDescription>{0}'s eyes glaze over, as they are once again taken by the archosplinter.</THNMF.SplinterPuppetRetakenDescription>
+
+
+</LanguageData>

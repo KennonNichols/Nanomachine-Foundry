@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<ThingDef ParentName="BuildingBase" Name="NaniteApplicatorParent" Abstract="True">
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<defaultPlacingRot>North</defaultPlacingRot>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>42</pathCost>
+		<blockWind>true</blockWind>
+		<fillPercent>0.5</fillPercent>
+		<canOverlapZones>false</canOverlapZones>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<designationCategory>THNMF_PipeNetworks</designationCategory>
+		<containedPawnsSelectable>true</containedPawnsSelectable>
+		<size>(3,2)</size>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<hasInteractionCell>true</hasInteractionCell>
+		<building>
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+			<haulToContainerDuration>120</haulToContainerDuration>
+		</building>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<neverMultiSelect>true</neverMultiSelect>
+		<thingCategories>
+			<li>BuildingsMisc</li>
+		</thingCategories>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_Flickable" />
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>THNMF_NaniteAdmin</li>
+		</researchPrerequisites>
+	</ThingDef>
+	<ThingDef ParentName="NaniteApplicatorParent" Name="NaniteConsumerParent" Abstract="True">
+		<comps>
+			<li Class="PipeSystem.CompProperties_Resource">
+				<pipeNet>THNMF_MechaniteNet</pipeNet>
+			</li>
+			<li Class="PipeSystem.CompProperties_Resource">
+				<pipeNet>THNMF_BionaniteNet</pipeNet>
+			</li>
+			<li Class="PipeSystem.CompProperties_Resource">
+				<pipeNet>THNMF_LuciferiteNet</pipeNet>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="NaniteConsumerParent">
+		<defName>THNMF_NaniteInjector</defName>
+		<label>nanite injector</label>
+		<size>(1,2)</size>
+		<description>A Small bed with a series of smart bioscanners and thousands of microinjectors. When a mechanized pawn lays in the bed, it quickly adjusts itself to their biosignature and begin administering nanites into their bloodstream. The injector is quite slow, as mechanization shock can be lethal if the body isn't acclimatized to the nanites.</description>
+		<graphicData>
+			<texPath>Things/Building/NaniteAdministrators/NaniteInjector</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(.8,0.6,1.9)</volume>
+			</shadowData>
+			<drawSize>(1, 2)</drawSize>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<WorkToBuild>800</WorkToBuild>
+			<Mass>50</Mass>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<costList>
+			<Steel>100</Steel>
+			<Plasteel>10</Plasteel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>150</basePowerConsumption>
+			</li>
+			<li>
+				<compClass>NanomachineFoundry.CompNaniteInjector</compClass>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="NaniteApplicatorParent">
+		<defName>THNMF_NaniteMechanizer</defName>
+		<label>nanite mechanizer</label>
+		<description>A massive machine with a sealed chamber to inundant a pawn's blood system with nanites. Once sealed into the chambers it will slowly analyze their biosignature and begin modifying the body and acclimatizing them to accept nanites.\nThe initial process is quite slow as the machine must read the pawn's biology, but a machine-readable scan is recorded on a microchip installed at the base of the skull for reference during future operations. Pawns are placed into cryptosleep for the duration of the mechanization, meaning they do not need to be attended to during the process, but will age very rapidly. Only postpubescent adults can mechanize, meaning pawns must be at least 24 years of age.</description>
+		<graphicData>
+			<texPath>Things/Building/NaniteAdministrators/NaniteMechanizer</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(2.9,0.6,1.9)</volume>
+			</shadowData>
+			<drawSize>(4, 3)</drawSize>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<WorkToBuild>28000</WorkToBuild>
+			<Mass>150</Mass>
+			<Flammability>0.5</Flammability>
+			<Beauty>-5</Beauty>
+		</statBases>
+		<costList>
+			<Steel>200</Steel>
+			<Plasteel>50</Plasteel>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<ComponentSpacer>2</ComponentSpacer>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>500</basePowerConsumption>
+			</li>
+			<li>
+				<compClass>NanomachineFoundry.CompNaniteMechanizer</compClass>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="NaniteConsumerParent">
+		<defName>THNMF_NaniteOperator</defName>
+		<label>nanite operator</label>
+		<description>A reprogramming casket intended to perform long-term applications of nanites. Capable of reconfiguring and reprogramming existing nanites, as well as performing advanced surgical operations on non-mechanized pawns using nanites.</description>
+		<graphicData>
+			<texPath>Things/Building/NaniteAdministrators/NaniteOperator</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(2.9,0.6,1.9)</volume>
+			</shadowData>
+			<drawSize>(4, 3)</drawSize>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<WorkToBuild>28000</WorkToBuild>
+			<Mass>150</Mass>
+			<Flammability>0.5</Flammability>
+			<Beauty>-5</Beauty>
+		</statBases>
+		<costList>
+			<Steel>200</Steel>
+			<Plasteel>25</Plasteel>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<ComponentSpacer>1</ComponentSpacer>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>500</basePowerConsumption>
+			</li>
+			<li>
+				<compClass>NanomachineFoundry.CompNaniteOperator</compClass>
+			</li>
+		</comps>
+		<inspectorTabs>
+			<li>NanomachineFoundry.ITab_NaniteConfig</li>
+			<li>NanomachineFoundry.ITab_NaniteModificationInstallation</li>
+			<li>NanomachineFoundry.ITab_NaniteOperation</li>
+		</inspectorTabs>
+	</ThingDef>
+</Defs>

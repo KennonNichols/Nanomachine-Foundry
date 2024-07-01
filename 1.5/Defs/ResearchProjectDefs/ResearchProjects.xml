@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+
+
+
+	<ResearchProjectDef>
+		<tab>THNMF_Nanites</tab>
+		<defName>THNMF_NaniteHarvesting</defName>
+		<label>nanite harvesting</label>
+		<description>Research the ability to forcibly extract nanites from inundated beings.</description>
+		<baseCost>1500</baseCost>
+		<techLevel>Ultra</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<prerequisites>
+			<li>THNMF_NaniteAdmin</li>
+		</prerequisites>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>3.8</researchViewY>
+	</ResearchProjectDef>
+
+
+
+	<!--TODO, write descriptions-->
+
+
+	<ResearchProjectDef Name="THNMF_NaniteResearchBase" Abstract="True">
+		<techLevel>Ultra</techLevel>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+		<tab>THNMF_Nanites</tab>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="THNMF_NaniteResearchBase">
+		<defName>THNMF_NaniteAdmin</defName>
+		<label>nanite administration</label>
+		<description>Unlocks the nanite pipe network and the nanite operator, a versatile machine capable of reconfiguring nanite levels in a mechanized pawn, programming powerful modifications into existing nanites, and performing surgeries on non-mechanized pawns.</description>
+		<baseCost>2000</baseCost>
+		<prerequisites>
+			<li>Fabrication</li>
+		</prerequisites>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>2.4</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="THNMF_NaniteResearchBase">
+		<defName>THNMF_HealthSupport</defName>
+		<label>health support</label>
+		<description>Program modifications that provide simple, yet impactful general support on a pawn's wellness.</description>
+		<baseCost>1000</baseCost>
+		<prerequisites>
+			<li>THNMF_BodyEmpowerment</li>
+		</prerequisites>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>4.8</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="THNMF_NaniteResearchBase">
+		<defName>THNMF_Neurorewiring</defName>
+		<label>neurorewiring</label>
+		<description>Program modifications that destroys and create neural pathways and tweaks brain chemistry, changing the way a pawn thinks by directly modifying their brain.</description>
+		<baseCost>1000</baseCost>
+		<prerequisites>
+			<li>THNMF_MindEmpowerment</li>
+		</prerequisites>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>0.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="THNMF_NaniteResearchBase">
+		<defName>THNMF_BodyEmpowerment</defName>
+		<label>body empowerment</label>
+		<description>Program modifications to make a pawn's body better and stronger.</description>
+		<baseCost>1000</baseCost>
+		<prerequisites>
+			<li>THNMF_NaniteAdmin</li>
+		</prerequisites>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>3.8</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="THNMF_NaniteResearchBase">
+		<defName>THNMF_NaniteAttacks</defName>
+		<label>nanite attacks</label>
+		<description>Program coroutines to engage nanites in coordinated nanite-empowered attacks.</description>
+		<baseCost>1000</baseCost>
+		<prerequisites>
+			<li>THNMF_BodyEmpowerment</li>
+		</prerequisites>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>3.8</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="THNMF_NaniteResearchBase">
+		<defName>THNMF_Revival</defName>
+		<label>revival</label>
+		<description>Program modifications to raise the pawn from the dead.</description>
+		<baseCost>3000</baseCost>
+		<prerequisites>
+			<li>THNMF_MindEmpowerment</li>
+			<li>THNMF_BodyEmpowerment</li>
+		</prerequisites>
+		<researchViewX>6.00</researchViewX>
+		<researchViewY>2.4</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="THNMF_NaniteResearchBase">
+		<defName>THNMF_MindEmpowerment</defName>
+		<label>mind empowerment</label>
+		<description>Program modifications to improve a pawn's mental abilities.</description>
+		<baseCost>1000</baseCost>
+		<prerequisites>
+			<li>THNMF_NaniteAdmin</li>
+		</prerequisites>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>1.00</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="THNMF_NaniteResearchBase">
+		<defName>THNMF_MechanoidControl</defName>
+		<label>mechanoid control</label>
+		<description>Program modifications to give a mechanitor a greater control over mechanoids, hostile and friendly.</description>
+		<baseCost>1000</baseCost>
+		<prerequisites>
+			<li>THNMF_MindEmpowerment</li>
+		</prerequisites>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>1.00</researchViewY>
+	</ResearchProjectDef>
+</Defs>

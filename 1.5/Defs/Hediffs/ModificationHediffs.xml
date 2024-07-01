@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <!--Metal Maw-->
+    <HediffDef>
+        <defName>THNMF_MetalMaw</defName>
+        <label>metal maw</label>
+        <description>The pawn's face has split open to reveal hundreds of razor-sharp bioferrite teeth.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <tendable>false</tendable>
+        <defaultLabelColor>(.5, .3, .3)</defaultLabelColor>
+        <stages>
+            <li>
+                <painOffset>0.08</painOffset>
+                <statOffsets>
+                    <PawnBeauty>-1</PawnBeauty>
+                </statOffsets>
+            </li>
+        </stages>
+        <comps>
+            <li Class="NanomachineFoundry.HediffCompProperties_MetalMaw" />
+        </comps>
+        <everCurableByItem>false</everCurableByItem>
+        <isBad>false</isBad>
+
+
+        <renderNodeProperties>
+            <li>
+                <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+                <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+                <texPath>Things/Pawn/MetalMaw</texPath>
+                <texPathFemale>Things/Pawn/MetalMaw</texPathFemale>
+                <parentTagDef>Head</parentTagDef>
+                <visibleFacing>
+                    <li>South</li>
+                </visibleFacing>
+                <rotDrawMode>Fresh, Rotting</rotDrawMode>
+                <drawSize>0.2</drawSize>
+                <drawData>
+                    <defaultData>
+                        <layer>54</layer>
+                        <offset>(0, 0, -0.16)</offset>
+                    </defaultData>
+                </drawData>
+            </li>
+        </renderNodeProperties>
+
+
+    </HediffDef>
+
+    <HediffDef>
+        <defName>THNMF_MawRegeneration</defName>
+        <label>regeneration</label>
+        <hediffClass>HediffWithComps</hediffClass>
+
+        <description>The host has consumed raw meat directly from another being in combat, and nanites are rapidly integrating that meat directly into the host's body to restore lost tissue.</description>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-60000</severityPerDay>
+                <showDaysToRecover>true</showDaysToRecover>
+            </li>
+        </comps>
+
+        <stages>
+            <li>
+                <regeneration>100</regeneration>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--Resurrection-->
+
+    <HediffDef>
+        <defName>THNMF_LockerProtocolResurrection</defName>
+        <label>locker protocol</label>
+        <hediffClass>HediffWithComps</hediffClass>
+        <description>Locker protocol is rapidly rebuilding user's tissue.</description>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="NanomachineFoundry.HediffCompProperties_NaniteResurrection">
+                <extraDescription>Locker protocol is active:</extraDescription>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>THNMF_AngelOSResurrection</defName>
+        <label>AngelOS</label>
+        <hediffClass>HediffWithComps</hediffClass>
+        <description>AngelOS is reconstructing the pawn's body.</description>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="NanomachineFoundry.HediffCompProperties_NaniteResurrection">
+                <resurrectionTicks>300</resurrectionTicks>
+                <extraDescription>AngelOS is active:</extraDescription>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>THNMF_ReconstructMortalityResurrection</defName>
+        <label>reconstructing mortality</label>
+        <hediffClass>HediffWithComps</hediffClass>
+        <description>Bionanites are healing the host at supernatural speed. The speed and efficiency are unparalleled, but the nanites will take their toll.</description>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="NanomachineFoundry.HediffCompProperties_NaniteResurrection">
+                <resurrectionTicks>900</resurrectionTicks>
+                <extraDescription>Bionanites reconstructing mortality:</extraDescription>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>THNMF_RefuteMortalityResurrection</defName>
+        <label>refuting mortality</label>
+        <hediffClass>HediffWithComps</hediffClass>
+        <description>Archites are returning the pawn to life.</description>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="NanomachineFoundry.HediffCompProperties_NaniteResurrection">
+                <resurrectionTicks>300</resurrectionTicks>
+                <extraDescription>Host is resurrecting:</extraDescription>
+            </li>
+        </comps>
+    </HediffDef>
+
+
+    <!--Bladeform and metallize-->
+    <HediffDef>
+        <defName>THNMF_Bladeform</defName>
+        <label>bladeform</label>
+        <hediffClass>HediffWithComps</hediffClass>
+        <maxSeverity>1</maxSeverity>
+        <description>The host's skin is entirely enrobed in microscopic plasteel scales formed by nanites, many of which have grown to extend to a razor-sharp edge, allowing the host terrifying combat prowess in melee. The scales move and breathe with the host, causing no encumbrance.</description>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+                </statOffsets>
+            </li>
+        </stages>
+        <comps>
+            <li Class="NanomachineFoundry.HediffCompProperties_ScaledVerbGiver">
+                <maxDamage>20</maxDamage>
+                <maxCooldown>2</maxCooldown>
+                <minCooldown>0.1</minCooldown>
+                <tools>
+                    <li>
+                        <label>plasteel scale</label>
+                        <capacities>
+                            <li>Cut</li>
+                        </capacities>
+                        <armorPenetration>0.8</armorPenetration>
+                        <power>20</power>
+                        <cooldownTime>0.1</cooldownTime>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+        <addedPartProps>
+            <solid>true</solid>
+        </addedPartProps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>THNMF_Metallize</defName>
+        <label>metallize</label>
+        <hediffClass>HediffWithComps</hediffClass>
+        <maxSeverity>1</maxSeverity>
+        <description>The host's skin is dotted with bioferrite thorns which can be used as a slashing attack.</description>
+        <comps>
+            <li Class="NanomachineFoundry.HediffCompProperties_ScaledVerbGiver">
+                <maxDamage>20</maxDamage>
+                <maxCooldown>2</maxCooldown>
+                <minCooldown>1.5</minCooldown>
+                <blockedByClothing>true</blockedByClothing>
+                <tools>
+                    <li>
+                        <label>bioferrite thorn</label>
+                        <capacities>
+                            <li>Cut</li>
+                        </capacities>
+                        <armorPenetration>0.2</armorPenetration>
+                        <power>20</power>
+                        <cooldownTime>0.1</cooldownTime>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+        <addedPartProps>
+            <solid>true</solid>
+        </addedPartProps>
+    </HediffDef>
+
+
+
+</Defs>

@@ -1,0 +1,266 @@
+<Defs>
+    <ThingDef ParentName="BuildingBase">
+        <defName>THNMF_MechaniteBreeder</defName>
+        <label>mechanite breeder</label>
+        <description>A large platform meant to clamp down and contain a mechanoid in a dormant state. Electrical stimulation provokes the additional production of mechanites.\n\nA powered regulator constantly extracts mechanites, preventing the mechanoid from having enough to ever reboot The regulator automatically destroys any excess mechanites that can't be stored, preventing them from building up in the mechanoid. If the regulator ever loses power excess mechanites can reawaken the mechanoid, albeit in a weakened state.</description>
+        <thingClass>NanomachineFoundry.Building_MechaniteBreeder</thingClass>
+        <drawerType>RealtimeOnly</drawerType>
+        <rotatable>false</rotatable>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <texPath>Things/Building/Production/BreedingPlatform</texPath>
+            <drawSize>(2,2)</drawSize>
+            <damageData>
+                <cornerTL>Damage/Corner</cornerTL>
+                <cornerTR>Damage/Corner</cornerTR>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+        </graphicData>
+        <castEdgeShadows>false</castEdgeShadows>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <pathCost>50</pathCost>
+        <fillPercent>1.0</fillPercent>
+        <defaultPlacingRot>North</defaultPlacingRot>
+        <statBases>
+            <MaxHitPoints>500</MaxHitPoints>
+            <WorkToBuild>5000</WorkToBuild>
+            <Mass>75</Mass>
+        </statBases>
+        <containedPawnsSelectable>true</containedPawnsSelectable>
+        <tickerType>Normal</tickerType>
+        <canOverlapZones>false</canOverlapZones>
+        <size>(2,2)</size>
+        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+        <hasInteractionCell>true</hasInteractionCell>
+        <building>
+            <destroySound>BuildingDestroyed_Metal_Medium</destroySound>
+            <haulToContainerDuration>120</haulToContainerDuration>
+            <uninstallWork>1800</uninstallWork>
+        </building>
+        <costList>
+            <Steel>180</Steel>
+            <Silver>10</Silver>
+            <ComponentIndustrial>2</ComponentIndustrial>
+            <ComponentSpacer>1</ComponentSpacer>
+        </costList>
+        <designationCategory>THNMF_PipeNetworks</designationCategory>
+        <researchPrerequisites>
+            <li>THNMF_NaniteHarvesting</li>
+        </researchPrerequisites>
+        <comps>
+            <li Class="PipeSystem.CompProperties_Resource">
+                <pipeNet>THNMF_MechaniteNet</pipeNet>
+            </li>
+            <li Class="NanomachineFoundry.NaniteProduction.CompProperties_MechaniteBreeder">
+            </li>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>500</basePowerConsumption>
+            </li>
+        </comps>
+        <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+        <constructEffect>ConstructMetal</constructEffect>
+        <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+    </ThingDef>
+
+
+    <ThingDef ParentName="BuildingBase" MayRequire="Ludeon.RimWorld.Anomaly">
+        <thingClass>NanomachineFoundry.NaniteProduction.Building_BionaniteExtractor</thingClass>
+        <defName>THNMF_BionaniteExtractor</defName>
+        <label>bionanite extractor</label>
+        <description>When placed near a holding platform, this device extracts corrupt nanites from the held entity and reprograms them into injectable bionanites.\n\nLarger entities generally produce more bioferrite. However, for most creatures, the process causes extreme discomfort, making the entity harder to contain.\n\nEach holding platform can only support one extractor; however, each extractor can connect to multiple platforms.</description>
+        <tickerType>Normal</tickerType>
+        <size>(1,2)</size>
+        <graphicData>
+            <texPath>Things/Building/Production/BionaniteExtractor</texPath>
+            <graphicClass>Graphic_Multi_BuildingWorking</graphicClass>
+            <drawSize>(2,3)</drawSize>
+            <addTopAltitudeBias>true</addTopAltitudeBias>
+        </graphicData>
+        <uiIconScale>0.8</uiIconScale>
+        <castEdgeShadows>true</castEdgeShadows>
+        <staticSunShadowHeight>0.20</staticSunShadowHeight>
+        <building>
+            <ai_chillDestination>false</ai_chillDestination>
+            <buildingTags>
+                <li>Anomaly</li>
+            </buildingTags>
+        </building>
+        <drawerType>RealtimeOnly</drawerType>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.9</fillPercent>
+        <pathCost>50</pathCost>
+        <designationCategory>THNMF_PipeNetworks</designationCategory>
+        <uiOrder>115</uiOrder>
+        <canOverlapZones>false</canOverlapZones>
+        <defaultPlacingRot>East</defaultPlacingRot>
+        <thingCategories>
+            <li>BuildingsPower</li>
+        </thingCategories>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <statBases>
+            <MaxHitPoints>200</MaxHitPoints>
+            <WorkToBuild>4000</WorkToBuild>
+            <Flammability>0.75</Flammability>
+            <Beauty>-10</Beauty>
+            <Mass>20</Mass>
+        </statBases>
+        <costList>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <Steel>20</Steel>
+            <Bioferrite>5</Bioferrite>
+        </costList>
+        <researchPrerequisites>
+            <li>THNMF_NaniteHarvesting</li>
+            <li>BioferriteHarvesting</li>
+        </researchPrerequisites>
+        <placeWorkers>
+            <li>PlaceWorker_ShowFacilitiesConnections</li>
+        </placeWorkers>
+        <comps>
+            <li Class="PipeSystem.CompProperties_Resource">
+                <pipeNet>THNMF_BionaniteNet</pipeNet>
+            </li>
+            <li Class="CompProperties_Breakdownable" />
+            <li Class="CompProperties_Facility">
+                <maxDistance>5.1</maxDistance>
+                <statOffsets>
+                    <ContainmentStrength>-15</ContainmentStrength>
+                </statOffsets>
+            </li>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>25</basePowerConsumption>
+            </li>
+            <li Class="CompProperties_Flickable" />
+            <li Class="CompProperties_AttachPoints">
+                <points>
+                    <li>
+                        <offset>(.1, 0, .8)</offset>
+                        <type>CableConnection0</type>
+                    </li>
+                    <li>
+                        <offset>(.1, 0, .8)</offset>
+                        <type>CableConnection1</type>
+                    </li>
+                    <li>
+                        <offset>(.1, 0, .8)</offset>
+                        <type>CableConnection2</type>
+                    </li>
+                    <li>
+                        <offset>(.1, 0, .8)</offset>
+                        <type>CableConnection3</type>
+                    </li>
+                    <li>
+                        <offset>(0, 0, .28)</offset>
+                        <type>Exhaust</type>
+                    </li>
+                </points>
+            </li>
+            <li Class="CompProperties_CableConnection">
+                <color>(0.36, 0.21, 0.13, 1)</color>
+                <drawMote>true</drawMote>
+                <moteDef>Mote_BioFerriteHarvested</moteDef>
+                <offsets>
+                    <li>
+                        <li>(0, 0, 0.9)</li>
+                        <li>(0, 0, 0.48)</li>
+                        <li>(0, 0, 0.3)</li>
+                        <li>(0, 0, 0.1)</li>
+                    </li>
+                    <li>
+                        <li>(0.6, 0, 0.3)</li>
+                        <li>(-0.2, 0, 0)</li>
+                        <li>(0.2, 0, 0)</li>
+                        <li>(0.4, 0, 0)</li>
+                    </li>
+                    <li>
+                        <li>(0, 0, -0.25)</li>
+                        <li>(0.4, 0, 0.48)</li>
+                        <li>(0.4, 0, 0.3)</li>
+                        <li>(0.4, 0, 0.1)</li>
+                    </li>
+                    <li>
+                        <li>(-0.65, 0, 0.3)</li>
+                        <li>(-0.2, 0, 0.65)</li>
+                        <li>(0.2, 0, 0.65)</li>
+                        <li>(0.4, 0, 0.65)</li>
+                    </li>
+                </offsets>
+            </li>
+        </comps>
+    </ThingDef>
+
+    
+
+    <!--<ThingDef ParentName="BuildingBase" MayRequire="Ushanka.luciferiumexpansion">
+        <thingClass>NanomachineFoundry.NaniteProduction.Building_LuciferiteReprogammer</thingClass>
+        <defName>LuciferiteReprogrammer</defName>
+        <label>luciferite reprogrammer</label>
+        <description>TODO- slowly reprograms scarlet mechanites into injectable luciferites.</description>
+        <tickerType>Normal</tickerType>
+        <size>(1,1)</size>
+        <graphicData>
+            <texPath>Things/Building/Production/LuciferiteReprogrammer</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1, 1)</drawSize>
+            <addTopAltitudeBias>true</addTopAltitudeBias>
+        </graphicData>
+        <uiIconScale>0.8</uiIconScale>
+        <castEdgeShadows>true</castEdgeShadows>
+        <staticSunShadowHeight>0.20</staticSunShadowHeight>
+        <building>
+            <ai_chillDestination>false</ai_chillDestination>
+        </building>
+        <altitudeLayer>Building</altitudeLayer>
+        <drawerType>MapMeshAndRealTime</drawerType>
+        <rotatable>false</rotatable>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.9</fillPercent>
+        <pathCost>50</pathCost>
+        <designationCategory>THNMF_PipeNetworks</designationCategory>
+        <uiOrder>115</uiOrder>
+        <canOverlapZones>false</canOverlapZones>
+        <defaultPlacingRot>South</defaultPlacingRot>
+        <thingCategories>
+            <li>BuildingsPower</li>
+        </thingCategories>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <statBases>
+            <MaxHitPoints>20</MaxHitPoints>
+            <WorkToBuild>400</WorkToBuild>
+            <Flammability>0.2</Flammability>
+            <Beauty>-1</Beauty>
+            <Mass>20</Mass>
+        </statBases>
+        <costList>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>1</ComponentSpacer>
+            <Steel>20</Steel>
+            <Gold>10</Gold>
+        </costList>
+        <researchPrerequisites>
+            
+            <li>BioferriteHarvesting</li>
+        </researchPrerequisites>
+        <comps>
+            <li Class="PipeSystem.CompProperties_Resource">
+                <pipeNet>USH_ScarletMechanitesNet</pipeNet>
+            </li>
+            <li Class="PipeSystem.CompProperties_Resource">
+                <pipeNet>THNMF_LuciferiteNet</pipeNet>
+            </li>
+            <li Class="CompProperties_Breakdownable" />
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>25</basePowerConsumption>
+            </li>
+            <li Class="CompProperties_Flickable" />
+        </comps>
+    </ThingDef>-->
+
+
+</Defs>

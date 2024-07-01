@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+        <defName>THNMF_AnnihilationPunch</defName>
+        <label>annihilation punch</label>
+        
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>LinearWithBase</scalingStyle>
+                <baseValue>30</baseValue>
+                <label>{0} second cooldown</label>
+                <amount>-2</amount>
+                <halfLife>5</halfLife>
+            </li>
+        </modScalingDetails>
+
+        <iconPath>UI/Administrations/Modifications/Modicon_AnnihilationPunch</iconPath>
+        <ability>THNMF_AnnihilationPunchAbility</ability>
+        <categoryDef>THNMF_Archite</categoryDef>
+        <description>Activated Ability: Enhances the host's entire skeleton and sends a massive archite impulse along their arm, throwing an empowered punch. The host's fist is sheathed in a broad psychic field which shears and explosively scatters atoms on impact.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker</workerClass>
+        <ticker>false</ticker>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+    
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+        <defName>THNMF_RefuteMortality</defName>
+        <label>refute mortality</label>
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0} control unit cost, to a minimum of 4.</label>
+                <scalingOperatorSymbol>-</scalingOperatorSymbol>
+                <amount>2</amount>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_RefuteMortality</iconPath>
+        <categoryDef>THNMF_Archite</categoryDef>
+        <description>Upon host death, heals all injuries and resurrects. By default, this costs archites equal to host's archite capacity. Each level reduces this cost by 2.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker_RefuteMortality</workerClass>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+        <defName>THNMF_AtomizationMist</defName>
+        <label>atomization mist</label>
+        
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Constant</scalingStyle>
+                <label>15 tile range</label>
+                <amount>0</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Constant</scalingStyle>
+                <label>{0} square units area</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>10</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>LinearWithBase</scalingStyle>
+                <baseValue>5</baseValue>
+                <label>{0} second cloud duration</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>2</amount>
+                <halfLife>5</halfLife>
+            </li>
+        </modScalingDetails>
+        
+        <iconPath>UI/Administrations/Modifications/Modicon_AtomizationMist</iconPath>
+        <ability>THNMF_AtomizationMistAbility</ability>
+        <categoryDef>THNMF_Archite</categoryDef>
+        <description>Activated ability: Ejects entire allocated archite population into a cloud that seeks out enemies and fatally attacks their central nervous system via perfectly optimised microtargeted severing of critical neural pathways. Archites are motile, allowing them to seek hostiles and eventually attempt to return to the host, but most are lost in the process. Has no cooldown, meaning any returned archites can be immediately reused.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker</workerClass>
+        <ticker>false</ticker>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+        <defName>THNMF_InsanityPulse</defName>
+        <label>insanity pulse</label>
+        
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>LinearWithBase</scalingStyle>
+                <baseValue>10</baseValue>
+                <label>{0}% berserk chance</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>4.5</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>LinearWithBase</scalingStyle>
+                <baseValue>60</baseValue>
+                <label>{0} second cooldown</label>
+                <amount>-2.5</amount>
+            </li>
+        </modScalingDetails>
+        
+        <iconPath>UI/Administrations/Modifications/Modicon_InsanityPulse</iconPath>
+        <ability>THNMF_InsanityPulseAbility</ability>
+        <categoryDef>THNMF_Archite</categoryDef>
+        <description>Activated ability: Project sheer hate into a target's mind, instantly driving them to a mental break. Requires line of sight.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker</workerClass>
+        <ticker>false</ticker>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+        <defName>THNMF_Bladeform</defName>
+        <label>bladeform</label>
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Bonus</scalingStyle>
+                <label>{0} sharp armor</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>.15</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0} scale damage</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>.5</amount>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_Bladeform</iconPath>
+        <hediff>THNMF_Bladeform</hediff>
+        <categoryDef>THNMF_Archite</categoryDef>
+        <description>Host grows giant plasteel scales all over their body, gaining a boost in armor. During a fight, scales in strategic positions will quickly grow into blades, granting powerful slashing attacks. Attacks faster at higher levels.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker</workerClass>
+        <ticker>false</ticker>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+    
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+        <defName>THNMF_AlphaBiology</defName>
+        <label>alpha biology</label>
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% hunger rate</label>
+                <scalingOperatorSymbol>-</scalingOperatorSymbol>
+                <amount>1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% resting rate</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% rest fall rate</label>
+                <scalingOperatorSymbol>-</scalingOperatorSymbol>
+                <amount>1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% immunity gain speed</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% healing rate</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% flammability</label>
+                <scalingOperatorSymbol>-</scalingOperatorSymbol>
+                <amount>1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% move speed</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% crawl speed</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% filth rate</label>
+                <scalingOperatorSymbol>-</scalingOperatorSymbol>
+                <amount>1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}° minimum comfortable temperature</label>
+                <scalingOperatorSymbol>-</scalingOperatorSymbol>
+                <amount>1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}° maximum comfortable temperature</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% lifespan</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail" MayRequire="Ludeon.RimWorld.Anomaly">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% psychic ritual quality offset</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail" MayRequire="Ludeon.RimWorld.Biotech">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% hemogen gain</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail" MayRequire="Ludeon.RimWorld.Biotech">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% cancer rate</label>
+                <scalingOperatorSymbol>-</scalingOperatorSymbol>
+                <amount>1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail" MayRequire="Ludeon.RimWorld.Biotech">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% toxic environment resistance</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail" MayRequire="Ludeon.RimWorld.Biotech">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% toxic resistance</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail" MayRequire="Ludeon.RimWorld.Biotech">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% fertility</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% beauty</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% carrying capacity</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% global work speed</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% medical tend quality</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail" MayRequire="Ludeon.RimWorld.Ideology">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% biosculpting speed</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail" MayRequire="Ludeon.RimWorld.Ideology">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% slave suppression power</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>1</amount>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_AlphaBiology</iconPath>
+
+        <scalingStatFactors>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>RestRateMultiplier</affectedStat>
+                <amount>0.01</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>RestFallRateFactor</affectedStat>
+                <amount>-0.01</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>ImmunityGainSpeed</affectedStat>
+                <amount>0.01</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>InjuryHealingFactor</affectedStat>
+                <amount>0.01</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>Flammability</affectedStat>
+                <amount>-0.01</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>MoveSpeed</affectedStat>
+                <amount>0.01</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>FilthRate</affectedStat>
+                <amount>-0.01</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>LifespanFactor</affectedStat>
+                <amount>0.01</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector" MayRequire="Ludeon.RimWorld.Anomaly">
+                <affectedStat>PsychicRitualQualityOffset</affectedStat>
+                <amount>0.01</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector" MayRequire="Ludeon.RimWorld.Biotech">
+                <affectedStat>HemogenGainFactor</affectedStat>
+                <amount>0.01</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector" MayRequire="Ludeon.RimWorld.Biotech">
+                <affectedStat>CancerRate</affectedStat>
+                <amount>-0.01</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector" MayRequire="Ludeon.RimWorld.Biotech">
+                <affectedStat>Fertility</affectedStat>
+                <amount>0.01</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>PawnBeauty</affectedStat>
+                <amount>0.01</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>CarryingCapacity</affectedStat>
+                <amount>0.01</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>WorkSpeedGlobal</affectedStat>
+                <amount>0.01</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>MedicalTendQuality</affectedStat>
+                <amount>0.01</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>CrawlSpeed</affectedStat>
+                <amount>0.01</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector" MayRequire="Ludeon.RimWorld.Ideology">
+                <affectedStat>BiosculpterOccupantSpeed</affectedStat>
+                <amount>0.01</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector" MayRequire="Ludeon.RimWorld.Ideology">
+                <affectedStat>SuppressionPower</affectedStat>
+                <amount>0.01</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+        </scalingStatFactors>
+
+        <scalingStatOffsets>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector" MayRequire="Ludeon.RimWorld.Biotech">
+                <affectedStat>ToxicEnvironmentResistance</affectedStat>
+                <amount>0.01</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector" MayRequire="Ludeon.RimWorld.Biotech">
+                <affectedStat>ToxicResistance</affectedStat>
+                <amount>0.01</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>ComfyTemperatureMin</affectedStat>
+                <amount>-1</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>ComfyTemperatureMax</affectedStat>
+                <amount>1</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+        </scalingStatOffsets>
+
+
+        <categoryDef>THNMF_Archite</categoryDef>
+        <description>Humanity perfected. Upgrades everything.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker_AlphaBiology</workerClass>
+        <ticker>false</ticker>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+    
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+        <defName>THNMF_Truesight</defName>
+        <label>truesight</label>
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% psychic sensitivity</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>10</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Constant</scalingStyle>
+                <label> Deaf to psychic drones, psychic disruption, and hostile psycasts when 5 or more nanites are allocated.</label>
+                <amount></amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Bonus</scalingStyle>
+                <label> Not fooled by dark psychic invisibility. Immune to weak psychic hypnosis.</label>
+                <amount></amount>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_Truesight</iconPath>
+
+
+        <scalingStatOffsets>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>PsychicSensitivity</affectedStat>
+                <amount>0.1</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+        </scalingStatOffsets>
+
+
+        <categoryDef>THNMF_Archite</categoryDef>
+        <description>Rewires the host's mind into a more efficient format. Increases psychic sensitivity, but makes the host deaf to certain broad-range hostile psychic attacks and prevents hostile psycasts from targetting them. Also allows the host to see through psychic influences of archotech origin.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker_Truesight</workerClass>
+        <ticker>false</ticker>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+    
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+        <defName>THNMF_SelectiveAbsorption</defName>
+        <label>selective absorption</label>
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% incoming damage</label>
+                <scalingOperatorSymbol>-</scalingOperatorSymbol>
+                <amount>4.5</amount>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_SelectiveAbsorption</iconPath>
+
+        <scalingStatFactors>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>IncomingDamageFactor</affectedStat>
+                <amount>-0.045</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+        </scalingStatFactors>
+
+        <categoryDef>THNMF_Archite</categoryDef>
+        <description>Archites will rapidly reform host biology in anticipation of incoming attacks. Within milliseconds of physical trauma archites transform flesh into solid lattices of bony plate enrobed in solid archite lattice, and then harmlessly reverts it back to normal tissue.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker</workerClass>
+        <ticker>false</ticker>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+    <iconPath>UI/Administrations/Modifications/Modicon_SelectiveAbsorption</iconPath>
+
+</Defs>

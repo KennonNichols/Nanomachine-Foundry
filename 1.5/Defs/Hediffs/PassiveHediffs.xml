@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<HediffDef>
+		<defName>THNMF_ArchitePower</defName>
+		<label>active archites</label>
+		<description>Active archites in the bloodstream are providing incredible resilience and immunity to bleeding. Archites also give protection from certain other archite attacks.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
+
+		<comps>
+			<li Class="NanomachineFoundry.HediffCompProperties_ArchitePower">
+				<naniteType>THNMF_Archite</naniteType>
+				<hairColorGoal>(16, 105, 39)</hairColorGoal>
+				<skinColorGoal>(165, 176, 128)</skinColorGoal>
+				<eyeColorGoal>(166, 199, 56)</eyeColorGoal>
+				<colorChange>0.001</colorChange>
+				<tickDelay>1200</tickDelay>
+				<breedAmount>0.2</breedAmount>
+			</li>
+		</comps>
+
+		<stages>
+			<li>
+				<totalBleedFactor>0</totalBleedFactor>
+				<statOffsets>
+					<ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+				</statOffsets>
+				<becomeVisible>true</becomeVisible>
+			</li>
+		</stages>
+
+
+		<renderNodeProperties>
+			<li Class="NanomachineFoundry.PawnRenderNodeProperties_EyeColored">
+				<texPath>Things/Pawn/MaleEyesColorable</texPath>
+				<texPathFemale>Things/Pawn/FemaleEyesColorable</texPathFemale>
+				<parentTagDef>Head</parentTagDef>
+				<anchorTag>RightEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
+				<color>(0, 0, 0)</color>
+				<drawData>
+					<defaultData>
+						<layer>54</layer>
+						<offset>(0, 0, -0.25)</offset>
+					</defaultData>
+				</drawData>
+			</li>
+			<li Class="NanomachineFoundry.PawnRenderNodeProperties_EyeColored">
+				<texPath>Things/Pawn/MaleEyesColorable</texPath>
+				<texPathFemale>Things/Pawn/FemaleEyesColorable</texPathFemale>
+				<parentTagDef>Head</parentTagDef>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<color>(0, 0, 0)</color>
+				<drawData>
+					<defaultData>
+						<layer>54</layer>
+						<offset>(0, 0, -0.25)</offset>
+						<flip>true</flip>
+					</defaultData>
+					<dataWest>
+						<flip>false</flip>
+					</dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+
+
+		<initialSeverity>1</initialSeverity>
+		<everCurableByItem>false</everCurableByItem>
+		<isBad>false</isBad>
+	</HediffDef>
+
+
+	<HediffDef>
+		<defName>THNMF_BionanitePower</defName>
+		<label>active bionanites</label>
+		<description>Active bionanites in the bloodstream are providing the user with incredible power, at a hefty price. Their blood runs and burns like oil.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
+
+		<comps>
+			<li Class="NanomachineFoundry.HediffCompProperties_BionanitePower">
+				<naniteType>THNMF_Bionanite</naniteType>
+				<hairColorGoal>(250, 250, 250)</hairColorGoal>
+				<skinColorGoal>(156, 142, 143)</skinColorGoal>
+				<eyeColorGoal>(250, 250, 250)</eyeColorGoal>
+				<colorChange>0.01</colorChange>
+				<tickDelay>6000</tickDelay>
+				<breedAmount>0.1</breedAmount>
+			</li>
+			<li Class="NanomachineFoundry.HediffCompProperties_NaniteSeverityFromLevel">
+				<naniteType>THNMF_Bionanite</naniteType>
+			</li>
+		</comps>
+
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<label>dead</label>
+				<becomeVisible>true</becomeVisible>
+				<statOffsets>
+					<MentalBreakThreshold>0.05</MentalBreakThreshold>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>.1</minSeverity>
+				<label>dying</label>
+				<totalBleedFactor>0.94</totalBleedFactor>
+				<statFactors>
+					<Flammability>1.3</Flammability>
+				</statFactors>
+				<statOffsets>
+					<MentalBreakThreshold>0.05</MentalBreakThreshold>
+				</statOffsets>
+				<becomeVisible>true</becomeVisible>
+			</li>
+			<li>
+				<minSeverity>.3</minSeverity>
+				<label>weak</label>
+				<totalBleedFactor>0.9</totalBleedFactor>
+				<statFactors>
+					<Flammability>1.5</Flammability>
+				</statFactors>
+				<statOffsets>
+					<MentalBreakThreshold>0.06</MentalBreakThreshold>
+				</statOffsets>
+				<becomeVisible>true</becomeVisible>
+			</li>
+			<li>
+				<minSeverity>.5</minSeverity>
+				<label>healthy</label>
+				<totalBleedFactor>0.86</totalBleedFactor>
+				<statFactors>
+					<Flammability>1.7</Flammability>
+				</statFactors>
+				<statOffsets>
+					<MentalBreakThreshold>0.07</MentalBreakThreshold>
+				</statOffsets>
+				<becomeVisible>true</becomeVisible>
+			</li>
+			<li>
+				<minSeverity>.7</minSeverity>
+				<label>strong</label>
+				<totalBleedFactor>0.82</totalBleedFactor>
+				<statFactors>
+					<Flammability>1.9</Flammability>
+				</statFactors>
+				<statOffsets>
+					<MentalBreakThreshold>0.09</MentalBreakThreshold>
+				</statOffsets>
+				<becomeVisible>true</becomeVisible>
+			</li>
+			<li>
+				<minSeverity>.9</minSeverity>
+				<label>inundated</label>
+				<totalBleedFactor>0.8</totalBleedFactor>
+				<statFactors>
+					<Flammability>2</Flammability>
+				</statFactors>
+				<statOffsets>
+					<MentalBreakThreshold>0.1</MentalBreakThreshold>
+				</statOffsets>
+				<becomeVisible>true</becomeVisible>
+			</li>
+		</stages>
+
+
+		<renderNodeProperties>
+			<li Class="NanomachineFoundry.PawnRenderNodeProperties_EyeColored">
+				<texPath>Things/Pawn/MaleEyesColorable</texPath>
+				<texPathFemale>Things/Pawn/FemaleEyesColorable</texPathFemale>
+				<parentTagDef>Head</parentTagDef>
+				<anchorTag>RightEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
+				<color>(0, 0, 0)</color>
+				<drawData>
+					<defaultData>
+						<layer>54</layer>
+						<offset>(0, 0, -0.25)</offset>
+					</defaultData>
+				</drawData>
+			</li>
+			<li Class="NanomachineFoundry.PawnRenderNodeProperties_EyeColored">
+				<texPath>Things/Pawn/MaleEyesColorable</texPath>
+				<texPathFemale>Things/Pawn/FemaleEyesColorable</texPathFemale>
+				<parentTagDef>Head</parentTagDef>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<color>(0, 0, 0)</color>
+				<drawData>
+					<defaultData>
+						<layer>54</layer>
+						<offset>(0, 0, -0.25)</offset>
+						<flip>true</flip>
+					</defaultData>
+					<dataWest>
+						<flip>false</flip>
+					</dataWest>
+				</drawData>
+			</li>
+		</renderNodeProperties>
+
+
+		<initialSeverity>1</initialSeverity>
+		<everCurableByItem>false</everCurableByItem>
+		<isBad>false</isBad>
+	</HediffDef>
+
+
+	<HediffDef>
+		<defName>THNMF_LuciferitePower</defName>
+		<label>active luciferites</label>
+		<description>Active luciferites in the bloodstream are providing the user with a passive boost to physical strength. Luciferite is incredibly deadly when lost through bleeding, but does provide a passive bleeding resistance. Luciferite shock uses a different pathway than other nanite types, making it much safer if all nanite capacity is allocated luciferite, instead of split between types.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
+
+
+		<comps>
+			<li Class="NanomachineFoundry.HediffCompProperties_NaniteSeverityFromLevel">
+				<naniteType>THNMF_Luciferite</naniteType>
+			</li>
+		</comps>
+
+
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<label>dead</label>
+				<becomeVisible>true</becomeVisible>
+			</li>
+			<li>
+				<minSeverity>0.2</minSeverity>
+				<label>weak</label>
+				<statFactors>
+					<PsychicSensitivity>.5</PsychicSensitivity>
+				</statFactors>
+				<capMods>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.05</offset>
+					</li>
+				</capMods>
+				<becomeVisible>true</becomeVisible>
+			</li>
+			<li>
+				<minSeverity>0.5</minSeverity>
+				<label>healthy</label>
+				<totalBleedFactor>0.9</totalBleedFactor>
+				<statFactors>
+					<PsychicSensitivity>.1</PsychicSensitivity>
+				</statFactors>
+				<statOffsets>
+					<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+				</statOffsets>
+				<painFactor>0.6</painFactor>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.05</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.02</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.07</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.35</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.07</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.10</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.05</offset>
+					</li>
+				</capMods>
+				<becomeVisible>true</becomeVisible>
+			</li>
+			<li>
+				<minSeverity>0.8</minSeverity>
+				<label>inundated</label>
+				<totalBleedFactor>0.75</totalBleedFactor>
+				<statFactors>
+					<PsychicSensitivity>0</PsychicSensitivity>
+				</statFactors>
+				<statOffsets>
+					<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+				</statOffsets>
+				<painFactor>0.8</painFactor>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.10</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.05</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.70</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.20</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.10</offset>
+					</li>
+				</capMods>
+				<becomeVisible>true</becomeVisible>
+			</li>
+		</stages>
+
+
+		<initialSeverity>1</initialSeverity>
+		<everCurableByItem>false</everCurableByItem>
+		<isBad>false</isBad>
+	</HediffDef>
+</Defs>
