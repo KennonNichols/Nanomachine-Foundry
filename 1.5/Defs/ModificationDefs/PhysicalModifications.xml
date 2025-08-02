@@ -200,7 +200,7 @@
             <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
                 <scalingStyle>Linear</scalingStyle>
                 <label>+{0}% healing factor</label>
-                <amount>100</amount>
+                <amount>1</amount>
             </li>
             <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
                 <scalingStyle>Linear</scalingStyle>

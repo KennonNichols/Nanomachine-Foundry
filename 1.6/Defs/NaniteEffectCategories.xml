@@ -1,0 +1,23 @@
+<Defs>
+    <NanomachineFoundry.NaniteEffectCategoryDef>
+        <defName>THNMF_Physical</defName>
+        <label>physical</label>
+        <spawnable>true</spawnable>
+    </NanomachineFoundry.NaniteEffectCategoryDef>
+    <NanomachineFoundry.NaniteEffectCategoryDef MayRequire="ludeon.rimworld.anomaly">
+        <defName>THNMF_Void</defName>
+        <label>void</label>
+    </NanomachineFoundry.NaniteEffectCategoryDef>
+    <NanomachineFoundry.NaniteEffectCategoryDef>
+        <defName>THNMF_Psychic</defName>
+        <label>psychic</label>
+    </NanomachineFoundry.NaniteEffectCategoryDef>
+    <NanomachineFoundry.NaniteEffectCategoryDef MayRequire="ludeon.rimworld.biotech">
+        <defName>THNMF_Mechanitor</defName>
+        <label>mechanitor</label>
+    </NanomachineFoundry.NaniteEffectCategoryDef>
+    <NanomachineFoundry.NaniteEffectCategoryDef>
+        <defName>THNMF_Archite</defName>
+        <label>archite</label>
+    </NanomachineFoundry.NaniteEffectCategoryDef>
+</Defs>

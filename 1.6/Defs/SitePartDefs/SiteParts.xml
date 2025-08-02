@@ -1,0 +1,58 @@
+<Defs>
+    <SitePartDef>
+        <defName>THNMF_CorruptNexus</defName>
+        <label>psychic scream epicenter</label>
+        <description>The center from which a psychic scream emanated.</description>
+        <workerClass>NanomachineFoundry.AssistingArchotechQuest.SitePartWorker_CorruptNexus</workerClass>
+        <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+        <expandingIconTexture>World/WorldObjects/Sites/GenericSite</expandingIconTexture>
+        <approachOrderString>Investigate psychic scream</approachOrderString>
+        <approachingReportString>Investigating psychic scream</approachingReportString>
+        <arrivedLetterDef>NeutralEvent</arrivedLetterDef>
+        <wantsThreatPoints>true</wantsThreatPoints>
+        <minMapSize>(200, 1, 200)</minMapSize>
+        <tags>
+            <li>THNMF_CorruptNexus</li>
+        </tags>
+    </SitePartDef>
+
+    <GenStepDef>
+        <defName>THNMF_CorruptNexus</defName>
+        <linkWithSite>THNMF_CorruptNexus</linkWithSite>
+        <order>1000</order>
+        <genStep Class="NanomachineFoundry.AssistingArchotechQuest.GenStep_CorruptNexus"/>
+    </GenStepDef>
+
+
+
+
+
+
+    <SitePartDef>
+        <defName>THNMF_ArchotechNodeSite</defName>
+        <label>second signal epicenter</label>
+        <description>A site of seemingly no interest, but the source of a secondary psychic pulse. Whatever is contacting us has clearly intended to guide us here.</description>
+        <workerClass>NanomachineFoundry.AssistingArchotechQuest.SitePartWorker_ArchotechNode</workerClass>
+        <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+        <expandingIconTexture>World/WorldObjects/Expanding/Sites/ItemStash</expandingIconTexture>
+        <approachOrderString>Investigate second signal epicenter</approachOrderString>
+        <approachingReportString>Investigating second signal epicenter</approachingReportString>
+        <arrivedLetterDef>NeutralEvent</arrivedLetterDef>
+        <wantsThreatPoints>true</wantsThreatPoints>
+        <minMapSize>(200, 1, 200)</minMapSize>
+        <tags>
+            <li>THNMF_ArchotechNode</li>
+        </tags>
+    </SitePartDef>
+
+    <GenStepDef>
+        <defName>THNMF_ArchotechNodeSiteGen</defName>
+        <linkWithSite>THNMF_ArchotechNodeSite</linkWithSite>
+        <order>1000</order>
+        <genStep Class="NanomachineFoundry.AssistingArchotechQuest.GenStep_ArchotechNode"> 
+            <count>1</count>
+            <nearMapCenter>true</nearMapCenter>
+        </genStep>
+    </GenStepDef>
+
+</Defs>

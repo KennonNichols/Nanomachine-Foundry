@@ -1,0 +1,70 @@
+<Defs>
+    <FactionDef ParentName="FactionBase">
+        <defName>THNMF_Archosplinter</defName>
+        <label>archosplinter puppets</label>
+        <permanentEnemy>true</permanentEnemy>
+        <pawnSingular>puppet</pawnSingular>
+        <pawnsPlural>puppets</pawnsPlural>
+        <categoryTag>Ancient</categoryTag>
+        <humanlikeFaction>true</humanlikeFaction>
+        <requiredCountAtGameStart>1</requiredCountAtGameStart>
+        <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+        <configurationListOrderPriority>2000</configurationListOrderPriority>
+        <displayInFactionSelection>false</displayInFactionSelection>
+        <fixedName>Archosplinter puppets</fixedName>
+        <factionIconPath>World/WorldObjects/Expanding/Sites/DownedRefugee</factionIconPath>
+        <techLevel>Archotech</techLevel>
+        <hiddenIdeo>true</hiddenIdeo>
+        <backstoryFilters>
+            <li>
+                <categories>
+                    <li>THNMF_SplinterPuppet</li>
+                </categories>
+            </li>
+        </backstoryFilters>
+        <hidden>true</hidden>
+        <rescueesCanJoin>false</rescueesCanJoin>
+        <autoFlee>false</autoFlee>
+        <apparelStuffFilter>
+            <thingDefs>
+                <li>Synthread</li>
+                <li>Hyperweave</li>
+                <li>Plasteel</li>
+            </thingDefs>
+        </apparelStuffFilter>
+    </FactionDef>
+    <FactionDef ParentName="FactionBase">
+        <defName>THNMF_ArchosplinterFormer</defName>
+        <label>emancipated archosplinter puppets</label>
+        <permanentEnemy>false</permanentEnemy>
+        <pawnSingular>freed puppet</pawnSingular>
+        <pawnsPlural>freed puppets</pawnsPlural>
+        <categoryTag>Ancient</categoryTag>
+        <humanlikeFaction>true</humanlikeFaction>
+        <requiredCountAtGameStart>1</requiredCountAtGameStart>
+        <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+        <configurationListOrderPriority>2000</configurationListOrderPriority>
+        <displayInFactionSelection>false</displayInFactionSelection>
+        <fixedName>emancipated archosplinter puppets</fixedName>
+        <factionIconPath>World/WorldObjects/Expanding/Sites/DownedRefugee</factionIconPath>
+        <techLevel>Archotech</techLevel>
+        <hiddenIdeo>true</hiddenIdeo>
+        <backstoryFilters>
+            <li>
+                <categories>
+                    <li>THNMF_SplinterPuppet</li>
+                </categories>
+            </li>
+        </backstoryFilters>
+        <hidden>true</hidden>
+        <rescueesCanJoin>true</rescueesCanJoin>
+        <autoFlee>false</autoFlee>
+        <apparelStuffFilter>
+            <thingDefs>
+                <li>Synthread</li>
+                <li>Hyperweave</li>
+                <li>Plasteel</li>
+            </thingDefs>
+        </apparelStuffFilter>
+    </FactionDef>
+</Defs>

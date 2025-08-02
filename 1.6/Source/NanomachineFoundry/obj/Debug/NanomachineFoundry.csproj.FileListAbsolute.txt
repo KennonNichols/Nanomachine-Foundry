@@ -1,0 +1,13 @@
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Nanomachine Foundry\1.5\Assemblies\NanomachineFoundry.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Nanomachine Foundry\1.5\Assemblies\NanomachineFoundry.pdb
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Nanomachine Foundry\1.5\Source\NanomachineFoundry\obj\Debug\NanomachineFoundry.csproj.CoreCompileInputs.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Nanomachine Foundry\1.5\Source\NanomachineFoundry\obj\Debug\NanomachineFoundry.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Nanomachine Foundry\1.5\Source\NanomachineFoundry\obj\Debug\NanomachineFoundry.pdb
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Nanomachine Foundry\1.5\Source\NanomachineFoundry\obj\Debug\NanomachineFoundry.csproj.AssemblyReference.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Nanomachine Foundry\1.5\Source\NanomachineFoundry\obj\Debug\Nanomach.ECDDE00A.Up2Date
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Nanomachine Foundry\1.6\Assemblies\NanomachineFoundry.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Nanomachine Foundry\1.6\Assemblies\NanomachineFoundry.pdb
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Nanomachine Foundry\1.6\Source\NanomachineFoundry\obj\Debug\NanomachineFoundry.csproj.AssemblyReference.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Nanomachine Foundry\1.6\Source\NanomachineFoundry\obj\Debug\NanomachineFoundry.csproj.CoreCompileInputs.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Nanomachine Foundry\1.6\Source\NanomachineFoundry\obj\Debug\NanomachineFoundry.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Nanomachine Foundry\1.6\Source\NanomachineFoundry\obj\Debug\NanomachineFoundry.pdb

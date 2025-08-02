@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef MayRequire="ludeon.rimworld.biotech">
+        <defName>THNMF_AngelOS</defName>
+        <label>AngelOS</label>
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>LinearWithBase</scalingStyle>
+                <baseValue>5</baseValue>
+                <label>{0} tile consumption range</label>
+                <amount>3</amount>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>                
+                
+                <accessKey>Range</accessKey>
+                <configGenerator>
+                    <label>Range multiplier: {0}</label>
+                    <minValue>0.01</minValue>
+                    <maxValue>10</maxValue>
+                    <defaultValue>1</defaultValue>
+                </configGenerator>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>LinearWithBase</scalingStyle>
+                <baseValue>3</baseValue>
+                <label>{0} required total mechanoid body size</label>
+                <amount>-0.12</amount>           
+                
+                <accessKey>BodySize</accessKey>
+                <configGenerator>
+                    <label>Body size requirement multiplier: {0}</label>
+                    <minValue>0.01</minValue>
+                    <maxValue>10</maxValue>
+                    <defaultValue>1</defaultValue>
+                </configGenerator>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_AngelOS</iconPath>
+        <categoryDef>THNMF_Mechanitor</categoryDef>
+        <description>Upon death, kill nearby friendly mechanoids and consume their mechanites to kick start the user's systems and rapidly heal all injuries. This process is not very efficient, and AngelOS Protocol might have to kill more than one mechanoid to perform the resurrection. Larger mechanoids produce more mechanites, and are killed first. Pawn can consume friendly mechanoids that don't belong to them, but will die permanently if there are no friendly or feral mechanoids in the colony.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker_AngelOS</workerClass>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+
+    <!-- Removed because it was boring, and also caused crashes I couldn't figure out. Just a lame-ass ability that wasn't worth debugging, lol
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef MayRequire="ludeon.rimworld.biotech">
+        <defName>THNMF_ControlDrift</defName>
+        <label>control drift</label>
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0} bandwidth</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>.34</amount>
+            </li>
+        </modScalingDetails>
+        <scalingStatOffsets>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingStatAffector">
+                <affectedStat>MechBandwidth</affectedStat>
+                <amount>.34</amount>
+                <scalingStyle>Linear</scalingStyle>
+            </li>
+        </scalingStatOffsets>
+        <ticker>false</ticker>
+        <categoryDef>THNMF_Mechanitor</categoryDef>
+        <description>Host mechanites in the brain allow for new neural pathways to control mechanoids. Increases bandwidth.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker_ControlDrift</workerClass>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>-->
+
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef MayRequire="ludeon.rimworld.biotech">
+        <defName>THNMF_ControlRelease</defName>
+        <label>control release</label>
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0} control group</label>
+                <scalingOperatorSymbol>-</scalingOperatorSymbol>
+                <amount>1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0} bandwidth</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <amount>3</amount>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_ControlRelease</iconPath>
+        <ticker>false</ticker>
+        <forcedStatAffector>true</forcedStatAffector>
+        <categoryDef>THNMF_Mechanitor</categoryDef>
+        <description>Rewired neural pathways make use of mechanoid control groups, exploiting them for more control. For each control group removed (1 control group will always remain), increases bandwidth by 3.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker_ControlRelease</workerClass>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef MayRequire="ludeon.rimworld.biotech">
+        <defName>THNMF_DismantlePulse</defName>
+        <label>dismantle pulse</label>
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Bonus</scalingStyle>
+                <label>Requires 5 control units per mechanoid body size to dismantle</label>
+                <amount>1</amount>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_DismantlePulse</iconPath>
+        <ticker>false</ticker>
+        <ability>THNMF_DismantlePulseAbility</ability>
+        <categoryDef>THNMF_Mechanitor</categoryDef>
+        <description>Activated ability: Turn a mechanoid's own mechanites against it, efficiently dismantling the mechanoid. Costs mechanites relative to the mechanoid's body size, and rarely allows salvage of the mechanoid's core.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker</workerClass>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef MayRequire="ludeon.rimworld.biotech">
+        <defName>THNMF_Ultraclock</defName>
+        <label>ultraclock</label>
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Bonus</scalingStyle>
+                <label>Ultraclock bonuses scale with nanites allocated.</label>
+                <amount>1</amount>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_Ultraclock</iconPath>
+        <ticker>false</ticker>
+        <ability>THNMF_UltraclockAbility</ability>
+        <categoryDef>THNMF_Mechanitor</categoryDef>
+        <description>Activated ability: Empowers a friendly mechanoid with all allocated mechanites to impart tremendous upgrades to all capabilities. At higher levels this can triple or quadruple the stats of a friendly mechanoid.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker</workerClass>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef MayRequire="ludeon.rimworld.biotech">
+        <defName>THNMF_Commandeer</defName>
+        <label>commandeer</label>
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Bonus</scalingStyle>
+                <label>Requires 7 control units per mechanoid body size to commandeer.</label>
+                <amount>1</amount>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_Commandeer</iconPath>
+        <ticker>false</ticker>
+        <ability>THNMF_CommandeerAbility</ability>
+        <categoryDef>THNMF_Mechanitor</categoryDef>
+        <description>Activated ability: Take immediate control of target hostile mechanoid if possible. Commandeer consumes mechanites relative to the mech's body size, and user must touch the mechanoid to take them over.</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker</workerClass>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+
+    <NanomachineFoundry.NaniteModifications.NaniteModificationDef MayRequire="ludeon.rimworld.biotech">
+        <defName>THNMF_MechanoidLeech</defName>
+        <label>mechanoid leech</label>
+        <modScalingDetails>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>{0}% shock severity. This is divided by mechanoid body size</label>
+                <scalingOperatorSymbol>+</scalingOperatorSymbol>
+                <baseOperatorSymbol></baseOperatorSymbol>
+                <amount>12</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Linear</scalingStyle>
+                <label>Can instantly kill mechanites up to: {0} body size</label>
+                <scalingOperatorSymbol></scalingOperatorSymbol>
+                <amount>.12</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Bonus</scalingStyle>
+                <label>Refunds 2 control units of mechanites per body size of target at full power.</label>
+                <amount>1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Bonus</scalingStyle>
+                <label>Will only spend as many nanites as is required to kill the mechanoid.</label>
+                <amount>1</amount>
+            </li>
+            <li Class="NanomachineFoundry.NaniteModifications.ModificationScalingDetail">
+                <scalingStyle>Bonus</scalingStyle>
+                <label>Sentient mechanoids take triple the amount of nanites to kill.</label>
+                <amount>1</amount>
+            </li>
+        </modScalingDetails>
+        <iconPath>UI/Administrations/Modifications/Modicon_MechanoidLeech</iconPath>
+        <ticker>false</ticker>
+        <ability>THNMF_MechanoidLeechAbility</ability>
+        <categoryDef>THNMF_Mechanitor</categoryDef>
+        <description>Activated ability: Steal mechanites from a mechanoid, instantly killing smaller mechanoids and inflicting crippling demechanization shock on larger ones. Intelligent mechanoids with better consciousness of their own mechanite reserve recieve far less shock. Mechanoid Leech refills the user's own reserves in the process. Be warned, however, as the mechanites will still be loyal to the mechhive. While sleeping, existing mechanites make use of the user's brain to permanently reprogram hostile mechanites. While a single use between rests is completely safe, repeated use without rests has a small chance to cause dire consequences...</description>
+        <workerClass>NanomachineFoundry.NaniteModifications.ModificationWorkers.ModificationWorker</workerClass>
+    </NanomachineFoundry.NaniteModifications.NaniteModificationDef>
+
+    
+    <!--
+    -Feedback loop??
+        Passively project a low-shield bubble around the nearest friendly mechanoid. The shield will temporarily and automatically jump back to the user if they come under fire.
+    -->
+</Defs>

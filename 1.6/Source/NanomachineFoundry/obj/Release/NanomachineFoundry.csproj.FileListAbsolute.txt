@@ -1,0 +1,2 @@
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Nanomachine Foundry\1.5\Source\NanomachineFoundry\obj\Release\NanomachineFoundry.csproj.AssemblyReference.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Nanomachine Foundry\1.5\Source\NanomachineFoundry\obj\Release\NanomachineFoundry.csproj.CoreCompileInputs.cache

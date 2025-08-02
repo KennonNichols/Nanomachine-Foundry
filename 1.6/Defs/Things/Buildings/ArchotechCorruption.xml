@@ -1,0 +1,199 @@
+<Defs>
+    MayRequire="ludeon.rimworld.anomaly"
+    
+    <ThingDef ParentName="BuildingBase">
+        <altitudeLayer>Building</altitudeLayer>
+        <category>Building</category>
+        <rotatable>false</rotatable>
+        <destroyable>false</destroyable>
+        <useHitPoints>false</useHitPoints>
+        <passability>Impassable</passability>
+        <fillPercent>1</fillPercent>
+        <canOverlapZones>false</canOverlapZones>
+        <preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
+
+
+        <defName>THNMF_CorruptNexusCore</defName>
+        <thingClass>NanomachineFoundry.AssistingArchotechQuest.Building_CorruptNexusCore</thingClass>
+        <label>corrupt archonexus core</label>
+        <description>A tall and sleek building that is believed to be the center of an archotech complex. What few people have witnessed such a sight describe it as a beautiful object whose psychic activity can be felt, but this one is different. It's walls seem to be melting, slowly sinking into the ground around as it spews a thick blanket of greenish fog. The archotech whom this presumably belonged to has promised you a great reward for delivering a package of their own archites to it.</description>
+        <size>(11, 11)</size>
+        <graphicData>
+            <texPath>Things/Building/Misc/ArchonexusCore</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(11, 11)</drawSize>
+            <shadowData>
+                <volume>(9.8, 1, 8)</volume>
+                <offset>(0,0,-0.66)</offset>
+            </shadowData>
+        </graphicData>
+        <building>
+            <deconstructible>false</deconstructible>
+            <claimable>false</claimable>
+        </building>
+        <comps>
+            <li Class="CompProperties_MoteEmitter">
+                <mote>Mote_PsychicConditionCauserEffect</mote>
+                <emissionInterval>150</emissionInterval>
+                <soundOnEmission>Archonexus_Throb</soundOnEmission>
+            </li>
+            
+            <li Class="CompProperties_AmbientSound">
+                <sound>ArchonexusCore_Ambience</sound>
+                <disabledOnUnpowered>false</disabledOnUnpowered>
+            </li>
+            <li Class="CompProperties_PlantDamager">
+                <ticksBetweenDamage>600</ticksBetweenDamage>
+                <radius>60</radius>
+                <damagePerCycle>20</damagePerCycle>
+                <cycleCountOnSpawn>4</cycleCountOnSpawn>
+            </li>
+            <li Class="CompProperties_SpawnSubplant" MayRequire="Ludeon.RimWorld.Royalty">
+                <compClass>CompSpawnImmortalSubplantsAround</compClass>
+                <subplant>Plant_TreeAnima</subplant>
+                <maxRadius>50</maxRadius>
+                <dontWipePlant>Plant_GrassAnima</dontWipePlant>
+                <chanceOverDistance>
+                    <points>
+                        <li>(0, 0)</li>
+                        <li>(32, 0)</li>
+                        <li>(32.01, 0.25)</li>
+                        <li>(36.5, 0.15)</li>
+                        <li>(41, 0.1)</li>
+                        <li>(50, 0)</li>
+                    </points>
+                </chanceOverDistance>
+                <saveKeysPrefix>tree</saveKeysPrefix>
+            </li>
+            <li Class="CompProperties_SpawnSubplant" MayRequire="Ludeon.RimWorld.Royalty">
+                <compClass>CompSpawnImmortalSubplantsAround</compClass>
+                <subplant>Plant_GrassAnima</subplant>
+                <maxRadius>50</maxRadius>
+                <dontWipePlant>Plant_TreeAnima</dontWipePlant>
+                <chanceOverDistance>
+                    <points>
+                        <li>(0, 0)</li>
+                        <li>(16, 0)</li>
+                        <li>(16.01, 0.01)</li>
+                        <li>(32, 1)</li>
+                        <li>(50, 0)</li>
+                    </points>
+                </chanceOverDistance>
+                <saveKeysPrefix>grass</saveKeysPrefix>
+            </li>
+        </comps>
+        <tickerType>Normal</tickerType>
+    </ThingDef>
+
+
+
+    <ThingDef ParentName="BuildingBase">
+        <defName>THNMF_PsysensitiveAntenna</defName>
+        <label>psysensitive antenna</label>
+        <thingClass>NanomachineFoundry.AssistingArchotechQuest.PsysensitiveAntenna</thingClass>
+        <description>A small antenna that can pick up even the faintest of psychic signals. The complexities required to interpret and analyze the signals are far beyond any tech you would find built on a rimworld, but it is capable of precisely measuring the strength and approximating the direction and signature of psychic waves.\n\nRequires a comms console to coordinate messages, and it may take some time to pick anything up.</description>
+        <graphicData>
+            <texPath>Things/Building/Misc/PsysensitiveAntenna</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(2,2)</drawSize>
+            <drawOffset>(0, 0, 0.5)</drawOffset>
+            <shadowData>
+                <volume>(1.7, 0.75, 0.8)</volume>
+                <offset>(0.15, 0, 0)</offset>
+            </shadowData>
+            <damageData>
+              <cornerTL>Damage/Corner</cornerTL>
+              <cornerTR>Damage/Corner</cornerTR>
+              <cornerBL>Damage/Corner</cornerBL>
+              <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.3</fillPercent>
+        <building>
+            <ai_chillDestination>false</ai_chillDestination>
+        </building>
+        <designationCategory>THNMF_PipeNetworks</designationCategory>
+        <uiOrder>2450</uiOrder>
+        <statBases>
+            <MaxHitPoints>80</MaxHitPoints>
+            <WorkToBuild>120000</WorkToBuild>
+            <Mass>25</Mass>
+            <Flammability>0.5</Flammability>
+        </statBases>
+        <size>(2,1)</size>
+        <costList>
+            <Steel>25</Steel>
+            <Silver>25</Silver>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>1</ComponentSpacer>
+        </costList>
+        <researchPrerequisites>
+            <li>MicroelectronicsBasics</li>
+        </researchPrerequisites>
+        <tickerType>Rare</tickerType>
+        <filthLeaving>Filth_MachineBits</filthLeaving>
+    </ThingDef>
+
+
+    <!--TODO: Make this not look identical to existing terminals-->
+    <ThingDef ParentName="BuildingBase">
+        <label>ancient terminal</label>
+        <description>An ancient computer terminal. It can be hacked to reveal long-forgotten information.</description>
+        <size>(1,1)</size>
+        <fillPercent>0.20</fillPercent>
+        <altitudeLayer>Building</altitudeLayer>
+        <defaultPlacingRot>South</defaultPlacingRot>
+        <hasInteractionCell>true</hasInteractionCell>
+        <interactionCellOffset>(0,0,1)</interactionCellOffset>
+        <statBases>
+        <MaxHitPoints>200</MaxHitPoints>
+        <WorkToBuild>1000</WorkToBuild>
+        <Flammability>0</Flammability>
+        </statBases>
+        <passability>PassThroughOnly</passability>
+        <pathCost>50</pathCost>
+        <tickerType>Normal</tickerType>
+
+
+
+        
+        <defName>THNMF_ArchotechNode</defName>
+        <comps>
+            <li Class="CompProperties_ThrownFleckEmitter" MayRequire="ludeon.rimworld.ideology">
+                <fleck>TerminalScreenLensFlare</fleck>
+                <offsetMin>(-0.3,0,0.35)</offsetMin>
+                <offsetMax>(0.3,0,0.35)</offsetMax>
+                <emissionInterval>90</emissionInterval>
+                <scale>1~1.1</scale>
+                <colorA>(0,235,31,255)</colorA>
+                <colorB>(0,235,31,255)</colorB>
+            </li>
+            <li Class="CompProperties_Glower">
+                <glowRadius>2</glowRadius>
+                <glowColor>(0,235,31,0)</glowColor>
+            </li>
+            <li Class="NanomachineFoundry.AssistingArchotechQuest.CompProperties_ArchotechNodeHackable">
+                <defence>4000</defence>
+                <effectHacking MayRequire="ludeon.rimworld.ideology">HackingTerminal</effectHacking>
+            </li>
+        </comps>
+        <rotatable>false</rotatable>
+        <graphicData>
+          <graphicClass>Graphic_Single</graphicClass>
+          <texPath>Things/Building/Misc/ArchotechNode</texPath>
+          <damageData>
+            <cornerTL>Damage/Corner</cornerTL>
+            <cornerTR>Damage/Corner</cornerTR>
+            <cornerBL>Damage/Corner</cornerBL>
+            <cornerBR>Damage/Corner</cornerBR>
+          </damageData>
+          <shadowData>
+            <volume>(0.55, 0.30, 0.40)</volume>
+          </shadowData>
+        </graphicData>
+    </ThingDef>
+
+</Defs>

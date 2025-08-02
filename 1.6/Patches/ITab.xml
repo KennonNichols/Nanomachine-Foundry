@@ -1,0 +1,19 @@
+<Patch>
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[@Name="BasePawn"]/inspectorTabs</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[@Name="BasePawn"]</xpath>
+            <value>
+                <inspectorTabs>
+                    <li>NanomachineFoundry.ITab_Nanites</li>
+                </inspectorTabs>
+            </value>
+        </nomatch>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[@Name="BasePawn"]/inspectorTabs</xpath>
+            <value>
+                <li>NanomachineFoundry.ITab_Nanites</li>
+            </value>
+        </match>
+    </Operation>
+</Patch>

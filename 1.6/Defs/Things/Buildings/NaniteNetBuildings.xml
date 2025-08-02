@@ -1,0 +1,201 @@
+<Defs>
+    <ThingDef Name="THNMF_TankParent" ParentName="BuildingBase" Abstract="True">
+        <drawerType>MapMeshAndRealTime</drawerType>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(2,2)</drawSize>
+            <damageData>
+                    <cornerTL>Damage/Corner</cornerTL>
+                    <cornerTR>Damage/Corner</cornerTR>
+                    <cornerBL>Damage/Corner</cornerBL>
+                    <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>Impassable</passability>
+        <pathCost>50</pathCost>
+        <blockWind>true</blockWind>
+        <castEdgeShadows>true</castEdgeShadows>
+        <fillPercent>0.40</fillPercent>
+        <tickerType>Normal</tickerType>
+        <statBases>
+            <Flammability>0.3</Flammability>
+        </statBases>
+        <size>(2,2)</size>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+        <designationCategory>THNMF_PipeNetworks</designationCategory>
+        <staticSunShadowHeight>0.2</staticSunShadowHeight>
+        <constructEffect>ConstructMetal</constructEffect>
+        <canOverlapZones>false</canOverlapZones>
+        <researchPrerequisites>
+            <li>THNMF_NaniteAdmin</li>
+        </researchPrerequisites>
+        <disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
+    </ThingDef>
+    
+
+    <ThingDef ParentName="THNMF_TankParent">
+        <defName>THNMF_MechaniteTank</defName>
+        <label>mechanite tank</label>
+        <description>A specialised stasis tank for mechanites. Comes with an attached centrifuge to occasionaly agitate nanites and prevent them from settling or rebinding.</description>
+            
+        <graphicData>
+            <texPath>Things/Building/Production/MechaniteTank</texPath>
+        </graphicData>
+        <costList>
+        <Steel>140</Steel>
+        </costList>
+        
+        
+        <comps>
+            <li Class="PipeSystem.CompProperties_ResourceStorage">
+            <pipeNet>THNMF_MechaniteNet</pipeNet>
+            <storageCapacity>50</storageCapacity>
+            <barSize>(0.625, 0.25)</barSize>
+            <margin>0.1</margin>
+            <centerOffset>(-0.5, 0, -0.07)</centerOffset>
+            </li>
+        </comps>
+    </ThingDef>
+    
+
+    <ThingDef ParentName="THNMF_TankParent" MayRequire="ludeon.rimworld.anomaly">
+        <defName>THNMF_BionaniteTank</defName>
+        <label>bionanite tank</label>
+        <description>A specialised stasis tank for bionanites. Lined with bioferrite, and unsurprisingly flammable. Comes with an attached centrifuge to occasionaly agitate nanites and prevent them from settling or gaining sentience.</description>
+        
+        <graphicData>
+            <texPath>Things/Building/Production/BionaniteTank</texPath>
+        </graphicData>
+        <costList>
+        <Steel>130</Steel>
+        <Bioferrite>10</Bioferrite>
+        </costList>
+        
+        <statBases>
+            <Flammability>3.0</Flammability>
+        </statBases>
+        
+        <comps>
+            <li Class="PipeSystem.CompProperties_ResourceStorage">
+            <pipeNet>THNMF_BionaniteNet</pipeNet>
+            <storageCapacity>50</storageCapacity>
+            <barSize>(0.625, 0.25)</barSize>
+            <margin>0.1</margin>
+            <centerOffset>(-0.5, 0, -0.07)</centerOffset>
+            </li>
+            <li Class="PipeSystem.CompProperties_ExplosiveContent">
+                <explosiveMaxRadius>5</explosiveMaxRadius>
+                <explosiveDamageType>Flame</explosiveDamageType>
+                <destroyThingOnExplosionSize>2</destroyThingOnExplosionSize>
+                <startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+                <preExplosionSpawnChance>1</preExplosionSpawnChance>
+                <wickTicks>70~150</wickTicks>
+            </li>
+        </comps>
+    </ThingDef>
+
+
+    <ThingDef ParentName="THNMF_TankParent">
+        <defName>THNMF_LuciferiteTank</defName>
+        <label>luciferite tank</label>
+        <description>A specialised stasis tank for luciferites. Comes with an attached centrifuge to occasionaly nanites and prevent them from settling or rebinding.</description>
+        
+        <graphicData>
+            <texPath>Things/Building/Production/LuciferiteTank</texPath>
+        </graphicData>
+        <costList>
+        <Steel>120</Steel>
+        <Gold>20</Gold>
+        </costList>
+        
+        
+        <comps>
+            <li Class="PipeSystem.CompProperties_ResourceStorage">
+            <pipeNet>THNMF_LuciferiteNet</pipeNet>
+            <storageCapacity>50</storageCapacity>
+            <barSize>(0.625, 0.25)</barSize>
+            <margin>0.1</margin>
+            <centerOffset>(-0.5, 0, -0.07)</centerOffset>
+            </li>
+        </comps>
+    </ThingDef>
+
+
+
+    <ThingDef ParentName="FurnitureBase">
+        <defName>THNMF_LuciferiumDrain</defName>
+        <label>luciferite dissolver</label>
+        <description>A hopper with a thin layer of synthetic oil to dissolve luciferium powder into loose luciferites. Each dose of luciferium is worth a control unit of luciferites.</description>
+        <thingClass>Building_Storage</thingClass>
+        <graphicData>
+            <texPath>Things/Building/Production/LuciferiteDrain</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <damageData>
+            <cornerTL>Damage/Corner</cornerTL>
+            <cornerTR>Damage/Corner</cornerTR>
+            <cornerBL>Damage/Corner</cornerBL>
+            <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+            <drawRotated>false</drawRotated>
+            <allowFlip>false</allowFlip>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <altitudeLayer>BuildingOnTop</altitudeLayer>
+        <passability>Standable</passability>
+        <fillPercent>0.5</fillPercent>
+        <castEdgeShadows>true</castEdgeShadows>
+        <pathCost>50</pathCost>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Mass>8</Mass>
+            <WorkToBuild>600</WorkToBuild>
+            <Flammability>0.3</Flammability>
+            <Beauty>0.5</Beauty>
+        </statBases>
+        <size>(1,1)</size>
+        <costList>
+            <Steel>60</Steel>
+            <Gold>10</Gold>
+            <ComponentIndustrial>3</ComponentIndustrial>
+        </costList>
+        <building>
+            <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+            <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+            <fixedStorageSettings>
+            <filter>
+                <disallowNotEverStorable>true</disallowNotEverStorable>
+                <thingDefs>
+                <li>Luciferium</li>
+                </thingDefs>
+            </filter>
+            </fixedStorageSettings>
+            <defaultStorageSettings>
+            <priority>Important</priority>
+            <filter>
+                <disallowNotEverStorable>true</disallowNotEverStorable>
+                <thingDefs>
+                <li>Luciferium</li>
+                </thingDefs>
+            </filter>
+            </defaultStorageSettings>
+        </building>
+        <inspectorTabs>
+            <li>ITab_Storage</li>
+        </inspectorTabs>
+        <designationCategory>THNMF_PipeNetworks</designationCategory>
+        <staticSunShadowHeight>0.5</staticSunShadowHeight>
+        <surfaceType>Item</surfaceType>
+        <canOverlapZones>false</canOverlapZones>
+        <comps>
+            <li Class="PipeSystem.CompProperties_ConvertThingToResource">
+                <pipeNet>THNMF_LuciferiteNet</pipeNet>
+                <thing>Luciferium</thing>
+            </li>
+        </comps>
+        <researchPrerequisites>
+            <li>THNMF_NaniteAdmin</li>
+        </researchPrerequisites>
+    </ThingDef>
+</Defs>

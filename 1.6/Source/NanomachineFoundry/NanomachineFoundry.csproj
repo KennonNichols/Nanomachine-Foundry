@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{00D41F4C-71A6-46BC-8FB3-6D23C6F701C4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NanomachineFoundry</RootNamespace>
+    <AssemblyName>NanomachineFoundry</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>none</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\..\..\..\..\..\RimworldModding\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PipeSystem">
+      <HintPath>..\..\..\..\..\..\..\..\..\RimworldModding\PipeSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdministrationWorkers\OperationWorkers.cs" />
+    <Compile Include="Alert_ExcessNanites.cs" />
+    <Compile Include="Alert_ExcessNanitesCritical.cs" />
+    <Compile Include="AssistingArchotechQuest\AssistingArchotechQuestlineUtility.cs" />
+    <Compile Include="AssistingArchotechQuest\Building_CorruptNexusCore.cs" />
+    <Compile Include="AssistingArchotechQuest\CompArchotechNodeHack.cs" />
+    <Compile Include="AssistingArchotechQuest\GameCondition_ArchiteFog.cs" />
+    <Compile Include="AssistingArchotechQuest\GenStep_ArchotechNode.cs" />
+    <Compile Include="AssistingArchotechQuest\GenStep_CorruptNexus.cs" />
+    <Compile Include="AssistingArchotechQuest\JobDriver_AccessArchotechNode.cs" />
+    <Compile Include="AssistingArchotechQuest\JobDriver_StabilizeCorruptArchonexusCore.cs" />
+    <Compile Include="AssistingArchotechQuest\PsysensitiveAntenna.cs" />
+    <Compile Include="AssistingArchotechQuest\QuestNode_Root_AssistingArchotech.cs" />
+    <Compile Include="AssistingArchotechQuest\QuestNode_Root_AssistingArchotechSecondaryNode.cs" />
+    <Compile Include="AssistingArchotechQuest\SitePartWorker_ArchotechNode.cs" />
+    <Compile Include="AssistingArchotechQuest\SitePartWorker_CorruptNexus.cs" />
+    <Compile Include="Building_MechaniteBreeder.cs" />
+    <Compile Include="CompNaniteOperator.cs" />
+    <Compile Include="CompNaniteApplicator.cs" />
+    <Compile Include="CompNaniteInjector.cs" />
+    <Compile Include="CompNaniteMechanizer.cs" />
+    <Compile Include="DebugActions.cs" />
+    <Compile Include="Dialog_Message.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="GameComponent_NanomachineFoundry.cs" />
+    <Compile Include="HediffComp_ArchosplinterLink.cs" />
+    <Compile Include="HediffCompProperties_NaniteDecay.cs" />
+    <Compile Include="HediffCompProperties_Powers.cs" />
+    <Compile Include="HediffCompProperties_ScaledVerbGiver.cs" />
+    <Compile Include="HediffComp_ConsciousnessLossFromSeverity.cs" />
+    <Compile Include="HediffComp_HostileNanites.cs" />
+    <Compile Include="HediffComp_MechanitePossession.cs" />
+    <Compile Include="HediffComp_MetalHorrorCombat.cs" />
+    <Compile Include="HediffComp_MetalMaw.cs" />
+    <Compile Include="HediffComp_NanitePowers.cs" />
+    <Compile Include="HediffComp_NaniteResurrection.cs" />
+    <Compile Include="HediffComp_NaniteSeverityFromLevel.cs" />
+    <Compile Include="HediffComp_SeveringMechlink.cs" />
+    <Compile Include="HotSwapping.cs" />
+    <Compile Include="ITab_Nanites.cs" />
+    <Compile Include="JobDriver_EnterNaniteInjector.cs" />
+    <Compile Include="JobDriver_RemoveMechlinkFromSelf.cs" />
+    <Compile Include="NaniteModifications\ModificationAbilities\Comp_Commandeer.cs" />
+    <Compile Include="NaniteModifications\ModificationAbilities\Comp_DismantlePulse.cs" />
+    <Compile Include="NaniteModifications\ModificationAbilities\Comp_AnnihilationPunch.cs" />
+    <Compile Include="NaniteModifications\ModificationAbilities\Comp_AtomizationMist.cs" />
+    <Compile Include="NaniteModifications\ModificationAbilities\Comp_Conflagration.cs" />
+    <Compile Include="NaniteModifications\ModificationAbilities\Comp_EjectNanites.cs" />
+    <Compile Include="NaniteModifications\ModificationAbilities\Comp_InsanityPulse.cs" />
+    <Compile Include="NaniteModifications\ModificationAbilities\Comp_MechanoidLeech.cs" />
+    <Compile Include="NaniteModifications\ModificationAbilities\Comp_MetalMawToggle.cs" />
+    <Compile Include="NaniteModifications\ModificationAbilities\Comp_PsioniserToggle.cs" />
+    <Compile Include="NaniteModifications\ModificationAbilities\Comp_Rotcloud.cs" />
+    <Compile Include="NaniteModifications\ModificationAbilities\Comp_SiegebreakerPunch.cs" />
+    <Compile Include="NaniteModifications\ModificationAbilities\CompAbilityEffect_NaniteCloud.cs" />
+    <Compile Include="NaniteModifications\ModificationAbilities\Comp_Ultraclock.cs" />
+    <Compile Include="NaniteModifications\ModificationAbilities\NaniteCloud.cs" />
+    <Compile Include="NaniteModifications\ModificationAbilities\NaniteCompAbilityEffect.cs" />
+    <Compile Include="NaniteModifications\ModificationAbilities\Projectile_NaniteCloudLaunch.cs" />
+    <Compile Include="NaniteModifications\ModificationAbility.cs" />
+    <Compile Include="NaniteModifications\ModificationWorkerAbility.cs" />
+    <Compile Include="NaniteModifications\ModificationWorkers\ModificationWorker.cs" />
+    <Compile Include="NaniteModifications\ModificationWorkers\ModificationWorker_AlphaBiology.cs" />
+    <Compile Include="NaniteModifications\ModificationWorkers\ModificationWorker_AngelOSProtocol.cs" />
+    <Compile Include="NaniteModifications\ModificationWorkers\ModificationWorker_Biomanager.cs" />
+    <Compile Include="NaniteModifications\ModificationWorkers\ModificationWorker_Clairvoyance.cs" />
+    <Compile Include="NaniteModifications\ModificationWorkers\ModificationWorker_ControlDrift.cs" />
+    <Compile Include="NaniteModifications\ModificationWorkers\ModificationWorker_ControlRelease.cs" />
+    <Compile Include="NaniteModifications\ModificationWorkers\ModificationWorker_Fleshform.cs" />
+    <Compile Include="NaniteModifications\ModificationWorkers\ModificationWorker_InstinctInhibitor.cs" />
+    <Compile Include="NaniteModifications\ModificationWorkers\ModificationWorker_LockerProtocol.cs" />
+    <Compile Include="NaniteModifications\ModificationWorkers\ModificationWorker_Metalblood.cs" />
+    <Compile Include="NaniteModifications\ModificationWorkers\ModificationWorker_Neuroconception.cs" />
+    <Compile Include="NaniteModifications\ModificationWorkers\ModificationWorker_PsychicCache.cs" />
+    <Compile Include="NaniteModifications\ModificationWorkers\ModificationWorker_PsychicRecycler.cs" />
+    <Compile Include="NaniteModifications\ModificationWorkers\ModificationWorker_ReconstructMortality.cs" />
+    <Compile Include="NaniteModifications\ModificationWorkers\ModificationWorker_RefuteMortality.cs" />
+    <Compile Include="NaniteModifications\ModificationWorkers\ModificationWorker_Nanosurgeons.cs" />
+    <Compile Include="NaniteModifications\ModificationWorkers\ModificationWorker_ResurrectionParent.cs" />
+    <Compile Include="NaniteModifications\ModificationWorkers\ModificationWorker_Truesight.cs" />
+    <Compile Include="NaniteModifications\ModificationWorkers\ModificationWorker_Psioniser.cs" />
+    <Compile Include="NaniteModifications\NaniteModificationDef.cs" />
+    <Compile Include="NaniteOperationDef.cs" />
+    <Compile Include="NaniteDef.cs" />
+    <Compile Include="NaniteCategories.cs" />
+    <Compile Include="NaniteProduction\Building_BionaniteExtractor.cs" />
+    <Compile Include="NaniteProduction\Building_LuciferiteReprogammer.cs" />
+    <Compile Include="NaniteProduction\CompMechaniteBreeder.cs" />
+    <Compile Include="NaniteProduction\CompProperties_MechaniteBreeder.cs" />
+    <Compile Include="NaniteProduction\JobDriver_CarryToMechaniteBreeder.cs" />
+    <Compile Include="NaniteProduction\MechaniteBreederGizmo.cs" />
+    <Compile Include="NanomachineFoundry_Mod.cs" />
+    <Compile Include="NMF_DefsOf.cs" />
+    <Compile Include="OperatorTabs\ITab_NaniteConfig.cs" />
+    <Compile Include="OperatorTabs\ITab_NaniteModificationInstallation.cs" />
+    <Compile Include="OperatorTabs\ITab_NaniteOperation.cs" />
+    <Compile Include="OperatorTabs\OperatorTab.cs" />
+    <Compile Include="Patches\ApplyHarmonyPatches.cs" />
+    <Compile Include="Patches\MiscPatches.cs" />
+    <Compile Include="Patches\ModificationPatches.cs" />
+    <Compile Include="Patches\OperationPatches.cs" />
+    <Compile Include="Patches\PawnPatches.cs" />
+    <Compile Include="PawnRenderNodeProperties_EyeColored.cs" />
+    <Compile Include="Utils\NaniteTracker_Pawn.cs" />
+    <Compile Include="Utils\NanomachineModBase.cs" />
+    <Compile Include="Utils\NMF_Utils.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\PawnSpawnUtility.cs" />
+    <Compile Include="WindowModificationConfiguration.cs" />
+    <Compile Include="WindowPrompts.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

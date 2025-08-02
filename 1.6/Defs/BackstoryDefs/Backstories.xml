@@ -1,0 +1,53 @@
+<Defs>
+
+    <BackstoryDef>
+        <defName>THNMF_UnknownChildhood</defName>
+        <title>unknown</title>
+        <titleShort>unknown</titleShort>
+        <description>[PAWN_nameDef]'s origins have been forgotten after their memory was erased.</description>
+        <slot>Childhood</slot>
+        <spawnCategories>
+            <li>THNMF_SplinterPuppet</li>
+        </spawnCategories>
+      </BackstoryDef>
+    
+    <BackstoryDef Name="SplinterPuppetBase" Abstract="True">
+        <slot>Adulthood</slot>
+        <workDisables>
+            <li>Social</li>
+        </workDisables>
+        <requiredWorkTags>
+            <li>Violent</li>
+        </requiredWorkTags>
+        <spawnCategories>
+            <li>THNMF_SplinterPuppet</li>
+        </spawnCategories>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+    </BackstoryDef>
+
+    <BackstoryDef ParentName="SplinterPuppetBase">
+        <defName>THNMF_NexusGuardian</defName>
+        <title>nexus guardian</title>
+        <titleShort>guardian</titleShort>
+        <description>[PAWN_nameDef] was particularly receptive to modification, and used by an archosplinter as a personal bodyguard.</description>
+        <spawnCategories Inherit="False">
+            <li>THNMF_NexusGuardian</li>
+        </spawnCategories>
+    </BackstoryDef>
+
+    <BackstoryDef ParentName="SplinterPuppetBase">
+        <defName>THNMF_SplinterPuppetDeal</defName>
+        <title>faustian puppet</title>
+        <titleShort>puppet</titleShort>
+        <description>[PAWN_nameDef] made a foolish deal with a corrupt archosplinter, and was wiped of any memory or autonomy. The archosplinter used [PAWN_possessive] puppeted body as a guard.</description>
+    </BackstoryDef>
+
+    <BackstoryDef ParentName="SplinterPuppetBase">
+        <defName>THNMF_SplinterPuppetSiezed</defName>
+        <title>splinter puppet</title>
+        <titleShort>puppet</titleShort>
+        <description>[PAWN_nameDef] was possessed by an archosplinter, a corrupt node of an archotech. While still alive, they will be loyal until their splinter is dealt with.</description>
+    </BackstoryDef>
+
+</Defs>

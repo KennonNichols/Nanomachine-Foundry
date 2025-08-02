@@ -196,7 +196,7 @@
                 <possessionThought>THNMF_ColonistPossessed</possessionThought>
                 <possessionThoughtWitness>THNMF_SawColonistPossessed</possessionThoughtWitness>
                 <possessionThoughtTranshumanist>THNMF_TranshumanistSawColonistPossessed</possessionThoughtTranshumanist>
-                <transhumanistMeme>Transhumanist</transhumanistMeme>
+                <transhumanistMeme MayRequire="ludeon.rimworld.ideology">Transhumanist</transhumanistMeme>
             </li>
             <li Class="HediffCompProperties_SeverityPerDay">
                 <severityPerDay>-0.0667</severityPerDay>
@@ -291,7 +291,7 @@
                     <SocialImpact>1.5</SocialImpact>
                     <MentalBreakThreshold>0</MentalBreakThreshold>
                     <ResearchSpeed>3</ResearchSpeed>
-                    <EntityStudyRate>3</EntityStudyRate>
+                    <EntityStudyRate MayRequire="Ludeon.RimWorld.Anomaly">3</EntityStudyRate>
                 </statFactors>
             </li>
         </stages>

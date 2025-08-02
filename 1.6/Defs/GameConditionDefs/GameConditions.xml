@@ -1,0 +1,11 @@
+<Defs>
+    <GameConditionDef>
+        <defName>THNMF_ArchiteFog</defName>
+        <conditionClass>NanomachineFoundry.AssistingArchotechQuest.GameCondition_ArchiteFog</conditionClass>
+        <label>archite fog</label>
+        <description>A colony of countless archites has replicated out of control like a tumor, bathing the region in thick, green, and strangely warm fog. The archites, controlled by a malevolent archosplinter, will try to kill anyone whom it deems a threat.</description>
+        <weatherDef>THNMF_ArchiteFog</weatherDef>
+        <canBePermanent>true</canBePermanent>
+        <allowUnderground>true</allowUnderground>
+    </GameConditionDef>
+</Defs>

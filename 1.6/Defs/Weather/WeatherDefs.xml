@@ -1,0 +1,51 @@
+<Defs>
+    <WeatherDef>
+        <defName>THNMF_ArchiteFog</defName>
+        <label>archite fog</label>
+        <isBad>true</isBad>
+        <canOccurAsRandomForcedEvent>false</canOccurAsRandomForcedEvent>
+        <description>A colony of countless archites has replicated out of control like a tumor, bathing the region in thick, green, and strangely warm fog. The archites, controlled by a malevolent archosplinter, will try to kill anyone whom it deems a threat.</description>
+        <favorability>Bad</favorability>
+        <transitionTicksOverride>1</transitionTicksOverride>
+        <perceivePriority>3</perceivePriority>
+        <windSpeedFactor>0.5</windSpeedFactor>
+        <accuracyMultiplier>0.8</accuracyMultiplier>
+        <ambientSounds>
+            <li>Ambient_Wind_Fog</li>
+        </ambientSounds>
+        <overlayClasses>
+            <li>WeatherOverlay_GrayPallFog</li>
+        </overlayClasses>
+        <commonalityRainfallFactor>
+            <points>
+                <li>(0, 0)</li>
+                <li>(1300, 1)</li>
+            </points>
+        </commonalityRainfallFactor>
+        <!-- Green color -->
+        <skyColorsDay>
+            <sky>(0.29, 0.52, 0.25)</sky>
+            <shadow>(0.92,0.92,0.92)</shadow>
+            <overlay>(0.25,0.2,0.2)</overlay>
+            <saturation>0.75</saturation>
+        </skyColorsDay>
+        <skyColorsDusk>
+            <sky>(0.29, 0.52, 0.25)</sky>
+            <shadow>(0.92,0.92,0.92)</shadow>
+            <overlay>(0.25,0.2,0.2)</overlay>
+            <saturation>0.75</saturation>
+        </skyColorsDusk>
+        <skyColorsNightEdge>
+            <sky>(0.29, 0.52, 0.25)</sky>
+            <shadow>(0.92,0.92,0.92)</shadow>
+            <overlay>(0.15,0.1,0.1)</overlay>
+            <saturation>0.75</saturation>
+        </skyColorsNightEdge>
+        <skyColorsNightMid>
+            <sky>(0.29, 0.52, 0.25)</sky>
+            <shadow>(0.92,0.92,0.92)</shadow>
+            <overlay>(0.15,0.1,0.1)</overlay>
+            <saturation>0.75</saturation>
+        </skyColorsNightMid>
+    </WeatherDef>
+</Defs>

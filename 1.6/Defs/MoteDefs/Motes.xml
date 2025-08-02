@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <EffecterDef>
+        <defName>THNMF_Nanite_Cloud</defName>
+        <children>
+          <li>
+            <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+            <moteDef>THNMF_Mote_Smoke</moteDef>
+            <ticksBetweenMotes>1</ticksBetweenMotes>
+            <scale>1.5~2</scale>
+            <speed>0.05~0.1</speed>
+          </li>
+        </children>
+      </EffecterDef>
+    
+      <ThingDef ParentName="MoteBase">
+        <defName>THNMF_Mote_Smoke</defName>
+        <thingClass>MoteThrown</thingClass>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <graphicData>
+          <texPath>Motes/Puff</texPath>
+          <color>(255, 255, 255)</color>
+        </graphicData>
+        <mote>
+          <fadeInTime>0.25</fadeInTime>
+          <solidTime>5.75</solidTime>
+          <fadeOutTime>5.7</fadeOutTime>
+          <growthRate>0.05</growthRate>
+          <acceleration>(0,0,0)</acceleration>
+        </mote>
+      </ThingDef>
+
+</Defs>
